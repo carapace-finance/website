@@ -7,6 +7,7 @@ import { Button } from "../components/Button/Button";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
+  const jobsPage = window.location.href + "jobs";
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
@@ -17,13 +18,11 @@ export default function Home(): JSX.Element {
         <h1>{siteConfig.title}</h1>
         <div className={index.buttons}>
           <Button
-            text="Sign Up for Beta"
             href="https://notionforms.io/forms/sign-up-for-beta-2"
+            target="_blank"
+            text="Sign Up for Beta"
           ></Button>
-          <Button
-            text="We're Hiring"
-            href="/jobs"
-          ></Button>
+          <Button href={jobsPage} target="_self" text="Join our Team"></Button>
         </div>
       </section>
     </Layout>
