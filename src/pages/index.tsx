@@ -7,7 +7,10 @@ import { Button } from "../components/Button/Button";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
-  const jobsPage = window.location.href + "jobs";
+  let jobsPage;
+  if (typeof window !== "undefined") {
+    jobsPage = window.location.href + "jobs";
+  }
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
