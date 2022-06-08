@@ -46,6 +46,7 @@ const config = {
           src: "img/white_logo.svg",
         },
         items: [
+          { to: "/whitepaper", label: "White Paper", position: "right" },
           {
             type: "doc",
             docId: "docs/abstract",
@@ -70,6 +71,10 @@ const config = {
           {
             title: "Protocol",
             items: [
+              {
+                label: "White Paper",
+                to: "/whitepaper",
+              },
               {
                 label: "Docs",
                 to: "/docs/abstract",
