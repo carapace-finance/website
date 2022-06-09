@@ -18,7 +18,7 @@ export default function Home(): JSX.Element {
         <h1>{siteConfig.title}</h1>
         <div className={index.buttons}>
           <Button
-            href="https://notionforms.io/forms/sign-up-for-beta-2"
+            href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"
             target="_blank"
             text="Sign Up for Beta"
           ></Button>
