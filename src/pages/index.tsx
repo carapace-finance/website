@@ -11,7 +11,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Carapace Finance is building decentralized protection against default risk in crypto loans."
+      description="Carapace is building decentralized protection against default risk in crypto loans."
     >
       <section className={index.container}>
         <CarapaceLogoSvg className={index.logo} />

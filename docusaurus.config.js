@@ -12,7 +12,7 @@ const config = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "Carapace Finance",
+  organizationName: "Carapace",
   projectName: "website",
 
   presets: [
@@ -42,7 +42,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Carapace Finance",
+        title: "Carapace",
         logo: {
           alt: "Carapace Logo",
           src: "img/white_logo.svg",
@@ -114,7 +114,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Carapace Protocol.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Carapace.`,
       },
       prism: {
         theme: lightCodeTheme,

@@ -1,6 +1,6 @@
 ---
 slug: fundraising
-title: Carapace Finance Raised $2.5m
+title: Carapace Raised $2.5m
 authors: [rohit]
 tags: [announcement]
 ---
