@@ -90,10 +90,10 @@ const config = {
           {
             title: "Community",
             items: [
-              // {
-              //   label: "Discord",
-              //   href: "https://discord.gg/ZqeB5MHzjX",
-              // },
+              {
+                label: "Discord",
+                href: "https://discord.gg/2hQC6q8CxA",
+              },
               {
                 label: "Twitter",
                 href: "https://twitter.com/carapacefinance",
