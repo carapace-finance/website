@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
       <section className={index.container}>
         <CarapaceLogoSvg className={index.logo} />
         <h1>{siteConfig.title}</h1>
-        <PinkButton />
+        <PinkButton fontSize="text-3xl" borderRadius="rounded-[200px]" text="Sign-up for our Beta App" />
         <div className={index.buttons}>
           <Button
             href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"

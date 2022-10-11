@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       colors: {
         buttonPink: "#FF5896",
+        buttonPinkHover: "#FF2576",
       },
     },
   },

@@ -5,6 +5,6 @@ export const PinkButton = (props) => (
   //   {props.text}
   // </Link>
   <a href={props.href} target="_blank">
-    <button className="bg-buttonPink text-white text-transform: uppercase ">button</button>
+    <button className={`bg-buttonPink text-white text-transform: uppercase ${props.fontSize} ${props.borderRadius} font-normal leading-[50px] px-12 py-7 text-center hover:bg-buttonPinkHover`}>{props.text}</button>
   </a>
 );
