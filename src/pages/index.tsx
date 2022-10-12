@@ -3,7 +3,7 @@ import Layout from "@theme/Layout";
 import React from "react";
 import CarapaceLogoSvg from "../../static/img/green_logo.svg";
 import index from "./index.module.css";
-import { PinkButton } from "../components/Button/PinkButton";
+import Hero from "../components/Hero";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -13,17 +13,10 @@ export default function Home(): JSX.Element {
       title={`Hello from ${siteConfig.title}`}
       description="Carapace is building decentralized protection against default risk in crypto loans."
     >
+        <Hero />
       <section className={index.container}>
         <CarapaceLogoSvg className={index.logo} />
         <h1>{siteConfig.title}</h1>
-        <PinkButton
-          fontSize="text-3xl"
-          borderRadius="rounded-[200px]"
-          text="Sign-up for our Beta App"
-          paddingX="px-12"
-          paddingY="py-7"
-        />
-
       </section>
     </Layout>
   );
