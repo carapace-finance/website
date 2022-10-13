@@ -1,5 +1,5 @@
 import React from 'react'
-import { supportingCompanies } from '.././constants'
+import { supporters, supportingCompanies } from '.././constants'
 import WhiteCard from './WhiteCard'
 
 const Supporters = () => {
@@ -13,6 +13,14 @@ const Supporters = () => {
           {supportingCompanies.map((company, _) => (
             <div key={company.id}>
               <WhiteCard company={company.title} />
+            </div>
+          ))}
+        </div>
+        <div className='grid grid-cols-2 lg:grid-cols-3 grid-rows-3 lg:grid-rows-2 gap-x-[24px] lg:gap-x-[29.57px] gap-y-[23px] lg:gap-y-[37.2px]'>
+          {supporters.map((supporter, _) => (
+            <div key={supporter.id}>
+              <h1>{supporter.title}</h1>
+              <img src={supporter.profile} alt="a" />
             </div>
           ))}
         </div>
