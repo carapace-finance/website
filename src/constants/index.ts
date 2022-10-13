@@ -46,3 +46,58 @@ export const supporters = [
     profile: supporter3,
   },
 ];
+
+export const footerLinks = [
+  {
+    title: "SOCIAL",
+    links: [
+      {
+        name: "Discord",
+        link: "https://www.hoobank.com/content/",
+      },
+      {
+        name: "Twitter",
+        link: "https://www.hoobank.com/how-it-works/",
+      },
+      {
+        name: "Blog",
+        link: "https://www.hoobank.com/create/",
+      },
+    ],
+  },
+  {
+    title: "PROTOCOL DESIGN",
+    links: [
+      {
+        name: "Whitepaper",
+        link: "https://www.hoobank.com/help-center/",
+      },
+      {
+        name: "User Doc",
+        link: "https://www.hoobank.com/partners/",
+      },
+    ],
+  },
+  {
+    title: "DEVELOPER",
+    links: [
+      {
+        name: "Github",
+        link: "https://www.hoobank.com/our-partner/",
+      },
+    ],
+  },
+  {
+    title: "LEGAL",
+    links: [
+      {
+        name: "Privacy Policy",
+        link: "https://www.hoobank.com/our-partner/",
+      },
+      {
+        name: "Terms of use",
+        link: "https://www.hoobank.com/our-partner/",
+      },
+    ],
+  },
+];

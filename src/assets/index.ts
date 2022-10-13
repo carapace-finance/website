@@ -5,6 +5,7 @@ import supporter1 from './supporter1.png';
 import supporter2 from './supporter2.png';
 import supporter3 from './supporter3.png';
 import eyeOpen from './eyeOpen.png';
+import footerLogo from './footerLogo.png';
 
 export default {
   hero,
@@ -14,4 +15,5 @@ export default {
   supporter2,
   supporter3,
   eyeOpen,
+  footerLogo,
 };
