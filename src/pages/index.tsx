@@ -5,6 +5,7 @@ import CarapaceLogoSvg from "../../static/img/green_logo.svg";
 import index from "./index.module.css";
 import Hero from "../components/Hero";
 import ContentMain from "../components/ContentMain";
+import Supporters from "../components/Supporters";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -17,6 +18,8 @@ export default function Home(): JSX.Element {
         <Hero />
         <div className="h-[67px] sm:h-[185px]"></div>
         <ContentMain />
+        <div className="h-[153px] lg:h-[76px]"></div>
+        <Supporters />
       <section className={index.container}>
         <CarapaceLogoSvg className={index.logo} />
         <h1>{siteConfig.title}</h1>
