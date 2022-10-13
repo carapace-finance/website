@@ -1,5 +1,6 @@
 import React from 'react'
 import { supporters, supportingCompanies } from '.././constants'
+import CircleAvatarWithName from './CircleAvatarWithName'
 import WhiteCard from './WhiteCard'
 
 const Supporters = () => {
@@ -18,10 +19,7 @@ const Supporters = () => {
         </div>
         <div className='grid grid-cols-2 lg:grid-cols-3 grid-rows-3 lg:grid-rows-2 gap-x-[24px] lg:gap-x-[29.57px] gap-y-[23px] lg:gap-y-[37.2px]'>
           {supporters.map((supporter, _) => (
-            <div key={supporter.id}>
-              <h1>{supporter.title}</h1>
-              <img src={supporter.profile} alt="a" />
-            </div>
+            <CircleAvatarWithName id={supporter.id} profile={supporter.profile} title={supporter.title} />
           ))}
         </div>
       </div>
