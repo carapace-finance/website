@@ -6,6 +6,8 @@ import index from "./index.module.css";
 import Hero from "../components/Hero";
 import ContentMain from "../components/ContentMain";
 import Supporters from "../components/Supporters";
+import LendingProtocol from "../components/LendingProtocol";
+
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -20,6 +22,8 @@ export default function Home(): JSX.Element {
         <ContentMain />
         <div className="h-[153px] lg:h-[76px]"></div>
         <Supporters />
+        <div className="h-[61px] lg:h-[199px]"></div>
+        <LendingProtocol/>
       <section className={index.container}>
         <CarapaceLogoSvg className={index.logo} />
         <h1>{siteConfig.title}</h1>
