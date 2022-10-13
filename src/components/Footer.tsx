@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <section id='footer'>
       <div className='flex flex-col items-center'>
-        Hello
+
       </div>
     </section>
   )
