@@ -4,7 +4,7 @@ const ThreeLayerDescription = (props) => {
   // change arrow
   // add href
   return (
-    <div className={`flex flex-col justify-between ${props.height} ${props.width} text-center sm:text-left sm:max-w-max max-w-[350px] md:mt-0 -mt-20`}>
+    <div className={`flex flex-col justify-between ${props.height} ${props.width} text-center sm:text-left sm:max-w-max max-w-[350px] lg:mt-0 -mt-20`}>
       <p className='font-manrope font-extrabold text-4xl sm:text-5xl leading-[40px] sm:leading-[52px] tracking-tighter text-customDarkBlue m-0 '>{props.firstLayer}</p>
       <p className='font-manrope font-normal text-[22px] sm:text-3xl leading-[30px] sm:leading-[36px] text-customDarkBlue text-opacity-50 m-0'>{props.secondLayer}</p>
       <a className='hover:text-textPinkHover cursor-pointer font-manrope text-buttonPink font-bold text-2xl sm:text-[32px] leading-6 sm:leading-[32px] text-right'>
