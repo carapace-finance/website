@@ -53,15 +53,15 @@ export const footerLinks = [
     links: [
       {
         name: "Discord",
-        link: "https://www.hoobank.com/content/",
+        link: "https://discord.gg/2hQC6q8CxA",
       },
       {
         name: "Twitter",
-        link: "https://www.hoobank.com/how-it-works/",
+        link: "https://twitter.com/carapacefinance",
       },
       {
         name: "Blog",
-        link: "https://www.hoobank.com/create/",
+        link: "",
       },
     ],
   },
@@ -70,11 +70,11 @@ export const footerLinks = [
     links: [
       {
         name: "Whitepaper",
-        link: "https://www.hoobank.com/help-center/",
+        link: "",
       },
       {
         name: "User Doc",
-        link: "https://www.hoobank.com/partners/",
+        link: "",
       },
     ],
   },
@@ -83,7 +83,7 @@ export const footerLinks = [
     links: [
       {
         name: "Github",
-        link: "https://www.hoobank.com/our-partner/",
+        link: "https://github.com/carapace-finance",
       },
     ],
   },
@@ -92,11 +92,11 @@ export const footerLinks = [
     links: [
       {
         name: "Privacy Policy",
-        link: "https://www.hoobank.com/our-partner/",
+        link: "",
       },
       {
         name: "Terms of use",
-        link: "https://www.hoobank.com/our-partner/",
+        link: "",
       },
     ],
   },

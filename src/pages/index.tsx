@@ -25,6 +25,7 @@ export default function Home(): JSX.Element {
         <Supporters />
         <div className="h-[61px] lg:h-[199px]"></div>
         <LendingProtocol/>
+        <div className="h-[61px] lg:h-[100px]"></div>
         <Footer />
       <section className={index.container}>
         <CarapaceLogoSvg className={index.logo} />
