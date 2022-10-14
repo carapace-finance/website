@@ -7,6 +7,6 @@ tags: [announcement]
 
 ## Boooooooom! 
 
-![Carapace Logo](./carapace_name_logo.png)
+![Carapace Logo](./_.png)
 
 ## raised $2.5m.
