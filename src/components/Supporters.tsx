@@ -13,12 +13,12 @@ const Supporters = () => {
         <div className='place-items-center grid grid-cols-2 lg:grid-cols-3 grid-rows-3 lg:grid-rows-2 gap-x-[24px] lg:gap-x-[29.57px] gap-y-[23px] lg:gap-y-[37.2px]'>
           {supportingCompanies.map((company, _) => (
             <div key={company.id}>
-              <WhiteCard company={company.title} />
+              <WhiteCard link={company.link} img={company.logo} title={company.title} />
             </div>
           ))}
           {/* TODO center last item */}
           {supporters.map((supporter, _) => (
-            <CircleAvatarWithName id={supporter.id} profile={supporter.profile} title={supporter.title} />
+            <CircleAvatarWithName link={supporter.link} id={supporter.id} profile={supporter.profile} title={supporter.title} />
           ))}
         </div>
       </div>
