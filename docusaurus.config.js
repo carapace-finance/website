@@ -4,6 +4,8 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
+require('dotenv').config()
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Decentralized protection against default risk in crypto loans",
@@ -14,7 +16,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "Carapace",
   projectName: "website",
-
+  plugins: [require.resolve("docusaurus-plugin-fathom")],
   presets: [
     [
       "classic",
@@ -41,6 +43,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      fathomAnalytics: {
+        siteId: process.env.FATHOM_SITE_ID,
+      },
       navbar: {
         title: "Carapace",
         logo: {
