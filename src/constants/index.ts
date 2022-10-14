@@ -1,6 +1,6 @@
-import supporter1 from '../assets/supporter1.png';
-import supporter2 from '../assets/supporter2.png';
-import supporter3 from '../assets/supporter3.png';
+import angel1 from '../assets/amySun.png';
+import angel2 from '../assets/chaseAdam.png';
+import angel3 from '../assets/kainWarwick.png';
 import nfx from '../assets/nfx.png';
 import tribeCapital from '../assets/tribeCapital.png';
 import ledgerPrime from '../assets/ledgerPrime.png';
@@ -52,19 +52,19 @@ export const supporters = [
   {
     id: "supporter-1",
     title: "Amy Sun",
-    profile: supporter1,
+    profile: angel1,
     link: "https://twitter.com/amysundae",
   },
   {
     id: "supporter-2",
     title: "Chase Adam",
-    profile: supporter2,
+    profile: angel2,
     link: "https://twitter.com/ChaseAdam17",
   },
   {
     id: "supporter-3",
     title: "Kain Warwick",
-    profile: supporter3,
+    profile: angel3,
     link: "https://twitter.com/kaiynne",
   },
 ];
