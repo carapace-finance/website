@@ -5,6 +5,13 @@ import supporter1 from './supporter1.png';
 import supporter2 from './supporter2.png';
 import supporter3 from './supporter3.png';
 import eyeOpen from './eyeOpen.png';
+import nfx from './nfx.png';
+import tribeCapital from './tribeCapital.png';
+import ledgerPrime from './ledgerPrime.png';
+import gsrVentures from './gsrVentures.png';
+import titanCapital from './titanCapital.png';
+import synthetix from './synthetix.png';
+
 
 export default {
   hero,
@@ -14,4 +21,10 @@ export default {
   supporter2,
   supporter3,
   eyeOpen,
+  nfx,
+  tribeCapital,
+  ledgerPrime,
+  gsrVentures,
+  titanCapital,
+  synthetix,
 };
