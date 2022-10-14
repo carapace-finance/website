@@ -7,6 +7,7 @@ import Hero from "../components/Hero";
 import ContentMain from "../components/ContentMain";
 import Supporters from "../components/Supporters";
 import LendingProtocol from "../components/LendingProtocol";
+import Footer from "../components/Footer";
 
 
 export default function Home(): JSX.Element {
@@ -24,10 +25,11 @@ export default function Home(): JSX.Element {
         <Supporters />
         <div className="h-[61px] lg:h-[199px]"></div>
         <LendingProtocol/>
-      <section className={index.container}>
+        <Footer />
+      {/* <section className={index.container}>
         <CarapaceLogoSvg className={index.logo} />
         <h1>{siteConfig.title}</h1>
-      </section>
+      </section> */}
     </Layout>
   );
 }

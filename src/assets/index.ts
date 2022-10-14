@@ -5,12 +5,15 @@ import angel1 from './amySun.png';
 import angel2 from './chaseAdam.png';
 import angel3 from './kainWarwick.png';
 import eyeOpen from './eyeOpen.png';
+import footerLogo from './footerLogo.png';
+import footer from './footer.png';
 import nfx from './nfx.png';
 import tribeCapital from './tribeCapital.png';
 import ledgerPrime from './ledgerPrime.png';
 import gsrVentures from './gsrVentures.png';
 import titanCapital from './titanCapital.png';
 import synthetix from './synthetix.png';
+import footerCarapace from './footerCarapace.png';
 
 
 export default {
@@ -21,10 +24,13 @@ export default {
   angel2,
   angel3,
   eyeOpen,
+  footerLogo,
+  footer,
   nfx,
   tribeCapital,
   ledgerPrime,
   gsrVentures,
   titanCapital,
   synthetix,
+  footerCarapace,
 };

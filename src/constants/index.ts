@@ -68,3 +68,58 @@ export const supporters = [
     link: "https://twitter.com/kaiynne",
   },
 ];
+
+export const footerLinks = [
+  {
+    title: "SOCIAL",
+    links: [
+      {
+        name: "Discord",
+        link: "https://discord.gg/2hQC6q8CxA",
+      },
+      {
+        name: "Twitter",
+        link: "https://twitter.com/carapacefinance",
+      },
+      {
+        name: "Blog",
+        link: "",
+      },
+    ],
+  },
+  {
+    title: "PROTOCOL DESIGN",
+    links: [
+      {
+        name: "Whitepaper",
+        link: "",
+      },
+      {
+        name: "User Doc",
+        link: "",
+      },
+    ],
+  },
+  {
+    title: "DEVELOPER",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/carapace-finance",
+      },
+    ],
+  },
+  {
+    title: "LEGAL",
+    links: [
+      {
+        name: "Privacy Policy",
+        link: "",
+      },
+      {
+        name: "Terms of use",
+        link: "",
+      },
+    ],
+  },
+];
