@@ -14,6 +14,7 @@ import gsrVentures from './gsrVentures.png';
 import titanCapital from './titanCapital.png';
 import synthetix from './synthetix.png';
 import footerCarapace from './footerCarapace.png';
+import logo from './logo.png';
 
 
 export default {
@@ -33,4 +34,5 @@ export default {
   titanCapital,
   synthetix,
   footerCarapace,
+  logo,
 };
