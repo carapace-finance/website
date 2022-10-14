@@ -15,6 +15,7 @@ import titanCapital from './titanCapital.png';
 import synthetix from './synthetix.png';
 import footerCarapace from './footerCarapace.png';
 import logo from './logo.png';
+import hamburger from './hamburger.png';
 
 
 export default {
@@ -35,4 +36,5 @@ export default {
   synthetix,
   footerCarapace,
   logo,
+  hamburger,
 };

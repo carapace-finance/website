@@ -42,30 +42,20 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Carapace",
         logo: {
           alt: "Carapace Logo",
           src: "img/white_logo.svg",
         },
         items: [
+          { to: "/home", label: "Home", position: "right" },
           { to: "/whitepaper", label: "White Paper", position: "right" },
-          // {
-          //   type: "doc",
-          //   docId: "docs/abstract",
-          //   position: "right",
-          //   label: "Docs",
-          //   to: "/docs/docs/abstract",
-          // },
-          // {
-          //   type: "doc",
-          //   docId: "developers/intro",
-          //   position: "right",
-          //   label: "Developers",
-          //   to: "/docs/developers/intro",
-          // },
-          { to: "/jobs", label: "Jobs", position: "right" },
-          // { to: "/blog", label: "Blog", position: "right" },
+          { to: "/documentation", label: "Documentation", position: "right" },
+          { to: "/blogs", label: "Blogs", position: "right" },
+          { to: "/signup", label: "SIGN-UP", position: "right" },
         ],
+      },
+      colorMode: {
+        disableSwitch: true,
       },
       // footer: {
       //   style: "dark",

@@ -8,16 +8,19 @@ import ContentMain from "../components/ContentMain";
 import Supporters from "../components/Supporters";
 import LendingProtocol from "../components/LendingProtocol";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   const jobsPage = useDocusaurusContext().siteConfig.baseUrl + "jobs";
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Carapace is building decentralized protection against default risk in crypto loans."
-    >
+    // <Layout
+    //   title={`Hello from ${siteConfig.title}`}
+    //   description="Carapace is building decentralized protection against default risk in crypto loans."
+    // >
+      <div>
+        <Navbar />
         <Hero />
         <div className="h-[67px] sm:h-[185px]"></div>
         <ContentMain />
@@ -26,10 +29,7 @@ export default function Home(): JSX.Element {
         <div className="h-[61px] lg:h-[199px]"></div>
         <LendingProtocol/>
         <Footer />
-      {/* <section className={index.container}>
-        <CarapaceLogoSvg className={index.logo} />
-        <h1>{siteConfig.title}</h1>
-      </section> */}
-    </Layout>
+      </div>
+
   );
 }
