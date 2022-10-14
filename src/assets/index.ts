@@ -13,6 +13,7 @@ import ledgerPrime from './ledgerPrime.png';
 import gsrVentures from './gsrVentures.png';
 import titanCapital from './titanCapital.png';
 import synthetix from './synthetix.png';
+import footerCarapace from './footerCarapace.png';
 
 
 export default {
@@ -31,4 +32,5 @@ export default {
   gsrVentures,
   titanCapital,
   synthetix,
+  footerCarapace,
 };

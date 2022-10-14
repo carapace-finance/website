@@ -5,6 +5,7 @@ import { footerLinks } from '../constants'
 const Footer = () => {
   return (
     <section id='footer'>
+      <div className="h-[61px] lg:h-[100px]"></div>
       <div className='flex flex-row justify-center'>
 
         <div className='flex-col w-[278px] mr-[152px]'>
@@ -36,8 +37,9 @@ const Footer = () => {
       </div>
       <div className='h-[339px]'></div>
       <div className="bg-[url('.././assets/footer.png')] bg-no-repeat bg-cover bg-center w-full h-[107px] flex flex-row items-center">
-        {/* TODO fix footer logo */}
-          <p className='text-white text-[40px] font-bold tracking-wide ml-[66px] flex-1'>carapace</p>
+        <div className='flex-1'>
+          <img src={assets.footerCarapace} alt="carapace" className='ml-[66px] h-[41px] w-[240px]'/>
+        </div>
           <p className='font-manrope font-medium text-white text-[22px] leading-[30px] mr-[60px]'>Copyright © {new Date().getFullYear()}</p>
       </div>
     </section>
