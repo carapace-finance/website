@@ -48,22 +48,38 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } flex-col p-6 bg-customDarkBlue absolute h-screen w-screen right-0 top-0 items-center`}
         >
-          <ul className="list-none flex justify-end items-start flex-1 flex-col">
-            {navLinks.map((nav, index) => (
+          <div className="flex flex-row items-center">
+            <img src={assets.footerCarapace} alt="carapace" className="w-[150px]" />
+            <div className="flex-1"></div>
+            <img src={assets.arrow} alt="back" className="w-[30px] h-[20px] object-cover" onClick={() => setToggle(!toggle)} />
+          </div>
+          <div className="h-[120px]"></div>
+          <ul className="list-none flex justify-start items-center  flex-col">
+            {navLinks.map((nav, _) => (
               <li
                 key={nav.id}
-                className={`list-none font-manrope font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-dimWhite"
-                } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                className={`text-white list-none font-manrope font-medium leading-[18px] cursor-pointer text-[22px] tracking-[0.02em]${
+                  active === nav.title ? "underline underline-offset-8 decoration-buttonPink" : ""
+                } mb-[55px]`}
                 onClick={() => setActive(nav.title)}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <a className="hover:decoration-buttonPink hover:text-white transition-all" href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>
-        </div>
+          <div className="h-[50px]"></div>
+      <PinkButton
+        fontWeight="font-medium"
+        fontSize="text-[22px]"
+        borderRadius="rounded-[100px]"
+        text="sign-up"
+        paddingX="px-[28px]"
+        paddingY="py-[5px]"
+        href={`#signup`}
+      />
+      </div>
       </div>
     </nav>
   );
