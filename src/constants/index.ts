@@ -123,3 +123,22 @@ export const footerLinks = [
     ],
   },
 ];
+
+export const navLinks = [
+  {
+    id: "home",
+    title: "Home",
+  },
+  {
+    id: "whitepaper",
+    title: "Whitepaper",
+  },
+  {
+    id: "documentation",
+    title: "Documentation",
+  },
+  {
+    id: "blogs",
+    title: "Blogs",
+  },
+];
