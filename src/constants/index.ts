@@ -141,8 +141,4 @@ export const navLinks = [
     id: "blogs",
     title: "Blogs",
   },
-  {
-    id: "signup",
-    title: "SIGN-UP",
-  },
 ];
