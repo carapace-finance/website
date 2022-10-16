@@ -20,7 +20,7 @@ const Navbar = () => {
             } mr-10`}
             onClick={() => setActive(nav.title)}
           >
-            <a className="hover:decoration-buttonPink hover:text-customDarkBlue transition-all" href={`#${nav.id}`}>{nav.title}</a>
+            <a className="hover:decoration-buttonPink hover:text-customDarkBlue transition-all" href={`${nav.id}`}>{nav.title}</a>
           </li>
         ))}
       </ul>
@@ -33,7 +33,7 @@ const Navbar = () => {
         text="sign-up"
         paddingX="px-[28px]"
         paddingY="py-[5px]"
-        href={`#signup`}
+        href={`signup`}
       />
       </div>
 
@@ -48,9 +48,9 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } flex-col p-6 bg-customDarkBlue absolute h-screen w-screen right-0 top-0 items-center`}
+          } flex-col p-6 bg-customDarkBlue h-full w-full right-0 top-0 items-center fixed overflow-hidden z-10`}
         >
-          <div className="flex flex-row items-center">
+          <div className="flex flex-row items-center w-full">
             <img src={assets.footerCarapace} alt="carapace" className="w-[150px]" />
             <div className="flex-1"></div>
             <img src={assets.arrow} alt="back" className="w-[30px] h-[20px] object-cover" onClick={() => setToggle(!toggle)} />
@@ -65,7 +65,7 @@ const Navbar = () => {
                 } mb-[55px]`}
                 onClick={() => setActive(nav.title)}
               >
-                <a className="hover:decoration-buttonPink hover:text-white transition-all" href={`#${nav.id}`}>{nav.title}</a>
+                <a className="hover:decoration-buttonPink hover:text-white transition-all" href={`${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>
@@ -77,7 +77,7 @@ const Navbar = () => {
         text="sign-up"
         paddingX="px-[28px]"
         paddingY="py-[5px]"
-        href={`#signup`}
+        href={`signup`}
       />
       </div>
       </div>
