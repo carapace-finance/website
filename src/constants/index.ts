@@ -40,12 +40,6 @@ export const supportingCompanies = [
     logo: titanCapital,
     link: "https://www.titancapital.vc/",
   },
-  {
-    id: "supportingCompanies-6",
-    title: "SYNTHETIX",
-    logo: synthetix,
-    link: "https://synthetix.io/",
-  },
 ];
 
 export const supporters = [
@@ -76,14 +70,17 @@ export const footerLinks = [
       {
         name: "Discord",
         link: "https://discord.gg/2hQC6q8CxA",
+        target: "_blank",
       },
       {
         name: "Twitter",
         link: "https://twitter.com/carapacefinance",
+        target: "_blank"
       },
       {
         name: "Blog",
-        link: "",
+        link: "blog",
+        target: ""
       },
     ],
   },
@@ -92,11 +89,13 @@ export const footerLinks = [
     links: [
       {
         name: "Whitepaper",
-        link: "",
+        link: "whitepaper",
+        target: ""
       },
       {
         name: "User Doc",
         link: "",
+        target: ""
       },
     ],
   },
@@ -106,6 +105,7 @@ export const footerLinks = [
       {
         name: "Github",
         link: "https://github.com/carapace-finance",
+        target: "_blank"
       },
     ],
   },
@@ -115,10 +115,12 @@ export const footerLinks = [
       {
         name: "Privacy Policy",
         link: "",
+        target: ""
       },
       {
         name: "Terms of use",
         link: "",
+        target: ""
       },
     ],
   },
