@@ -18,6 +18,7 @@ const Hero = () => {
           text="Sign-up for our Beta App"
           paddingX="px-7 sm:px-12"
           paddingY="py-7 sm:py-12"
+          href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"
         />
         </div>
       </div>

@@ -33,7 +33,7 @@ const Navbar = () => {
         text="sign-up"
         paddingX="px-[28px]"
         paddingY="py-[5px]"
-        href={`signup`}
+        href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"
       />
       </div>
 
@@ -77,7 +77,7 @@ const Navbar = () => {
         text="sign-up"
         paddingX="px-[28px]"
         paddingY="py-[5px]"
-        href={`signup`}
+        href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"
       />
       </div>
       </div>
