@@ -16,11 +16,11 @@ const Navbar = () => {
           <li
             key={nav.id}
             className={`decoration-buttonPink text-customDarkBlue list-none font-manrope font-normal cursor-pointer leading-[18px] tracking-[0.02em] text-[22px] ${
-              active === nav.title ? "underline underline-offset-4 decoration-2 decoration-buttonPink" : ""
+              active === nav.title ? "underline underline-offset-4 decoration-2 decoration-buttonPink decoration-solid" : ""
             } mr-10`}
             onClick={() => setActive(nav.title)}
           >
-            <a className={`hover:text-customDarkBlue ${active !== nav.title ? "group transition-all duration-300 ease-in-out  hover:no-underline" : "hover:decoration-buttonPink"}`} href={`${nav.id}`}>
+            <a className={`hover:text-customDarkBlue decoration-buttonPink ${active !== nav.title ? "group transition-all duration-300 ease-in-out  hover:no-underline" : "hover:decoration-buttonPink"}`} href={`${nav.id}`}>
               <span className={`bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"}`} >
                 {nav.title}
               </span>
