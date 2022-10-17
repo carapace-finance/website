@@ -19,7 +19,7 @@ export default function Home(): JSX.Element {
     //   title={`Hello from ${siteConfig.title}`}
     //   description="Carapace is building decentralized protection against default risk in crypto loans."
     // >
-      <div>
+      <div className="overscroll-x-none">
         <Navbar />
         <Hero />
         <div className="h-[67px] sm:h-[185px]"></div>
