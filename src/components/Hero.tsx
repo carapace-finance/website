@@ -5,7 +5,7 @@ import { PinkButton } from './Button/PinkButton'
 const Hero = () => {
   return (
     <section id='home'>
-      <div className="h-screen w-screen bg-[url('.././assets/hero.png')] bg-no-repeat bg-cover bg-center">
+      <div className="h-screen w-screen bg-[url('.././assets/heroBanner.gif')] bg-no-repeat bg-cover bg-center">
         <div className="flex flex-col justify-center items-center h-screen">
            <h1 className="tracking-tighter font-extrabold text-white text-9xl md:text-[180px] font-manrope">DeFy{" "}
             <br className='lg:hidden'/>

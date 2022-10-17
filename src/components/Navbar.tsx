@@ -56,7 +56,7 @@ const Navbar = () => {
             <img src={assets.arrow} alt="back" className="w-[30px] h-[20px] object-cover" onClick={() => setToggle(!toggle)} />
           </div>
           <div className="h-[120px]"></div>
-          <ul className="list-none flex justify-start items-center  flex-col">
+          <ul className="list-none flex justify-start items-center flex-col">
             {navLinks.map((nav, _) => (
               <li
                 key={nav.id}
