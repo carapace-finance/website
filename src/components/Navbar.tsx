@@ -9,18 +9,22 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex h-[65px] md:h-[102px] px-[20px] md:px-[64px] justify-between items-center">
-      <img src={assets.logo} alt="carapace" className="w-[145px] md:w-[245px] h-[43px] md:h-[62px]" />
+      <img src={assets.logo} alt="carapace" className="w-[145px] md:w-[245px] h-[43px] md:h-[62px] object-contain" />
 
       <ul className="list-none md:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, _) => (
           <li
             key={nav.id}
-            className={`text-customDarkBlue list-none font-manrope font-normal cursor-pointer leading-[18px] tracking-[0.02em] text-[22px] ${
-              active === nav.title ? "underline underline-offset-2 decoration-buttonPink" : ""
+            className={`decoration-buttonPink text-customDarkBlue list-none font-manrope font-normal cursor-pointer leading-[18px] tracking-[0.02em] text-[22px] ${
+              active === nav.title ? "underline underline-offset-4 " : ""
             } mr-10`}
             onClick={() => setActive(nav.title)}
           >
-            <a className="hover:decoration-buttonPink hover:text-customDarkBlue transition-all" href={`${nav.id}`}>{nav.title}</a>
+            <a className={`hover:text-customDarkBlue ${active !== nav.title ? "group transition-all duration-300 ease-in-out  hover:no-underline" : "hover:decoration-buttonPink"}`} href={`${nav.id}`}>
+              <span className={`bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"}`} >
+                {nav.title}
+              </span>
+            </a>
           </li>
         ))}
       </ul>
