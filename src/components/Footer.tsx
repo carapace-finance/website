@@ -42,7 +42,7 @@ const Footer = () => {
       <div className='h-[60px] lg:h-[339px]'></div>
       <div className="bg-[url('.././assets/mobileFooter.png')] lg:bg-[url('.././assets/footer.png')] bg-no-repeat bg-cover bg-center w-full h-[173px] xl:h-[107px] flex flex-col lg:flex-row items-center justify-center">
         <div className='flex lg:flex-1'>
-          <img src={assets.footerCarapace} alt="carapace" className='ml-0 lg:ml-[66px] h-[41px] w-[240px]'/>
+          <img src={assets.footerCarapace} alt="carapace" className='ml-0 lg:ml-[66px] h-[35px] w-[195px] lg:h-[41px] lg:w-[240px]'/>
         </div>
           <p className='font-manrope font-medium text-white text-[18px] sm:text-[22px] leading-[30px] mr-0 lg:mr-[60px] my-2'>Copyright © {new Date().getFullYear()}</p>
       </div>
