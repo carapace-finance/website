@@ -15,12 +15,16 @@ const Navbar = () => {
         {navLinks.map((nav, _) => (
           <li
             key={nav.id}
-            className={`text-customDarkBlue list-none font-manrope font-normal cursor-pointer leading-[18px] tracking-[0.02em] text-[22px] ${
-              active === nav.title ? "underline underline-offset-2 decoration-buttonPink" : ""
+            className={`decoration-buttonPink text-customDarkBlue list-none font-manrope font-normal cursor-pointer leading-[18px] tracking-[0.02em] text-[22px] ${
+              active === nav.title ? "underline underline-offset-4 decoration-buttonPink" : ""
             } mr-10`}
             onClick={() => setActive(nav.title)}
           >
-            <a className="hover:decoration-buttonPink hover:text-customDarkBlue transition-all" href={`${nav.id}`}>{nav.title}</a>
+            <a className={`${active !== nav.title ? "group transition-all duration-300 ease-in-out hover:text-customDarkBlue hover:no-underline" : "hover:text-customDarkBlue hover:decoration-buttonPink"}`} href={`${nav.id}`}>
+              <span className={`bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"}`} >
+                {nav.title}
+              </span>
+            </a>
           </li>
         ))}
       </ul>
