@@ -16,7 +16,7 @@ const Navbar = () => {
           <li
             key={nav.id}
             className={`decoration-buttonPink text-customDarkBlue list-none font-manrope font-normal cursor-pointer leading-[18px] tracking-[0.02em] text-[22px] ${
-              active === nav.title ? "underline underline-offset-4 " : ""
+              active === nav.title ? "underline underline-offset-4 decoration-2 decoration-buttonPink" : ""
             } mr-10`}
             onClick={() => setActive(nav.title)}
           >
