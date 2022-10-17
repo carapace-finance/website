@@ -40,12 +40,6 @@ export const supportingCompanies = [
     logo: titanCapital,
     link: "https://www.titancapital.vc/",
   },
-  {
-    id: "supportingCompanies-6",
-    title: "SYNTHETIX",
-    logo: synthetix,
-    link: "https://synthetix.io/",
-  },
 ];
 
 export const supporters = [

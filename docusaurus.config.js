@@ -47,7 +47,7 @@ const config = {
           src: "img/white_logo.svg",
         },
         items: [
-          { to: "/", label: "Home", position: "right" },
+          { to: "/home", label: "Home", position: "right" },
           { to: "/whitepaper", label: "White Paper", position: "right" },
           { to: "/documentation", label: "Documentation", position: "right" },
           { to: "/blogs", label: "Blogs", position: "right" },
