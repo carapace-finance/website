@@ -4,7 +4,7 @@ import { navLinks } from '../constants';
 import { PinkButton } from "./Button/PinkButton";
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState("Whitepaper");
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -63,7 +63,7 @@ const Navbar = () => {
                 className={`text-white list-none font-manrope font-medium leading-[18px] cursor-pointer text-[22px] tracking-[0.02em] mb-[55px]`}
                 onClick={() => setActive(nav.title)}
               >
-                <a className={`${active === nav.title ? "underline underline-offset-8 decoration-buttonPink" : ""}`} href={`${nav.id}`}>{nav.title}</a>
+                <a className={`${active === nav.title ? "underline underline-offset-8 decoration-buttonPink" : ""} hover:no-underline hover:text-white`} href={`${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>
