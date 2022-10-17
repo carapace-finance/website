@@ -9,7 +9,9 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex h-[65px] md:h-[102px] px-[20px] md:px-[64px] justify-between items-center">
-      <img src={assets.logo} alt="carapace" className="w-[145px] md:w-[245px] h-[43px] md:h-[62px] object-contain" />
+      <a href="/">
+        <img src={assets.logo} alt="carapace" className="w-[145px] md:w-[245px] h-[43px] md:h-[62px] object-contain" />
+      </a>
 
       <ul className="list-none lg:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, _) => (
