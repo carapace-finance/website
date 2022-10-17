@@ -57,59 +57,59 @@ const config = {
       colorMode: {
         disableSwitch: true,
       },
-      // footer: {
-      //   style: "dark",
-      //   links: [
-      //     {
-      //       title: "Protocol",
-      //       items: [
-      //         {
-      //           label: "White Paper",
-      //           to: "/whitepaper",
-      //         },
-      //         // {
-      //         //   label: "Docs",
-      //         //   to: "/docs/abstract",
-      //         // },
-      //         // {
-      //         //   label: "Developers",
-      //         //   to: "/developers/intro",
-      //         // },
-      //       ],
-      //     },
-      //     {
-      //       title: "Community",
-      //       items: [
-      //         {
-      //           label: "Discord",
-      //           href: "https://discord.gg/2hQC6q8CxA",
-      //         },
-      //         {
-      //           label: "Twitter",
-      //           href: "https://twitter.com/carapacefinance",
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: "More",
-      //       items: [
-      //         // {
-      //         //   label: "Blog",
-      //         //   to: "/blog",
-      //         // },
-      //         {
-      //           label: "GitHub",
-      //           href: "https://github.com/carapace-finance",
-      //         },
-      //       ],
-      //     },
-      //   ],
-      //   copyright: `Copyright © ${new Date().getFullYear()} Carapace.`,
-      // },
-      // prism: {
-      //   theme: lightCodeTheme,
-      //   darkTheme: darkCodeTheme,
-      // },
+      footer: {
+        style: "light",
+        links: [
+          {
+            title: "Protocol",
+            items: [
+              {
+                label: "White Paper",
+                to: "/whitepaper",
+              },
+              // {
+              //   label: "Docs",
+              //   to: "/docs/abstract",
+              // },
+              // {
+              //   label: "Developers",
+              //   to: "/developers/intro",
+              // },
+            ],
+          },
+          {
+            title: "Community",
+            items: [
+              {
+                label: "Discord",
+                href: "https://discord.gg/2hQC6q8CxA",
+              },
+              {
+                label: "Twitter",
+                href: "https://twitter.com/carapacefinance",
+              },
+            ],
+          },
+          {
+            title: "More",
+            items: [
+              // {
+              //   label: "Blog",
+              //   to: "/blog",
+              // },
+              {
+                label: "GitHub",
+                href: "https://github.com/carapace-finance",
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} Carapace.`,
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+      },
     }),
 };
 
