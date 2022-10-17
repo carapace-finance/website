@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="w-full flex h-[65px] md:h-[102px] px-[20px] md:px-[64px] justify-between items-center">
       <img src={assets.logo} alt="carapace" className="w-[145px] md:w-[245px] h-[43px] md:h-[62px] object-contain" />
 
-      <ul className="list-none md:flex hidden justify-end items-center flex-1">
+      <ul className="list-none lg:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, _) => (
           <li
             key={nav.id}
@@ -29,7 +29,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="md:block hidden">
+      <div className="lg:block hidden">
       <PinkButton
         fontWeight="font-medium"
         fontSize="text-[22px]"
@@ -41,11 +41,11 @@ const Navbar = () => {
       />
       </div>
 
-      <div className="md:hidden flex flex-1 justify-end items-center">
+      <div className="lg:hidden flex flex-1 justify-end items-center">
         <img
           src={assets.hamburger}
           alt="menu"
-          className="w-[22px] h-[16px] object-cover"
+          className="w-[22px] sm:w-[32px] h-[16px] sm:h-[26px] object-cover"
           onClick={() => setToggle(!toggle)}
         />
 
