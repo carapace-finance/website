@@ -16,8 +16,8 @@ const Hero = () => {
           fontSize="sm:text-[25.5px] text-lg"
           borderRadius="rounded-[200px]"
           text="Sign-up for our Beta App"
-          paddingX="px-7 sm:px-12"
-          paddingY="py-7 sm:py-12"
+          paddingX="px-7 sm:px-9"
+          paddingY="py-7 sm:py-9"
           href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"
         />
         </div>
