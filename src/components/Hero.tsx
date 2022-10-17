@@ -5,7 +5,7 @@ import { PinkButton } from './Button/PinkButton'
 const Hero = () => {
   return (
     <section id='home'>
-      <div className="h-screen w-screen bg-[url('.././assets/hero.png')] bg-no-repeat bg-cover bg-center">
+      <div className="h-screen w-screen bg-[url('.././assets/heroBanner.gif')] bg-no-repeat bg-cover bg-center">
         <div className="flex flex-col justify-center items-center h-screen">
            <h1 className="tracking-tighter font-extrabold text-white text-9xl md:text-[180px] font-manrope">DeFy{" "}
             <br className='lg:hidden'/>
@@ -18,6 +18,7 @@ const Hero = () => {
           text="Sign-up for our Beta App"
           paddingX="px-7 sm:px-12"
           paddingY="py-7 sm:py-12"
+          href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"
         />
         </div>
       </div>

@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='h-[60px] lg:h-[339px]'></div>
-      <div className="bg-[url('.././assets/footer.png')] bg-no-repeat bg-cover bg-center w-full h-[173px] xl:h-[107px] flex flex-col lg:flex-row items-center justify-center">
+      <div className="bg-[url('.././assets/mobileFooter.png')] md:bg-[url('.././assets/footer.png')] bg-no-repeat bg-cover bg-center w-full h-[173px] xl:h-[107px] flex flex-col lg:flex-row items-center justify-center">
         <div className='flex lg:flex-1'>
           <img src={assets.footerCarapace} alt="carapace" className='ml-0 lg:ml-[66px] h-[41px] w-[240px]'/>
         </div>
