@@ -10,7 +10,7 @@ const Footer = () => {
 
         <div className='flex flex-col w-[338px] lg:w-[278px] mr-0 lg:mr-[152px] items-center lg:items-start'>
           <img src={assets.footerLogo} alt="carapace" className='w-[180px]'/>
-          <p className='font-manrope font-normal text-[22px] sm:text-xl leading-[27px] text-center lg:text-left tracking-[0.01em] text-black opacity-40 mb-0 mt-12'>Accelerate the world's transition to decentralized finance by re-imagining how we manage credit.</p>
+          <p className='font-manrope font-normal text-[22px] sm:text-xl leading-[27px] text-center lg:text-left tracking-[0.01em] text-black opacity-40 mb-0 mt-12'>Accelerating the world's transition to decentralized finance by re-imagining how we manage credit.</p>
         </div>
 
         <div className='flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between w-[260px] md:w-[797px]'>
