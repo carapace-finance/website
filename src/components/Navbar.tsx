@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import assets from '../assets';
 import { navLinks } from '../constants';
-import { PinkButton } from "./Button/PinkButton";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -30,18 +29,6 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-
-      <div className="lg:block hidden">
-      <PinkButton
-        fontWeight="font-medium"
-        fontSize="text-[22px]"
-        borderRadius="rounded-[100px]"
-        text="sign-up"
-        paddingX="px-[28px]"
-        paddingY="py-[5px]"
-        href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"
-      />
-      </div>
 
       <div className="lg:hidden flex flex-1 justify-end items-center">
         <img
@@ -74,15 +61,6 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="h-[50px]"></div>
-      <PinkButton
-        fontWeight="font-medium"
-        fontSize="text-[22px]"
-        borderRadius="rounded-[100px]"
-        text="sign-up"
-        paddingX="px-[28px]"
-        paddingY="py-[5px]"
-        href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"
-      />
       </div>
       </div>
     </nav>
