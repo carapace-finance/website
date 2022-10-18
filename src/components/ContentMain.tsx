@@ -10,7 +10,7 @@ const ContentMain = () => {
         <div className='flex flex-row flex-wrap justify-center'>
           <AnimationWithTopText text="protect" bgImage="bg-[url('.././assets/animation1.png')]" />
           <div className='lg:w-[54px]'></div>
-          <ThreeLayerDescription height="sm:h-[410px] h-[366px]" width="w-[529px]" firstLayer="Earn risk-adjusted yields with protected loans." secondLayer="To earn risk-adjusted yields, you can lend money in under- collateralized loans protocols with protection." thirdLayer="Protected Loans"/>
+          <ThreeLayerDescription height="sm:h-[410px] h-[366px]" width="w-[529px]" firstLayer="Earn risk-adjusted yields with protected loans." secondLayer="To earn risk-adjusted yields through Carapace, you can lend money in under-collateralized loans protocols with protection." thirdLayer="Protected Loans"/>
         </div>
       <div className='lg:h-[52px] h-[97px]'></div>
       <div className='flex flex-row flex-wrap-reverse lg:flex-wrap justify-center'>

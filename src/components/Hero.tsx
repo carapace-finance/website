@@ -15,7 +15,7 @@ const Hero = () => {
           <PinkButton
           fontSize="sm:text-[25.5px] text-lg"
           borderRadius="rounded-[200px]"
-          text="Sign-up for our Beta"
+          text="Sign-up for Beta"
           paddingX="px-8 sm:px-8"
           paddingY="py-4 sm:py-4"
           href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"
