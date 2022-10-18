@@ -3,28 +3,33 @@ import Layout from "@theme/Layout";
 import React from "react";
 import CarapaceLogoSvg from "../../static/img/green_logo.svg";
 import index from "./index.module.css";
-import { Button } from "../components/Button/Button";
+import Hero from "../components/Hero";
+import ContentMain from "../components/ContentMain";
+import Supporters from "../components/Supporters";
+import LendingProtocol from "../components/LendingProtocol";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   const jobsPage = useDocusaurusContext().siteConfig.baseUrl + "jobs";
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Carapace is building decentralized protection against default risk in crypto loans."
-    >
-      <section className={index.container}>
-        <CarapaceLogoSvg className={index.logo} />
-        <h1>{siteConfig.title}</h1>
-        <div className={index.buttons}>
-          <Button
-            href="https://xzpl2jauxb6.typeform.com/to/hSmuyZph"
-            target="_blank"
-            text="Sign Up for Beta"
-          ></Button>
-          <Button href={jobsPage} target="_self" text="Join our Team"></Button>
-        </div>
-      </section>
-    </Layout>
+    // <Layout
+    //   title={`Hello from ${siteConfig.title}`}
+    //   description="Carapace is building decentralized protection against default risk in crypto loans."
+    // >
+      <div className="overflow-x-hidden">
+        <Navbar />
+        <Hero />
+        <div className="h-[67px] sm:h-[185px]"></div>
+        <ContentMain />
+        <div className="h-[153px] lg:h-[76px]"></div>
+        <Supporters />
+        <div className="h-[61px] lg:h-[199px]"></div>
+        <LendingProtocol/>
+        <Footer />
+      </div>
+
   );
 }
