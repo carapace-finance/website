@@ -77,26 +77,31 @@ export const footerLinks = [
         link: "https://twitter.com/carapacefinance",
         target: "_blank"
       },
-      {
-        name: "Blog",
-        link: "blog",
-        target: ""
-      },
+      // {
+      //   name: "Blog",
+      //   link: "blog",
+      //   target: ""
+      // },
     ],
   },
   {
     title: "PROTOCOL DESIGN",
     links: [
       {
-        name: "Whitepaper",
-        link: "whitepaper",
-        target: ""
-      },
-      {
-        name: "User Doc",
+        name: "Coming soon",
         link: "",
         target: ""
       },
+      // {
+      //   name: "Whitepaper",
+      //   link: "whitepaper",
+      //   target: ""
+      // },
+      // {
+      //   name: "User Doc",
+      //   link: "",
+      //   target: ""
+      // },
     ],
   },
   {
@@ -113,34 +118,39 @@ export const footerLinks = [
     title: "LEGAL",
     links: [
       {
-        name: "Privacy Policy",
+        name: "Coming soon",
         link: "",
         target: ""
-      },
-      {
-        name: "Terms of use",
-        link: "",
-        target: ""
-      },
+      },      
+      // {
+      //   name: "Privacy Policy",
+      //   link: "",
+      //   target: ""
+      // },
+      // {
+      //   name: "Terms of use",
+      //   link: "",
+      //   target: ""
+      // },
     ],
   },
 ];
 
 export const navLinks = [
-  {
-    id: "/",
-    title: "Home",
-  },
-  {
-    id: "whitepaper",
-    title: "Whitepaper",
-  },
-  {
-    id: "documentation",
-    title: "Documentation",
-  },
-  {
-    id: "blogs",
-    title: "Blogs",
-  },
+  // {
+  //   id: "/",
+  //   title: "Home",
+  // },
+  // {
+  //   id: "whitepaper",
+  //   title: "Whitepaper",
+  // },
+  // {
+  //   id: "documentation",
+  //   title: "Documentation",
+  // },
+  // {
+  //   id: "blogs",
+  //   title: "Blogs",
+  // },
 ];
