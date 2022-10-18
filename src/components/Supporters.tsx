@@ -16,9 +16,10 @@ const Supporters = () => {
             <WhiteCard key={supportingCompanies[1].id} link={supportingCompanies[1].link} img={supportingCompanies[1].logo} title={supportingCompanies[1].title} />
             <WhiteCard key={supportingCompanies[2].id} link={supportingCompanies[2].link} img={supportingCompanies[2].logo} title={supportingCompanies[2].title} />
           </div>
-          <div className='hidden lg:grid place-items-center grid-cols-2 mt-8'>
+          <div className='hidden lg:grid place-items-center grid-cols-3 gap-x-[29.57px] mt-8'>
             <WhiteCard key={supportingCompanies[3].id} link={supportingCompanies[3].link} img={supportingCompanies[3].logo} title={supportingCompanies[3].title} />
             <WhiteCard key={supportingCompanies[4].id} link={supportingCompanies[4].link} img={supportingCompanies[4].logo} title={supportingCompanies[4].title} />
+            <WhiteCard key={supportingCompanies[5].id} link={supportingCompanies[5].link} img={supportingCompanies[5].logo} title={supportingCompanies[5].title} />
           </div>
           <div className='lg:hidden grid place-items-center grid-cols-2 gap-x-[29.57px]'>
             <WhiteCard key={supportingCompanies[0].id} link={supportingCompanies[0].link} img={supportingCompanies[0].logo} title={supportingCompanies[0].title} />
@@ -28,8 +29,9 @@ const Supporters = () => {
             <WhiteCard key={supportingCompanies[2].id} link={supportingCompanies[2].link} img={supportingCompanies[2].logo} title={supportingCompanies[2].title} />
             <WhiteCard key={supportingCompanies[3].id} link={supportingCompanies[3].link} img={supportingCompanies[3].logo} title={supportingCompanies[3].title} />
           </div>
-          <div className='lg:hidden grid place-items-center grid-cols-1 mt-8'>
+          <div className='lg:hidden grid place-items-center grid-cols-2 mt-8'>
             <WhiteCard key={supportingCompanies[4].id} link={supportingCompanies[4].link} img={supportingCompanies[4].logo} title={supportingCompanies[4].title} />
+            <WhiteCard key={supportingCompanies[5].id} link={supportingCompanies[5].link} img={supportingCompanies[5].logo} title={supportingCompanies[5].title} />
           </div>
           <div className='h-[20px]'></div>
         <div className='hidden lg:grid place-items-center grid-cols-3 gap-x-[29.57px]'>

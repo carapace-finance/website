@@ -6,6 +6,7 @@ import tribeCapital from '../assets/tribeCapital.png';
 import ledgerPrime from '../assets/ledgerPrime.png';
 import gsrVentures from '../assets/gsrVentures.png';
 import titanCapital from '../assets/titanCapital.png';
+import angelDAO from '../assets/angelDAO.png';
 import synthetix from '../assets/synthetix.png';
 
 
@@ -39,6 +40,12 @@ export const supportingCompanies = [
     title: "Titan Capital",
     logo: titanCapital,
     link: "https://www.titancapital.vc/",
+  },
+  {
+    id: "supportingCompanies-6",
+    title: "Angel DAO",
+    logo: angelDAO,
+    link: "https://www.angeldao.org/",
   },
 ];
 
