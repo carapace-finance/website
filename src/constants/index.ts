@@ -128,7 +128,7 @@ export const footerLinks = [
         name: "Coming soon",
         link: "",
         target: ""
-      },      
+      },
       // {
       //   name: "Privacy Policy",
       //   link: "",
@@ -144,20 +144,20 @@ export const footerLinks = [
 ];
 
 export const navLinks = [
-  // {
-  //   id: "/",
-  //   title: "Home",
-  // },
-  // {
-  //   id: "whitepaper",
-  //   title: "Whitepaper",
-  // },
-  // {
-  //   id: "documentation",
-  //   title: "Documentation",
-  // },
-  // {
-  //   id: "blogs",
-  //   title: "Blogs",
-  // },
+  {
+    id: "/",
+    title: "Home",
+  },
+  {
+    id: "/whitepaper",
+    title: "Whitepaper",
+  },
+  {
+    id: "/documentation",
+    title: "Documentation",
+  },
+  {
+    id: "/blog",
+    title: "Blog",
+  },
 ];

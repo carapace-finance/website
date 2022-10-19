@@ -15,10 +15,10 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   const jobsPage = useDocusaurusContext().siteConfig.baseUrl + "jobs";
   return (
-    // <Layout
-    //   title={`Hello from ${siteConfig.title}`}
-    //   description="Carapace is building decentralized protection against default risk in crypto loans."
-    // >
+    <Layout
+      title={`Hello from ${siteConfig.title}`}
+      description="Carapace is building decentralized protection against default risk in crypto loans."
+    >
       <div className="overflow-x-hidden">
         <Navbar />
         <Hero />
@@ -30,6 +30,6 @@ export default function Home(): JSX.Element {
         <LendingProtocol/>
         <Footer />
       </div>
-
+</Layout>
   );
 }
