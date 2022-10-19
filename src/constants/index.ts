@@ -76,7 +76,7 @@ export const footerLinks = [
     links: [
       {
         name: "Discord",
-        link: "https://discord.gg/2hQC6q8CxA",
+        link: "https://discord.gg/f34GS9uheN",
         target: "_blank",
       },
       {
