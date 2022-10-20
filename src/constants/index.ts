@@ -153,7 +153,7 @@ export const navLinks = [
     title: "Whitepaper",
   },
   {
-    id: "/documentation",
+    id: "/docs/abstract",
     title: "Documentation",
   },
   {
