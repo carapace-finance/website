@@ -50,19 +50,18 @@ const config = {
       fathomAnalytics: {
         siteId: process.env.FATHOM_SITE_ID,
       },
-      // navbar: {
-      //   logo: {
-      //     alt: "Carapace Logo",
-      //     src: "img/white_logo.svg",
-      //   },
-      //   items: [
-      //     { to: "/home", label: "Home", position: "right" },
-      //     { to: "/whitepaper", label: "White Paper", position: "right" },
-      //     { to: "/documentation", label: "Documentation", position: "right" },
-      //     { to: "/blog", label: "Blog", position: "right" },
-      //     { to: "/signup", label: "SIGN-UP", position: "right" },
-      //   ],
-      // },
+      navbar: {
+        logo: {
+          alt: "Carapace Logo",
+          src: "img/white_logo.svg",
+        },
+        items: [
+          { to: "/home", label: "Home", position: "right" },
+          { to: "/whitepaper", label: "White Paper", position: "right" },
+          { to: "/documentation", label: "Documentation", position: "right" },
+          { to: "/blog", label: "Blog", position: "right" },
+        ],
+      },
       colorMode: {
         disableSwitch: true,
       },
