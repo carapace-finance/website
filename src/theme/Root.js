@@ -7,7 +7,7 @@ export default function Root({ children }) {
   return (
     <div>
     <Navbar />
-      <>{children}</>;
+      <>{children}</>
     <Footer />
     </div>
   );
