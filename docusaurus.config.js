@@ -27,7 +27,9 @@ const config = {
         //   sidebarPath: require.resolve("./sidebars.js"),
         //   editUrl: "https://github.com/carapace-finance/website",
         // },
-        docs: false,
+        docs: {
+          sidebarPath: require.resolve("./sidebars.js"),
+        },
         blog: {
           showReadingTime: true,
         },

@@ -23,6 +23,7 @@
     --ifm-color-primary-lighter: #359962;
     --ifm-color-primary-lightest: #3cad6e;
     --ifm-code-font-size: 95%;
+    --ifm-navbar-height: 0;
   }
 
   nav {
