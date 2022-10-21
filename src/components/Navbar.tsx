@@ -1,9 +1,15 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import assets from '../assets';
 import { navLinks } from '../constants';
 
+const usePathname = () => {
+  const location = useLocation();
+  return location.pathname;
+};
+
 const Navbar = () => {
-  const [active, setActive] = useState(window.location.pathname);
+  const [active, setActive] = useState(usePathname);
   const [toggle, setToggle] = useState(false);
 
   return (
