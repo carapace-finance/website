@@ -4,7 +4,7 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-// require('dotenv').config()
+require('dotenv').config()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,7 +16,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "Carapace",
   projectName: "website",
-  // plugins: [require.resolve("docusaurus-plugin-fathom")],
+  plugins: [require.resolve("docusaurus-plugin-fathom")],
   presets: [
     [
       "classic",
