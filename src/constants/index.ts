@@ -83,11 +83,11 @@ export const footerLinks = [
         link: "https://twitter.com/carapacefinance",
         target: "_blank"
       },
-      // {
-      //   name: "Blog",
-      //   link: "blog",
-      //   target: ""
-      // },
+      {
+        name: "Blog",
+        link: "blog",
+        target: ""
+      },
     ],
   },
   {
