@@ -4,7 +4,7 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-require('dotenv').config()
+// require('dotenv').config()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,7 +16,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "Carapace",
   projectName: "website",
-  plugins: [require.resolve("docusaurus-plugin-fathom")],
+  // plugins: [require.resolve("docusaurus-plugin-fathom")],
   presets: [
     [
       "classic",
@@ -50,18 +50,18 @@ const config = {
       fathomAnalytics: {
         siteId: process.env.FATHOM_SITE_ID,
       },
-      // navbar: {
-      //   logo: {
-      //     alt: "Carapace Logo",
-      //     src: "img/white_logo.svg",
-      //   },
-      //   items: [
-      //     { to: "/home", label: "Home", position: "right" },
-      //     { to: "/whitepaper", label: "White Paper", position: "right" },
-      //     { to: "/documentation", label: "Documentation", position: "right" },
-      //     { to: "/blog", label: "Blog", position: "right" },
-      //   ],
-      // },
+      navbar: {
+        // logo: {
+        //   alt: "Carapace Logo",
+        //   src: "img/white_logo.svg",
+        // },
+        items: [
+          { to: "/home", label: "Home", position: "right" },
+          { to: "/whitepaper", label: "White Paper", position: "right" },
+          { to: "/docs", label: "Documentation", position: "right" },
+          { to: "/blog", label: "Blog", position: "right" },
+        ],
+      },
       colorMode: {
         disableSwitch: true,
       },
