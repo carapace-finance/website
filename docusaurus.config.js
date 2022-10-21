@@ -32,9 +32,7 @@ const config = {
         //   showReadingTime: true,
         //   editUrl: "https://github.com/carapace-finance/website",
         // },
-        blog: {
-          showReadingTime: true,
-        },
+        blog: false,
         theme: {
           customCss: require.resolve("./src/style/custom.css"),
         },
