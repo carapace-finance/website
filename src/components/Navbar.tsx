@@ -3,7 +3,7 @@ import assets from '../assets';
 import { navLinks } from '../constants';
 
 const Navbar = () => {
-  const [active, setActive] = useState(window.location.pathname);
+  const [active, setActive] = useState('window.location.pathname');
   const [toggle, setToggle] = useState(false);
 
   return (
