@@ -7,9 +7,6 @@ import Hero from "../components/Hero";
 import ContentMain from "../components/ContentMain";
 import Supporters from "../components/Supporters";
 import LendingProtocol from "../components/LendingProtocol";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
