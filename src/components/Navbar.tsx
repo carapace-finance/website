@@ -1,9 +1,15 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import assets from '../assets';
 import { navLinks } from '../constants';
 
+const usePathname = () => {
+  const location = useLocation();
+  return location.pathname;
+};
+
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState(usePathname);
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -17,11 +23,14 @@ const Navbar = () => {
           <li
             key={nav.id}
             className={`decoration-buttonPink text-customDarkBlue list-none font-manrope font-normal cursor-pointer leading-[18px] tracking-[0.02em] text-[22px] ${
-              active === nav.title ? "underline underline-offset-4 decoration-2 decoration-buttonPink decoration-solid" : ""
+              active === nav.id ? "underline underline-offset-4 decoration-2 decoration-buttonPink decoration-solid" : ""
             } mr-10`}
-            onClick={() => setActive(nav.title)}
+            onClick={() => {
+              setActive(nav.id)
+            }
+          }
           >
-            <a className={`hover:text-customDarkBlue decoration-buttonPink ${active !== nav.title ? "group transition-all duration-300 ease-in-out  hover:no-underline" : "hover:decoration-buttonPink"}`} href={`${nav.id}`}>
+            <a className={`hover:text-customDarkBlue decoration-buttonPink ${active !== nav.id ? "group transition-all duration-300 ease-in-out  hover:no-underline" : "hover:decoration-buttonPink"}`}  href={`${nav.id}`}>
               <span className={`bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"}`} >
                 {nav.title}
               </span>
@@ -31,13 +40,14 @@ const Navbar = () => {
       </ul>
 
       <div className="lg:hidden flex flex-1 justify-end items-center">
+        <a onClick={() => setToggle(!toggle)}>MENU</a>
         {/* <img
           src={assets.hamburger}
           alt="menu"
           className="w-[22px] sm:w-[32px] h-[16px] sm:h-[26px] object-cover"
           onClick={() => setToggle(!toggle)}
-        /> */}
-
+        />
+ */}
         <div
           className={`${
             !toggle ? "hidden" : "flex"
@@ -54,9 +64,9 @@ const Navbar = () => {
               <li
                 key={nav.id}
                 className={`text-white list-none font-manrope font-medium leading-[18px] cursor-pointer text-[22px] tracking-[0.02em] mb-[55px]`}
-                onClick={() => setActive(nav.title)}
+                onClick={() => setActive(nav.id)}
               >
-                <a className={`${active === nav.title ? "underline underline-offset-8 decoration-buttonPink" : ""} hover:no-underline hover:text-white`} href={`${nav.id}`}>{nav.title}</a>
+                <a className={`${active === nav.id ? "underline underline-offset-8 decoration-buttonPink" : ""} hover:no-underline hover:text-white`} href={`${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>
