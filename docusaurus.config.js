@@ -31,6 +31,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
         },
         blog: {
+          blogSidebarCount: 8,
           showReadingTime: true,
         },
         theme: {
