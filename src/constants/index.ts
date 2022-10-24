@@ -85,7 +85,7 @@ export const footerLinks = [
       },
       {
         name: "Blog",
-        link: "blog",
+        link: "",
         target: ""
       },
     ],
