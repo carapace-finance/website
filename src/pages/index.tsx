@@ -1,7 +1,6 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import React from "react";
-import CarapaceLogoSvg from "../../static/img/green_logo.svg";
 import index from "./index.module.css";
 import Hero from "../components/Hero";
 import ContentMain from "../components/ContentMain";
