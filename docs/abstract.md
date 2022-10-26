@@ -7,27 +7,22 @@ hide_table_of_contents: false
 
 import styles from "./docs.module.css";
 
-# Hello from Docusaurus
+# Tutorial Intro
 
-<p className={styles.subtitle}>Are you ready to create the documentation site for your open source project?</p>
+<p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
 
-## Headers
+## Heading 2
 
-will show up on the table of contents on the upper right
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-So that your users will know what this page is all about without scrolling down or even without reading too much.
+## Heading 3
 
-## Only h2 and h3 will be in the TOC by default.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-You can configure the TOC heading levels either per-document or in the theme configuration.
-
-The headers are well-spaced so that the hierarchy is clear.
-
-- lists will help you
-- present the key points
-- that you want your users to remember
-  - and you may nest them
-    - multiple times
+<ul className={styles.bulletpoints}>
+<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+</ul>
 
 ## Custom ID headers {#custom-id}
 
