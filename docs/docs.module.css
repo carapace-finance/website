@@ -43,3 +43,12 @@ p {
   width: 1em;
   margin-left: -1em
 }
+
+code {
+  @apply bg-[#F0F0F0];
+  @apply py-9 !important;
+  @apply px-11 !important;
+  @apply rounded-2xl !important;
+  @apply inline-block;
+  @apply my-5;
+}
