@@ -47,8 +47,14 @@ p {
 code {
   @apply bg-[#F0F0F0];
   @apply py-9 !important;
-  @apply px-11 !important;
+  @apply px-10 !important;
   @apply rounded-2xl !important;
   @apply inline-block;
   @apply my-5;
+  @apply text-[18px];
+}
+
+article {
+  @apply ml-[77px];
+  @apply mr-[44px];
 }

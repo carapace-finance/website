@@ -1,13 +1,12 @@
 ---
 sidebar_position: 1
+title: "Tutorial Intro"
 pagination_next: null
 pagination_prev: null
 hide_table_of_contents: false
 ---
 
 import styles from "./docs.module.css";
-
-# Tutorial Intro
 
 <p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
 
