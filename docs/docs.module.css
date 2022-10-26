@@ -1,0 +1,68 @@
+.subtitle {
+  @apply text-opacity-50;
+  @apply mt-0;
+  @apply mb-16 !important;
+}
+
+h1 {
+  @apply text-[64px];
+  @apply font-medium;
+}
+h2, h3 {
+  @apply text-[#4B4B4B];
+  @apply font-medium;
+  @apply text-[40px];
+  @apply mb-[43px] !important;
+  @apply mt-[47px] !important;
+}
+p {
+  @apply font-manrope;
+  @apply text-[#616161];
+  @apply font-normal;
+  @apply leading-7;
+  @apply text-xl;
+}
+
+.bulletpoints {
+  @apply list-none;
+  @apply text-[#616161];
+  @apply ml-6;
+}
+
+.bulletpoints li {
+  @apply font-manrope;
+  @apply font-normal;
+  @apply leading-7;
+  @apply text-xl;
+  @apply pl-2;
+}
+
+.bulletpoints li::marker {
+  content: "\2022";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em
+}
+
+code {
+  @apply bg-[#F0F0F0];
+  @apply py-9 !important;
+  @apply px-10 !important;
+  @apply rounded-2xl !important;
+  @apply inline-block;
+  @apply my-5;
+  @apply text-[18px];
+}
+
+article {
+  @apply ml-[77px];
+  @apply mr-[44px];
+}
+
+li::marker {
+  content: none;
+}
+
+main {
+  @apply mt-10;
+}
