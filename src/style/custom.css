@@ -54,7 +54,8 @@
   }
 
   h1 {
-    @apply text-4xl;
+    @apply text-[64px];
+    @apply font-medium;
   }
   h2 {
     @apply text-3xl;

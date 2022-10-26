@@ -1,0 +1,6 @@
+  .subtitle {
+    @apply text-[#616161];
+    @apply text-opacity-50;
+    @apply text-xl;
+    @apply leading-7;
+  }
