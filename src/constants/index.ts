@@ -7,7 +7,6 @@ import ledgerPrime from '../assets/ledgerPrime.png';
 import gsrVentures from '../assets/gsrVentures.png';
 import titanCapital from '../assets/titanCapital.png';
 import angelDAO from '../assets/angelDAO.png';
-import synthetix from '../assets/synthetix.png';
 
 
 export const supportingCompanies = [
@@ -84,11 +83,11 @@ export const footerLinks = [
         link: "https://twitter.com/carapacefinance",
         target: "_blank"
       },
-      // {
-      //   name: "Blog",
-      //   link: "blog",
-      //   target: ""
-      // },
+      {
+        name: "Blog",
+        link: "",
+        target: ""
+      },
     ],
   },
   {
@@ -148,14 +147,14 @@ export const navLinks = [
     id: "/",
     title: "Home",
   },
-  {
-    id: "/whitepaper",
-    title: "Whitepaper",
-  },
-  {
-    id: "/docs/abstract",
-    title: "Documentation",
-  },
+  // {
+  //   id: "/whitepaper",
+  //   title: "Whitepaper",
+  // },
+  // {
+  //   id: "/docs/abstract",
+  //   title: "Documentation",
+  // },
   {
     id: "/blog",
     title: "Blog",
