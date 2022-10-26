@@ -24,6 +24,7 @@
     --ifm-color-primary-lightest: #3cad6e;
     --ifm-code-font-size: 95%;
     --ifm-navbar-height: 0;
+    --ifm-menu-color-background-active: transparent;
   }
 
   nav {

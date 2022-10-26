@@ -58,3 +58,11 @@ article {
   @apply ml-[77px];
   @apply mr-[44px];
 }
+
+li::marker {
+  content: none;
+}
+
+main {
+  @apply mt-10;
+}
