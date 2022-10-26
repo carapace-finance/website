@@ -4,7 +4,7 @@ import { footerLinks } from '../constants'
 
 const Footer = () => {
   return (
-    <section id='footer'>
+    <section id='footer' className='border-t bg-[#F9F9FF]'>
       <div className="h-[61px] lg:h-[100px]"></div>
       <div className='flex flex-col lg:flex-row justify-center items-center lg:items-start'>
 
