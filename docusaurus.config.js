@@ -32,7 +32,6 @@ const config = {
           breadcrumbs: false,
         },
         blog: {
-          blogSidebarCount: 8,
           showReadingTime: true,
         },
         theme: {
@@ -51,7 +50,7 @@ const config = {
       // navbar: {
       //   logo: {
       //     alt: "Carapace Logo",
-      //     src: "",
+      //     src: "img/white_logo.svg",
       //   },
       //   items: [
       //     { to: "/home", label: "Home", position: "right" },
