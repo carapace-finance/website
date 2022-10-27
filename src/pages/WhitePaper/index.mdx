@@ -169,83 +169,102 @@ You can get your share of underlying tokens by multiplying your sToken share wit
 
 Although an sToken amount stays constant, the token accumulates interest through the exchange rate; the exchange rate keeps increasing as a premium is paid by protection buyers. Thus, each sToken is exchangeable with an increasing amount of its underlying token. In other words, the interest for each sToken holder is the delta between the sToken \* the exchange rate when they exit the market and the sToken \* the exchange rate when they enter the market. The exchange rate decreases only when the capital is locked for potential default claim payouts.
 
-Mathematically speaking, the exchange rate changes only when total_accrued_premiums or total_default_payouts change, which means only when there are premium accrual or default payouts. The exchange rate doesn’t change with the seller's deposit or withdrawal amount because the sTokens minted and sTokens burned will be proportional to the deposited or withdrawn amount. The protection purchase doesn’t also change the exchange rate at that block because there is no premium accrued for that protection yet.
-
-Practically speaking, the exchange rate state change happens at the seller's transactions, not at the buyer’s transactions, for gas efficiency. This is because the only time we need to change the exchange rate is when a seller deposits or withdrawals. In these transactions, our accrueInterest method is called to factor in accrued premium for sTokens. The method retroactively accrues premium in each prior block where the accrueInterest method was not triggered and then changes the exchange rate, which effectively means premium for protection sellers is accrued.
+Mathematically speaking, the exchange rate changes only when *total_accrued_premiums* or *total_default_payouts* change, which means only when there are premium accrual or default payouts. The exchange rate doesn’t change with the seller's deposit or withdrawal amount because the sTokens minted and sTokens burned will be proportional to the deposited or withdrawn amount. The protection purchase doesn’t also change the exchange rate at that block because there is no premium accrued for that protection yet.
 
 One key property of the exchange rate is that the exchange rate from time A to B and B to C is the same as the exchange rate from A to C. If we calculate the exchange rate at time C from time A, we get the same exchange rate when we calculate the exchange rate at time B from time A and then calculate the exchange at time C from time B. In both ways, the exchange rate at C will be the same.
-Accrued Premium
-As we discussed above,
-the exchange rate = total_sToken_underlying / total_sTokens
 
-In this section, we discuss how we calculate the total sToken underlying token amount.
+### Accrued Premium
+As we discussed above,<br />
+*the exchange rate = total_sToken_underlying / total_sTokens*
 
+where<br />
+*total_sToken_underlying*
+= *total_seller_deposit + total_accrued_premiums - total_default_payouts(if any)*
 
-total_sToken_underlying
-= total_seller_deposit + total_accrued_premiums - total_default_payouts(if any)
+The *total_seller_deposit* is self-explanatory. The *total_default_payouts* is the amount of capital locked for potential default claim payouts.
 
-The total_seller_deposit is self-explanatory. The total_default_payouts is the amount of capital locked for potential default claim payouts.
+The biggest question is how we calculate the *total_accrued_premiums*. In short, the premium paid by a buyer will accrue for sellers over the duration of protection.
 
-The question is how we calculate total_accrued_premiums. In short, the premium paid by a buyer will accrue for sellers over the duration of protection(In the upcoming versions, we will add interest from rehypothecation on top of the accrued premiums.)
-
-Accrued premium is priced based on three main factors:
-K is a constant amount that acts like a unit.
-t is the beginning time and T is the end time of protection.
- is the risk factor from the premium pricing formula for this protection divided by 365.
-
-Accrued premium AP between any time t and T:
+Accrued premium AP between any time t and T:<br />
 AP = K * ( e- t *  - e- T* )
 
-We discuss each factor below.
-K
+We will explain the premium accrual in more detail below. Accrued premium is priced based on three main factors:<br />
+<ul>
+<li>1. K is a constant amount that acts like a unit.</li>
+<li>2. t is the beginning time and T is the end time of protection.</li>
+<li>3. is the risk factor from the premium pricing formula for this protection divided by 365.</li>
+</ul>
+
+### K
+
 K = P / ( e- t *  - e- T* )
 
-where P is protection_premium - protocol_fees.
+where P is protection_premium - *protocol_fees*.
 
 Imagine that a protection buyer has bought 180 days protection for $10,000 and the protocol fee is $100. Then:
 
 K = (10,000 - 100) / (1 - e- 180 * )
-t and T
-t is the beginning time and T is the end time of protection. In other words, duration is T - t.
-where: 0 < t < T < the protection period
+
+### t and T
+
+t is the beginning time and T is the end time of protection. In other words, duration is T - t.<br />
+where: 0 < t < T
 
 t and T can be seconds as long as they are expressed in years. This is because we use 365 in the risk factor below.
-𝜆
- is the risk factor from the premium pricing formula for this protection divided by 365 (we use 365 regardless of the duration to get units in years). We assume risk follows poisson distribution in line with premium pricing, similar to what traditional finance does to get the probability of survival and default events.
 
-= risk_factor / 365
-= (((LEVERAGE_RATIO_CEILING + BUFFER) - leverage_ratio)
-                  / (leverage_ratio - (LEVERAGE_RATIO_FLOOR - BUFFER)))
-              * CURVATURE / 365
-Example
-Imagine that a protection buyer has bought 180 days protection for $10,000 and the protocol fee is $100. The premium for the pool is paid on day 0, and the protection covers till day 180. After 180 days, how do we calculate the accrued premium?
+### 𝜆
+𝜆 is the risk factor from the premium pricing formula for this protection divided by 365 (we use 365 regardless of the duration to get units in years). We assume risk follows Poisson distribution in line with premium pricing.
 
-K = (10,000 - 100) / (1 - e- 180 * )
+𝜆<br />
+= risk_factor / 365<br />
+= (((LEVERAGE_RATIO_CEILING + BUFFER) - leverage_ratio)<br />
+                  / (*leverage_ratio* - (*LEVERAGE_RATIO_FLOOR* - *BUFFER*)))<br />
+              \* *CURVATURE* / 365
 
-Accrued premium(AP) from day 0 to day 180
-= K * ( e- 0 *  - e- 180* )
-= K * ( 1 - e- 180 *  )
+### Example
 
-We can also say that the accrued premium for day 0 + day 1 + day 2 + … + day 180
+Imagine that a protection buyer has bought 180 days protection for $10,000 and the protocol fee is $100. The premium for the pool is paid on day 0, and the protection covers till day 180. How do we calculate the accrued premium after 180 days?
+
+K = (10,000 - 100) / (1 - e- 180 \* )
+
+Accrued premium(AP) from day 0 to day 180<br/>
+= K \* ( e- 0 \*  - e- 180\* )<br/>
+= K \* ( 1 - e- 180 \*  )
+
+We can also say that the accrued premium for day 0 + day 1 + day 2 + … + day 180<br />
 = t = 1180K * ( e-(t-1) *  - e- t * )
-Transitivity
+
+### Transitivity
+
 The accrued premium has a transitive property. Accrued premium from time A to C = Accrued premium from time A to B + accrued premium from time B to C.
-Fair Distribution
+
+
+### Fair Distribution
+
 One of the most important principles of yield distribution is fairness. I will outline how we distribute yield fairly with the above distribution mechanism.
 
 First, at the risk of stating the obvious, a protection seller is entitled to receive a premium from protection buyers only when they protect them. Thus, protection sellers get a premium only when their locking period overlaps with the protection duration of protection buyers. This is why we accrue a premium over the duration of protection following the poisson distribution. Second, when a seller withdraws, they get a proportional amount of premium depending on their share of total capital provided in a given block. Third, the longer they keep their capital in a pool, the more premium they can earn. They can earn more interest with the longer deposit term because the delta between the sToken * the exchange rate when they exit the market and the sToken * the exchange rate when they enter the market will be bigger.
-Payouts
-Premium
+
+## Payouts
+
+### Premium
+
 When a locking term ends, a protection seller can get a proportional amount of all the premiums in a pool depending on the amount of protection they have provided.
-Protection
+
+### Protection
+
 Protection buyers get protection depending on how much premium they have paid. They must show their proof of loss in the form of an LP token in underlying lending protocols. More specifically, they get protection in exchange for the LP token and can get only what they have lost.
-Security
+
+## Security
+
 We take security seriously to maintain trust in our system.
 
 In life insurance, a buyer might assassinate somebody and then attempt to collect money from the insurance carrier. By the same token, it is possible that a buyer of credit default swaps manipulates a default event for a profit.
 
 We have a defense mechanism against this classic insurance problem. In short, we require Protection buyers to be a lender of an underlying loan through our proof of loss system.
-Proof of Loss
+
+### Proof of Loss
+
 More specifically, our proof of loss system requires Protection buyers to lock the LP tokens representing a loan amount in under-collateralized lending protocols. In this way, only a lender can be a protection buyer, and a protection buyer can get only what they have lost.
 
 There are two possible attacks against this system where a protection buyer who is also a lender in an underlying loan manipulates a default event.
@@ -253,7 +272,9 @@ There are two possible attacks against this system where a protection buyer who 
 First, self-loan. Let's say Bob lends $10k to himself as an LP and borrows $100k in total. Bob pays a premium to Carapace to get $10k worth of protection. He maliciously defaults and runs away with $100k + $10k - premium. Second, collusion between a lender and a borrower. Bob(LP) lends $10k to Alice(borrower). Alice borrows $100k in total. Bob pays a premium to Carapace to get $10k worth of protection. Alice maliciously defaults. Bob and Alice run away with $100k - premium. Legit under-collateralized lending protocols have a security model against these attacks. Most importantly, borrowers are required to go through the KYC process. It goes without saying that Bob and Alice face significant reputation risk that damages their reputation widely and serious legal risk of getting arrested in both cases as long as there is an identity system. Some protocols, such as Goldfinch have another layer of protection where a randomly chosen auditor carefully chooses a borrower who is not involved in collusion.
 
 Thus, it is critical to rigorously review each under-collateralized lending protocol and ensure that they have the right security model.
-Treasury
+
+## Treasury
+
 Treasury is a revenue stored for the growth and security of the protocol. It can be used for development, grants, emergency funds in the event of insolvency, and other purposes.
 
 Initially, there are no protocol fees for the treasury. However, we plan to turn on the protocol fees in the upcoming versions. The protocol fees will likely be charged from the interest generated with rehypothecation and/or premium. Our protocol will also earn trading fees in decentralized exchanges(DEXes) by selling a bond in exchange for LP tokens in DEXes. This scheme is known as protocol owned liquidity.
