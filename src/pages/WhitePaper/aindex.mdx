@@ -1,9 +1,9 @@
-import React from 'react'
-import styles from '../pages/WhitePaper/white_paper.module.css'
+---
+title: White Paper
+hide_table_of_contents: true
+---
 
-const PageContent = () => {
-  return (
-    <div className='bg-buttonPink col-span-7 pt-[100px]'>
+import styles from './white_paper.module.css'
 
 <p className="text-buttonPink text-opacity-50">Carapace Protocol</p>
 
@@ -13,40 +13,40 @@ const PageContent = () => {
 
 <h2 className={styles.whitePaperh2}>Abstract</h2>
 
-<p>This paper proposes decentralized protection against default risk in under-collateralized crypto loans. Traditionally, protection against credit default risk is known as credit default swaps.</p>
+This paper proposes decentralized protection against default risk in under-collateralized crypto loans. Traditionally, protection against credit default risk is known as credit default swaps.
 
-<p>We aim to build the next DeFi primitive currently missing in the market to make DeFi more resilient to credit risks. Credit risk protection is critical for the mass adoption of decentralized finance.</p>
+We aim to build the next DeFi primitive currently missing in the market to make DeFi more resilient to credit risks. Credit risk protection is critical for the mass adoption of decentralized finance.
 
-<p>We create a market where traders can swap the default risk. Protection buyers pay a premium to get the right to claim protection when an underlying loan defaults. Protection sellers provide capital for protection in exchange for a premium. When a default event occurs, a payout is made to protection buyers.</p>
+We create a market where traders can swap the default risk. Protection buyers pay a premium to get the right to claim protection when an underlying loan defaults. Protection sellers provide capital for protection in exchange for a premium. When a default event occurs, a payout is made to protection buyers.
 
 ![abstract](../../assets/abstract.png)
 
-<p>Carapace protocol is a non-custodial automated market maker implemented on a blockchain. Our automated market maker (AMM) pools liquidity and makes it available to swap traders according to an algorithm such as our premium pricing formula that fluctuates with supply and demand and the exchange rate formula that keeps increasing with the interest accrual.</p>
+Carapace protocol is a non-custodial automated market maker implemented on a blockchain. Our automated market maker (AMM) pools liquidity and makes it available to swap traders according to an algorithm such as our premium pricing formula that fluctuates with supply and demand and the exchange rate formula that keeps increasing with the interest accrual.
 
 <h2 className={styles.whitePaperh2}>Peer-to-Pool Model</h2>
 
-<p>Each swap market is represented by a pool contract.</p>
+Each swap market is represented by a pool contract.
 
 <h3 className={styles.whitePaperh3}>Pool Design</h3>
 
-<p>Each pool contract represents a bundle of lending pools in under-collateralized crypto loans. The under-collateralized crypto loans are provided by lending protocols such as Goldfinch, Maple Finance, TrueFi, to name a few. We aggregate lending pools to avoid market fragmentation and to achieve high liquidity.</p>
+Each pool contract represents a bundle of lending pools in under-collateralized crypto loans. The under-collateralized crypto loans are provided by lending protocols such as Goldfinch, Maple Finance, TrueFi, to name a few. We aggregate lending pools to avoid market fragmentation and to achieve high liquidity.
 
 <h3 className={styles.whitePaperh3}>Protection Buyers</h3>
 
-<p>If you want to hedge against the default risk of a specific underlying lending pool, you can pay some premium to a pool contract and get the right to claim a payout if the lending pool defaults.</p>
+If you want to hedge against the default risk of a specific underlying lending pool, you can pay some premium to a pool contract and get the right to claim a payout if the lending pool defaults.
 
 <h3 className={styles.whitePaperh3}>Protection Sellers</h3>
 
-<p>If you are convinced that the underlying lending pools are safe, you can invest capital in the respective pool contract to earn yields. You will get a representative sToken in exchange for the capital you have invested.</p>
+If you are convinced that the underlying lending pools are safe, you can invest capital in the respective pool contract to earn yields. You will get a representative sToken in exchange for the capital you have invested.
 
-<p>If one of the lending pools defaults, some liquidity is kept aside for protection. If no loan defaults within the designated period, then protection sellers earn yield via premium payment, without facing any loss.</p>
+If one of the lending pools defaults, some liquidity is kept aside for protection. If no loan defaults within the designated period, then protection sellers earn yield via premium payment, without facing any loss.
 
-<p>Our pool contract locks the capital provided for some time to prevent protection sellers from running away without providing protection when a lending pool defaults.</p>
+Our pool contract locks the capital provided for some time to prevent protection sellers from running away without providing protection when a lending pool defaults.
 
-<p>Sellers can always request to withdraw the deposited capital, or they can keep their capital in a pool to keep earning yields.</p>
+Sellers can always request to withdraw the deposited capital, or they can keep their capital in a pool to keep earning yields.
 
 <h2 className={styles.whitePaperh2}>Premium Pricing</h2>
-{/*
+
 *premium* = (*carapace_risk_premium* + *underlying_risk_premium*) \* *protection_amount*
 
 <h3 className={styles.whitePaperh3}>Carapace Risk Premium</h3>
@@ -306,9 +306,3 @@ Special thanks to Rohit Sabnis and Sabir Shaik for ideas, heavy feedback, and br
 <h2 className={styles.whitePaperh2}>Disclaimer</h2>
 
 This paper is for general information purposes only. It does not constitute investment advice or a recommendation or solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. The opinions reflected herein are subject to change without being updated.
- */}
-    </div>
-  )
-}
-
-export default PageContent
