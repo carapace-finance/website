@@ -94,7 +94,8 @@ Here, we will be explaining the first part of the risk factor equation:<br />
 Our protection pool is leveraged; the pool doesn’t store capital for the total protection amount because it is unlikely that all the protected loans are going to default at the same time. The leverage ratio is calculated with the equation below.
 
 the leverage ratio = sToken_underlying / total_protection_amount<br />
-where sToken_underlying = seller_deposit + accrued_premiums - default_payouts
+where<br />
+sToken_underlying = seller_deposit + accrued_premiums - default_payouts
 
 The higher the leverage ratio is, the lower the risk factor and the premium are because the market believes that underlying loans are safe. The lower the leverage ratio is, the higher the risk factor and the premium are because the market believes that underlying loans are unsafe. You can see the graph below where the premium price is plotted depending on the leverage ratio from the floor to the ceiling.
 
@@ -106,31 +107,45 @@ When there is more supply, the sToken underlying amount increases, which means t
 
 As you can see, premium price is effectively an aggregated view of supply and demand in the market. In other words, premium price is the prediction of the market about default risk.
 
-Lastly, we use the buffer value(e.g. 0.05) to avoid the edge case inconsistency. For example, when the leverage ratio goes to the floor, without subtracting the buffer value, the premium curve steepens at a high pace and goes to 100%. The buffer values also ensure that numerator or denominator won’t be zero.<br />
-Curvature<br />
+Lastly, we use the buffer value(e.g. 0.05) to avoid the edge case inconsistency. For example, when the leverage ratio goes to the floor, without subtracting the buffer value, the premium curve steepens at a high pace and goes to 100%. The buffer values also ensure that numerator or denominator won’t be zero.
+
+### Curvature
 CURVATURE exists literally to adjust the curvature of the curve. If this doesn’t exist or if this is 1, the shape would be linear. 0.04 is steeper than 0.05.
 
-Minimum Carapace Risk Premium
-The MIN_CARAPACE_RISK_PREMIUM is the minimum amount of carapace_risk_premium paid by a protection buyer.
+![graph2](../../assets/graph2.png)
+
+![graph3](../../assets/graph3.png)
+
+### Minimum Carapace Risk Premium
+
+The MIN_CARAPACE_RISK_PREMIUM is the minimum amount of carapace_risk_premium paid by a protection buyer regardless of the leverage ratio.
 
 When the Carapace Protocol starts a new pool, there are the minimal sToken underlying from protection sellers and the minimal total protection amount in the pool. If the sToken underlying is less than the minimum sToken underlying or the total protection amount is less than the minimum total protection amount, the premium is MIN_CARAPACE_RISK_PREMIUM + underlying_risk_premium.
-Underlying Risk Premium
+
+### Underlying Risk Premium
+
 The underlying_risk_premium represents the level of risk in underlying loans within a given pool. The riskier the underlying loans are, the more expensive the risk premium will be. In this case, we use the yield from underlying loans to indicate level of risk; for liquidity providers of unsecured lending protocols, higher yields indicate higher risk of default.
 
 
-underlying_risk_premium
-= UNDERLYING_RISK_PREMIUM_PERCENT *duration * protection_buyer_apy
+underlying_risk_premium<br />
+= UNDERLYING_RISK_PREMIUM_PERCENT \* duration \* protection_buyer_apy
 
 UNDERLYING_RISK_PREMIUM_PERCENT is a constant value like 10% which represents the percentage of protection buyers yields we take into account.
 
-duration is the expiration time minus the current time as we explained in the Carapace Risk Premium section.
+*duration* is the expiration time minus the current time as we explained in the Carapace Risk Premium section.
 
-protection_buyer_apy is expected yields for protection buyers in underlying loans in case of survival. The higher the protection_buyer_apy is, the higher the risk of underlying loans and the premium are.
-Protection Amount
-The amount of protection a buyer wants to get. protection_amount is selected by protection buyers. The more protection you want to get, the more premium you need to pay.
-Yields Distribution
+*protection_buyer_apy* is expected yields for protection buyers in underlying loans in case of survival. The higher the protection_buyer_apy is, the higher the risk of underlying loans and the premium are.
+
+### Protection Amount
+
+The amount of protection a buyer wants to get. *protection_amount* is selected by protection buyers. The more protection you want to get, the more premium you need to pay.
+
+## Yields Distribution
+
 Carapace Protocol distributes yields with a combination of 1) an sToken in each pool, 2) the exchange rate, and 3) the accrued premium.
-sToken
+
+### sToken
+
 sToken is an interest-bearing token that protection sellers get in exchange for an underlying token like USDC they deposit. Each pool represents a different risk and has its sToken.
 
 The sToken represents the capital provided plus interest from the premium(we will introduce interest from rehypothecation in the upcoming versions).
@@ -138,20 +153,21 @@ The sToken represents the capital provided plus interest from the premium(we wil
 Protection sellers can return their sToken in exchange for their deposited capital and interest after the lockup period. sToken will be burned when they withdraw their capital. Some capital and interest may be lost due to a default event.
 
 If they wish to take back their USDC and interest before the lockup period, they might be able to find a buyer of their sToken in the secondary market such as Uniswap. Traders in the exchanges can long/short sTokens based on the opinions about particular risks expressed with sTokens. Since an sToken is a fungible ERC20 token, it is fairly easy to bootstrap the secondary markets for protection sellers.
-The Exchange Rate
+
+### The Exchange Rate
+
 The exchange rate is the total sToken underlying token amount divided by the total supply of sTokens.
 
-the exchange rate = total_sToken_underlying / total_sTokens
+*the exchange rate = total_sToken_underlying / total_sTokens*
 
-You can get the total underlying value of the total sToken by multiplying the total sTokens with the exchange rate.
-total_sTokens * the_exchange_rate = total_sToken_underlying
-where total_sToken_underlying
-= total_seller_deposit + total_accrued_premiums - total_default_payouts(if any)
+You can get the total underlying value of the total sToken by multiplying the total sTokens with the exchange rate.<br />
+*total_sTokens \* the_exchange_rate = total_sToken_underlying*<br />
+where *total_sToken_underlying*<br />
+= *total_seller_deposit + total_accrued_premiums - total_default_payouts(if any)*
 
+You can get your share of underlying tokens by multiplying your sToken share with the exchange rate.
 
-If you want to get your share of underlying tokens, you multiply your sToken share with the exchange rate.
-
-Although an sToken amount stays constant, the token accumulates interest through the exchange rate; the exchange rate keeps increasing as premium is paid by protection buyers. Thus, each sToken is exchangeable with an increasing amount of its underlying token. In other words, the interest for each sToken holder is delta between the sToken * the exchange rate when they exit the market and the sToken * the exchange rate when they enter the market. The exchange rate decreases only when the capital is locked for potential default claim payouts.
+Although an sToken amount stays constant, the token accumulates interest through the exchange rate; the exchange rate keeps increasing as a premium is paid by protection buyers. Thus, each sToken is exchangeable with an increasing amount of its underlying token. In other words, the interest for each sToken holder is the delta between the sToken \* the exchange rate when they exit the market and the sToken \* the exchange rate when they enter the market. The exchange rate decreases only when the capital is locked for potential default claim payouts.
 
 Mathematically speaking, the exchange rate changes only when total_accrued_premiums or total_default_payouts change, which means only when there are premium accrual or default payouts. The exchange rate doesn’t change with the seller's deposit or withdrawal amount because the sTokens minted and sTokens burned will be proportional to the deposited or withdrawn amount. The protection purchase doesn’t also change the exchange rate at that block because there is no premium accrued for that protection yet.
 
