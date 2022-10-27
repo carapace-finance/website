@@ -13,13 +13,15 @@ Taisuke Mino
 
 ## Abstract
 
-This paper proposes decentralized protection against default risk in under-collateralized crypto loans. Traditionally, protection against default risk is known as credit default swaps.
+This paper proposes decentralized protection against default risk in under-collateralized crypto loans. Traditionally, protection against credit default risk is known as credit default swaps.
 
-Credit risk protection is critical for mass adoption and a requirement for institutions. We aim to build the next DeFi primitive currently missing in the market to make DeFi more resilient to credit risks.
+We aim to build the next DeFi primitive currently missing in the market to make DeFi more resilient to credit risks. Credit risk protection is critical for the mass adoption of decentralized finance.
 
 We create a market where traders can swap the default risk. Protection buyers pay a premium to get the right to claim protection when an underlying loan defaults. Protection sellers provide capital for protection in exchange for a premium. When a default event occurs, a payout is made to protection buyers.
 
-Carapace protocol is a noncustodial automated market maker implemented on a blockchain. Our automated market maker (AMM) pools liquidity and makes it available to swap traders according to an algorithm, including our premium pricing formula that fluctuates with supply and demand.
+![abstract](../../assets/abstract.png)
+
+Carapace protocol is a non-custodial automated market maker implemented on a blockchain. Our automated market maker (AMM) pools liquidity and makes it available to swap traders according to an algorithm such as our premium pricing formula that fluctuates with supply and demand and the exchange rate formula that keeps increasing with the interest accrual.
 
 ## Peer-to-Pool Model
 
@@ -27,39 +29,41 @@ Each swap market is represented by a pool contract.
 
 ### Pool Design
 
-Each pool contract represents a bundle of loans/pools in under-collateralized crypto loans. The under-collateralized crypto loans are provided by lending protocols such as Goldfinch, Maple Finance, TrueFi, to name a few. We aggregate loans/pools to avoid market fragmentation and achieve high liquidity.
+Each pool contract represents a bundle of lending pools in under-collateralized crypto loans. The under-collateralized crypto loans are provided by lending protocols such as Goldfinch, Maple Finance, TrueFi, to name a few. We aggregate lending pools to avoid market fragmentation and to achieve high liquidity.
 
 ### Protection Buyers
 
-If you want to hedge against the default of a specific loan, you can pay some premium to a pool contract and get the right to claim protection when the loan defaults.
+If you want to hedge against the default risk of a specific underlying lending pool, you can pay some premium to a pool contract and get the right to claim a payout if the lending pool defaults.
 
 ### Protection Sellers
 
-If you are convinced that underlying loans are safe, you can invest capital in a pool contract to earn yields. You get a representative sToken in exchange for the capital you invested.
+If you are convinced that the underlying lending pools are safe, you can invest capital in the respective pool contract to earn yields. You will get a representative sToken in exchange for the capital you have invested.
 
-When one of the loans defaults, some liquidity is taken for protection. When no loan defaults within the designated period, they can earn a premium without loss.
+If one of the lending pools defaults, some liquidity is kept aside for protection. If no loan defaults within the designated period, then protection sellers earn yield via premium payment, without facing any loss.
 
-Our pool contract locks the capital provided for some time to prevent protection sellers from running away without providing protection when a loan defaults.
+Our pool contract locks the capital provided for some time to prevent protection sellers from running away without providing protection when a lending pool defaults.
 
-Our swap contract is perpetual for sellers. They can make a request to withdraw the deposited capital after the minimum locking period, but they can also keep their capital in a pool to keep earning yields.
+Sellers can always request to withdraw the deposited capital, or they can keep their capital in a pool to keep earning yields.
 
 ## Premium Pricing
 
-premium = (carapace_risk_premium + underlying_risk_premium) * protection_amount
+*premium* = (*carapace_risk_premium* + *underlying_risk_premium*) \* *protection_amount*
 
 ### Carapace Risk Premium
 
-carapace_risk_premium is priced based on three main factors:<br />
-duration is selected by protection buyers.<br />
-risk_factor represents how risky a given pool is.<br />
-MIN_CARAPACE_RISK_PREMIUM is the minimum amount of carapace_risk_premium paid by a protection buyer.
+*carapace_risk_premium*<br />
+= *max*((1 - (e \*\* (- *duration* \* *risk_factor*))), *MIN_CARAPACE_RISK_PREMIUM* )
 
-carapace_risk_premium<br />
-= max((1-(e *** (-duration * risk_factor))), MIN_CARAPACE_RISK_PREMIUM )
+e is the mathematical constant. We use the e because we assume survival of the protections in the protection pool follows the Poisson distribution.
 
-e is the mathematical constant. We use the e because we assume survival of the protections in the protection pool follows poisson distribution similar to traditional finance. The risk factor simulates hazard rate(survival rate or (1 - default rate)) in poisson distribution.
+*carapace_risk_premium* is priced based on three main factors:<br />
+<ul>
+<li>1. <i>duration</i> which is selected by protection buyers.</li>
+<li>2. <i>risk_factor</i>, which represents how risky a given pool is. It simulates the hazard rate(survival rate or (1 - default rate)) in the Poisson distribution.</li>
+<li>3. <i>MIN_CARAPACE_RISK_PREMIUM</i> is the minimum amount of carapace_risk_premium paid by a protection buyer.</li>
+</ul>
 
-We will explain the three main factors in more detail below:
+We will explain them in more detail below.
 
 ### Duration
 
