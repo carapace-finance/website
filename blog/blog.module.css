@@ -1,0 +1,75 @@
+aside {
+  @apply border-r;
+  @apply pt-10 !important;
+}
+
+h1 {
+  @apply text-[40px] sm:text-[55px] !important;
+  @apply leading-none sm:leading-[60px] !important;
+  @apply font-medium;
+  @apply text-buttonPink;
+}
+
+
+h2, h3 {
+  @apply text-[#4B4B4B];
+  @apply font-medium;
+  @apply text-2xl sm:text-[40px];
+  @apply leading-tight sm:leading-10 !important;
+  @apply mb-[26px] sm:mb-[43px] !important;
+  @apply mt-[40px] sm:mt-[47px] !important;
+}
+
+p {
+  @apply font-manrope;
+  @apply text-[#616161];
+  @apply font-normal;
+  @apply text-base sm:text-xl;
+  @apply leading-5 sm:leading-7 ;
+}
+
+.bulletpoints {
+  @apply list-none;
+  @apply text-[#616161];
+  @apply ml-5 sm:ml-6;
+}
+
+.bulletpoints li {
+  @apply font-manrope;
+  @apply font-normal;
+  @apply text-base sm:text-xl;
+  @apply leading-5 sm:leading-7;
+  @apply pl-2;
+}
+
+.bulletpoints li::marker {
+  content: "\2022";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em
+}
+
+code {
+  @apply bg-[#F0F0F0];
+  @apply py-9 !important;
+  @apply px-10 !important;
+  @apply rounded-2xl !important;
+  @apply inline-block;
+  @apply text-[18px];
+  @apply my-5;
+}
+
+article {
+  @apply ml-[20px] sm:ml-[77px];
+  @apply mr-[20px] sm:mr-[44px];
+  @apply pb-10;
+}
+
+li::marker {
+  content: none;
+}
+
+h2 > a {
+  @apply hover:text-buttonPink;
+  @apply hover:no-underline;
+}
