@@ -4,8 +4,13 @@ hide_table_of_contents: true
 ---
 
 import styles from './white_paper.module.css'
+import PageSidebar from '../../components/PageSidebar'
 
-<div className="bom">
+<div className="grid grid-cols-10">
+
+<PageSidebar />
+
+<div className={styles.whitePaperContent}>
 
 <p className="text-buttonPink text-opacity-50">Carapace Protocol</p>
 
@@ -308,6 +313,6 @@ Special thanks to Rohit Sabnis and Sabir Shaik for ideas, heavy feedback, and br
 <h2 className={styles.whitePaperh2}>Disclaimer</h2>
 
 This paper is for general information purposes only. It does not constitute investment advice or a recommendation or solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. The opinions reflected herein are subject to change without being updated.
-
+</div>
 
 </div>

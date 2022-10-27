@@ -21,3 +21,8 @@
   @apply pl-2;
   @apply my-2;
 }
+
+.whitePaperContent {
+  @apply col-span-8;
+  @apply ml-6;
+}
