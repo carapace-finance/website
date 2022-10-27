@@ -1,1 +1,23 @@
+.whitePaperh1 {
+  @apply leading-[70.65px];
+  @apply text-black;
+}
 
+.whitePaperh2 {
+    @apply text-black;
+    @apply text-[20px] sm:text-[48px];
+}
+
+.whitePaperh3 {
+    @apply text-[16px] sm:text-[32px];
+}
+
+.whitePaperli {
+  @apply font-manrope;
+  @apply text-[#616161];
+  @apply font-normal;
+  @apply text-base sm:text-xl;
+  @apply leading-5 sm:leading-7 ;
+  @apply pl-2;
+  @apply my-2;
+}
