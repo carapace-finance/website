@@ -4,7 +4,7 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-// require('dotenv').config()
+require('dotenv').config()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,7 +16,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "Carapace",
   projectName: "website",
-  // plugins: [require.resolve("docusaurus-plugin-fathom")],
+  plugins: [require.resolve("docusaurus-plugin-fathom")],
   presets: [
     [
       "classic",
@@ -32,6 +32,7 @@ const config = {
           breadcrumbs: false,
         },
         blog: {
+          blogSidebarCount: 8,
           showReadingTime: true,
         },
         theme: {
@@ -50,7 +51,7 @@ const config = {
       // navbar: {
       //   logo: {
       //     alt: "Carapace Logo",
-      //     src: "img/white_logo.svg",
+      //     src: "",
       //   },
       //   items: [
       //     { to: "/home", label: "Home", position: "right" },
