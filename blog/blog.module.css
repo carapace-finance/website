@@ -5,7 +5,6 @@ aside {
 
 h1 {
   @apply text-[40px] sm:text-[55px];
-  @apply leading-none sm:leading-[60px];
   @apply font-medium;
   @apply text-buttonPink;
 }
