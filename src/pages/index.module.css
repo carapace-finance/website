@@ -2,32 +2,3 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
-
-.container {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  margin: 4rem 0;
-  text-align:center;
-}
-
-.logo {
-  height: 100%;
-  margin-bottom: 4rem;
-  width: 20%;
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4rem;
-}
-
-@media (max-width: 600px) {
-  .logo {
-    width: 50%;
-  }
-}
