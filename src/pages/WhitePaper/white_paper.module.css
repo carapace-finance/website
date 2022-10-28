@@ -26,3 +26,8 @@
   @apply col-span-8;
   @apply ml-6;
 }
+
+:global(.col--offset-3) {
+  @apply bg-black;
+  @apply ml-0;
+}

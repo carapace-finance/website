@@ -73,4 +73,10 @@
     margin-bottom: 0 !important;
   }
 
+  :global(.col--offset-3) {
+    @apply bg-black;
+    @apply ml-0;
+  }
+
+
 }
