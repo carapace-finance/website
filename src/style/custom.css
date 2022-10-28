@@ -72,14 +72,5 @@
     margin-bottom: 0 !important;
   }
 
-  :global(.col--offset-3) {
-    @apply bg-black;
-    @apply ml-0;
-  }
-
-  :global(.col--6) {
-    @apply bg-buttonPink;
-    @apply w-0;
-  }
 
 }
