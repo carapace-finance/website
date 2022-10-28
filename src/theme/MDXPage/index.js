@@ -1,3 +1,4 @@
+
 import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
@@ -13,6 +14,7 @@ import MDXContent from "@theme/MDXContent";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 export default function WhitePaperLayout(props) {
+  const {content: MDXPageContent} = props;
   const { siteConfig } = useDocusaurusContext();
 
   return (
@@ -37,7 +39,7 @@ export default function WhitePaperLayout(props) {
               { type: "link", href: "#acknowledgments", label: "Acknowledgments" },
               { type: "link", href: "#disclaimer", label: "Disclaimer" },
             ]}
-            path="#abstract" onCollapse={function (): void {
+            path="#abstract" onCollapse={function () {
               throw new Error("Function not implemented.");
             } } isHidden={false}          ></DocSidebar>
         </aside>
@@ -60,7 +62,7 @@ export default function WhitePaperLayout(props) {
                       )}
                     >
                       <MDXContent>
-                        {props.content}
+                        <MDXPageContent />
                       </MDXContent>
                     </div>
                   </article>
