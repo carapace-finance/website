@@ -71,12 +71,4 @@
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
-
-  :global(.col--6) {
-    --ifm-col-width: 0;
-  }
-
-  :global(.col-offset-3) {
-    @apply ml-0;
-  }
 }

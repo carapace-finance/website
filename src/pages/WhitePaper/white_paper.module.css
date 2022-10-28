@@ -26,3 +26,11 @@
   @apply col-span-8;
   @apply ml-6;
 }
+
+  :global(.col--6) {
+    --ifm-col-width: 0;
+  }
+
+  :global(.col-offset-3) {
+    @apply ml-0;
+  }
