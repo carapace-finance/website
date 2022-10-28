@@ -25,7 +25,6 @@
     --ifm-code-font-size: 95%;
     --ifm-navbar-height: 0;
     --ifm-menu-color-background-active: transparent;
-    --ifm-col-width: 0;
   }
 
   nav {
@@ -77,6 +76,5 @@
     @apply bg-black;
     @apply ml-0;
   }
-
 
 }
