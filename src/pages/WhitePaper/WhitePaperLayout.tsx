@@ -15,8 +15,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 export default function WhitePaperLayout(props) {
   const { siteConfig } = useDocusaurusContext();
 
-  const name = "Abstract";
-
   return (
     <Layout>
       <div className={DocPageStyles.docPage}>
@@ -28,7 +26,7 @@ export default function WhitePaperLayout(props) {
         >
           <DocSidebar
             sidebar={[
-              { type: "link", href: "#abstract", label: "Abstract" },
+              { type: "link", href: "#abstract", label: "Abstract"},
               { type: "link", href: "#peer-to-peer", label: "Peer-to-Peer Model"},
               { type: "link", href: "#premium-pricing", label: "Premium Pricing" },
               { type: "link", href: "#yields-distribution", label: "Yields Distribution" },
@@ -38,9 +36,8 @@ export default function WhitePaperLayout(props) {
               { type: "link", href: "#governance", label: "Governance" },
               { type: "link", href: "#acknowledgments", label: "Acknowledgments" },
               { type: "link", href: "#disclaimer", label: "Disclaimer" },
-
             ]}
-            path="/myCustomPage" onCollapse={function (): void {
+            path="#abstract" onCollapse={function (): void {
               throw new Error("Function not implemented.");
             } } isHidden={false}          ></DocSidebar>
         </aside>
