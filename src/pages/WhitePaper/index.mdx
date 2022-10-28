@@ -4,7 +4,10 @@ hide_table_of_contents: true
 ---
 
 import styles from './white_paper.module.css'
+import WhitePaperLayout from './_WhitePaperLayout.tsx'
 
+<WhitePaperLayout content={
+  <section>
 <p className="text-buttonPink text-opacity-50">Carapace Protocol</p>
 
 <h1 className={styles.whitePaperh1}>Decentralized Protection Against Credit Default Risk</h1>
@@ -306,3 +309,6 @@ Special thanks to Rohit Sabnis and Sabir Shaik for ideas, heavy feedback, and br
 <h2 id="disclaimer" className={styles.whitePaperh2}>Disclaimer</h2>
 
 This paper is for general information purposes only. It does not constitute investment advice or a recommendation or solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. The opinions reflected herein are subject to change without being updated.
+
+  </section>
+} />
