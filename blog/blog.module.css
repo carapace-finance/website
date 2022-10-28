@@ -61,7 +61,6 @@ code {
 article {
   @apply ml-[20px] sm:ml-[77px];
   @apply mr-[20px] sm:mr-[44px];
-  @apply pb-10;
 }
 
 li::marker {

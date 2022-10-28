@@ -4,14 +4,17 @@ hide_table_of_contents: true
 ---
 
 import styles from './white_paper.module.css'
+import WhitePaperLayout from './WhitePaperLayout.tsx'
 
-<p className="text-buttonPink text-opacity-50">Carapace Protocol</p>
+<WhitePaperLayout content={
+  <section>
+    <p className="text-buttonPink text-opacity-50">Carapace Protocol</p>
 
 <h1 className={styles.whitePaperh1}>Decentralized Protection Against Credit Default Risk</h1>
 
 <p className="text-opacity-30">Taisuke Mino</p>
 
-<h2 className={styles.whitePaperh2}>Abstract</h2>
+<h2 id="abstract" className={styles.whitePaperh2}>Abstract</h2>
 
 This paper proposes decentralized protection against default risk in under-collateralized crypto loans. Traditionally, protection against credit default risk is known as credit default swaps.
 
@@ -23,7 +26,7 @@ We create a market where traders can swap the default risk. Protection buyers pa
 
 Carapace protocol is a non-custodial automated market maker implemented on a blockchain. Our automated market maker (AMM) pools liquidity and makes it available to swap traders according to an algorithm such as our premium pricing formula that fluctuates with supply and demand and the exchange rate formula that keeps increasing with the interest accrual.
 
-<h2 className={styles.whitePaperh2}>Peer-to-Pool Model</h2>
+<h2 id="peer-to-peer" className={styles.whitePaperh2}>Peer-to-Pool Model</h2>
 
 Each swap market is represented by a pool contract.
 
@@ -45,7 +48,7 @@ Our pool contract locks the capital provided for some time to prevent protection
 
 Sellers can always request to withdraw the deposited capital, or they can keep their capital in a pool to keep earning yields.
 
-<h2 className={styles.whitePaperh2}>Premium Pricing</h2>
+<h2 id="premium-pricing" className={styles.whitePaperh2}>Premium Pricing</h2>
 
 *premium* = (*carapace_risk_premium* + *underlying_risk_premium*) \* *protection_amount*
 
@@ -144,7 +147,7 @@ The underlying_risk_premium represents the level of risk in an underlying lendin
 
 The amount of protection a buyer wants to get. *protection_amount* is selected by protection buyers. The more protection you want to get, the more premium you need to pay.
 
-<h2 className={styles.whitePaperh2}>Yields Distribution</h2>
+<h2 id="yields-distribution" className={styles.whitePaperh2}>Yields Distribution</h2>
 
 Carapace Protocol distributes yields with a combination of 1) an sToken in each pool, 2) the exchange rate, and 3) the accrued premium.
 
@@ -251,7 +254,7 @@ One of the most important principles of yield distribution is fairness. I will o
 
 First, at the risk of stating the obvious, a protection seller is entitled to receive a premium from protection buyers only when they protect them. Thus, protection sellers get a premium only when their locking period overlaps with the protection duration of protection buyers. This is why we accrue a premium over the duration of protection following the poisson distribution. Second, when a seller withdraws, they get a proportional amount of premium depending on their share of total capital provided in a given block. Third, the longer they keep their capital in a pool, the more premium they can earn. They can earn more interest with the longer deposit term because the delta between the sToken * the exchange rate when they exit the market and the sToken * the exchange rate when they enter the market will be bigger.
 
-<h2 className={styles.whitePaperh2}>Payouts</h2>
+<h2 id="payouts" className={styles.whitePaperh2}>Payouts</h2>
 
 <h3 className={styles.whitePaperh3}>Premium</h3>
 
@@ -261,7 +264,7 @@ When a locking term ends, a protection seller can get a proportional amount of a
 
 Protection buyers get protection depending on how much premium they have paid. They must show their proof of loss in the form of an LP token in underlying lending protocols. More specifically, they get protection in exchange for the LP token and can get only what they have lost.
 
-<h2 className={styles.whitePaperh2}>Security</h2>
+<h2 id="security" className={styles.whitePaperh2}>Security</h2>
 
 We take security seriously to maintain trust in our system.
 
@@ -279,7 +282,7 @@ First, self-loan. Let's say Bob lends $10k to himself as an LP and borrows $100k
 
 Thus, it is critical to rigorously review each under-collateralized lending protocol and ensure that they have the right security model.
 
-<h2 className={styles.whitePaperh2}>Treasury</h2>
+<h2 id="treasury" className={styles.whitePaperh2}>Treasury</h2>
 
 Treasury is a revenue stored for the growth and security of the protocol. It can be used for development, grants, emergency funds in the event of insolvency, and other purposes.
 
@@ -287,7 +290,7 @@ Initially, there are no protocol fees for the treasury. However, we plan to turn
 
 It’s worth noting that we won’t charge any fees when a default event happens. Since our protocol aims to protect DeFi users against default risk, we don’t want to incentivize our protocol to cause default events.
 
-<h2 className={styles.whitePaperh2}>Governance</h2>
+<h2 id="governance" className={styles.whitePaperh2}>Governance</h2>
 
 <h3 className={styles.whitePaperh3}>Pool Creation</h3>
 
@@ -299,10 +302,13 @@ Although we keep our pool simple in the 1st version, we will introduce other kin
 
 Since our protocol focuses on default events that can be verified almost algorithmically, the protocol would payout with no complex claiming process. This little/no governance overhead is advantageous over other insurance protocols.
 
-<h2 className={styles.whitePaperh2}>Acknowledgments</h2>
+<h2 id="acknowledgments" className={styles.whitePaperh2}>Acknowledgments</h2>
 
 Special thanks to Rohit Sabnis and Sabir Shaik for ideas, heavy feedback, and brainstorming help when writing this. The paper would not have been possible without them.
 
-<h2 className={styles.whitePaperh2}>Disclaimer</h2>
+<h2 id="disclaimer" className={styles.whitePaperh2}>Disclaimer</h2>
 
 This paper is for general information purposes only. It does not constitute investment advice or a recommendation or solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. The opinions reflected herein are subject to change without being updated.
+
+  </section>
+}/>
