@@ -1,5 +1,6 @@
 .whitePaperh1 {
-  @apply leading-[70.65px];
+  @apply leading-[28px] sm:leading-[70.65px];
+  @apply text-[24px] sm:text-[56px];
   @apply text-black;
 }
 
