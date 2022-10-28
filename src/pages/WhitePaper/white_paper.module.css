@@ -28,9 +28,9 @@
 }
 
   :global(.col--6) {
-    --ifm-col-width: 0;
+    --ifm-col-width: 100%;
   }
 
-  :global(.col-offset-3) {
+  :global(.col--offset-3) {
     @apply ml-0;
   }
