@@ -50,7 +50,7 @@ export default function WhitePaperLayout(props) {
             )}
           >
             <div className="row">
-              <div className={clsx("col")}>
+              <div className={clsx("col", DocItemColStyles.docItemCol)}>
                 <div className={DocItemStyles.docItemContainer}>
                   <article>
                     <div
