@@ -77,4 +77,9 @@
     @apply ml-0;
   }
 
+  :global(.col--6) {
+    @apply bg-buttonPink;
+    @apply w-0;
+  }
+
 }

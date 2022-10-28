@@ -16,7 +16,6 @@ export default function WhitePaperLayout(props) {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <Layout>
       <div className={DocPageStyles.docPage}>
         <aside
           className={clsx(
@@ -70,6 +69,5 @@ export default function WhitePaperLayout(props) {
           </div>
         </main>
       </div>
-    </Layout>
   );
 }
