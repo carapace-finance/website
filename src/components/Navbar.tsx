@@ -51,7 +51,7 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } flex-col p-6 bg-customDarkBlue h-full w-full right-0 top-0 items-center fixed overflow-hidden z-10`}
+          } flex-col p-6 bg-[url('.././assets/mobile_nav_bg.png')] h-full w-full right-0 top-0 items-center fixed overflow-hidden z-10 bg-cover bg-no-repeat`}
         >
           <div className="flex flex-row items-center w-full">
             <img src={assets.footerCarapace} alt="carapace" className="w-[150px]" />
