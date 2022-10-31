@@ -51,19 +51,19 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } flex-col p-6 bg-customDarkBlue h-full w-full right-0 top-0 items-center fixed overflow-hidden z-10`}
+          } flex-col p-6 bg-[url('.././assets/mobile_nav_bg.png')] h-full w-full right-0 top-0 fixed overflow-hidden z-10 bg-cover bg-no-repeat`}
         >
           <div className="flex flex-row items-center w-full">
             <img src={assets.footerCarapace} alt="carapace" className="w-[150px]" />
             <div className="flex-1"></div>
-            <img src={assets.arrow} alt="back" className="w-[30px] h-[20px] object-cover" onClick={() => setToggle(!toggle)} />
+            <img src={assets.close} alt="back" className="w-[30px] h-[20px] object-cover" onClick={() => setToggle(!toggle)} />
           </div>
-          <div className="h-[120px]"></div>
-          <ul className="list-none flex justify-start items-center flex-col">
+          <div className="h-[250px]"></div>
+          <ul className="ml-[36px] list-none flex justify-start items-left flex-col">
             {navLinks.map((nav, _) => (
               <li
                 key={nav.id}
-                className={`text-white list-none font-manrope font-medium leading-[18px] cursor-pointer text-[22px] tracking-[0.02em] mb-[55px]`}
+                className={`${active === nav.id ? "opacity-100" : "opacity-70" } text-white list-none font-manrope font-semibold leading-[18px] cursor-pointer text-[34px] tracking-[0.02em] mb-[55px]`}
                 onClick={() => setActive(nav.id)}
               >
                 <a className={`${active === nav.id ? "underline underline-offset-8 decoration-buttonPink" : ""} hover:no-underline hover:text-white`} href={`${nav.id}`}>{nav.title}</a>

@@ -62,6 +62,7 @@ const config = {
       fathomAnalytics: {
         siteId: process.env.FATHOM_SITE_ID,
       },
+      image: "img/socialmeta.png",
       // navbar: {
       //   logo: {
       //     alt: "Carapace Logo",

@@ -18,6 +18,7 @@ import arrow from './arrow.png';
 import eye from './eye.gif';
 import heroBanner from './heroBanner.gif';
 import mobileFooter from './mobileFooter.png';
+import close from './close.png';
 
 
 export default {
@@ -41,4 +42,5 @@ export default {
   eye,
   heroBanner,
   mobileFooter,
+  close,
 };
