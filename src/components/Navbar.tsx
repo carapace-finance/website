@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className="flex flex-row items-center w-full">
             <img src={assets.footerCarapace} alt="carapace" className="w-[150px]" />
             <div className="flex-1"></div>
-            <img src={assets.arrow} alt="back" className="w-[30px] h-[20px] object-cover" onClick={() => setToggle(!toggle)} />
+            <img src={assets.close} alt="back" className="w-[30px] h-[20px] object-cover" onClick={() => setToggle(!toggle)} />
           </div>
           <div className="h-[120px]"></div>
           <ul className="list-none flex justify-start items-center flex-col">
