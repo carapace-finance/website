@@ -12,6 +12,15 @@ module.exports = {
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
       },
+      keyframes: {
+        slide: {
+          "0%, 100%" : {transform : "tranlate(0, 0)" },
+          "50%" : {transform : "translate(10px, 0)"},
+        },
+      },
+      animation: {
+        "slide": "slide 1s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
