@@ -14,12 +14,23 @@ module.exports = {
       },
       keyframes: {
         slide: {
-          "0%, 100%" : {transform : "tranlate(0, 0)" },
-          "50%" : {transform : "translate(10px, 0)"},
+          "0%, 100%": { transform: "tranlate(0, 0)" },
+          "50%": { transform: "translate(10px, 0)" },
+        },
+        "text-focus-in": {
+          "0%": {
+            filter: "blur(12px)",
+            opacity: "0",
+          },
+          to: {
+            filter: "blur(0)",
+            opacity: "1",
+          },
         },
       },
       animation: {
-        "slide": "slide 1s ease-in-out infinite",
+        slide: "slide 1s ease-in-out infinite",
+        "text-focus-in": "text-focus-in 1s ease-in",
       },
     },
   },
