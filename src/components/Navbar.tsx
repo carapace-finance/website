@@ -40,14 +40,14 @@ const Navbar = () => {
       </ul>
 
       <div className="lg:hidden flex flex-1 justify-end items-center">
-        <a onClick={() => setToggle(!toggle)}>MENU</a>
-        {/* <img
+        <a onClick={() => setToggle(!toggle)}></a>
+        <img
           src={assets.hamburger}
           alt="menu"
           className="w-[22px] sm:w-[32px] h-[16px] sm:h-[26px] object-cover"
           onClick={() => setToggle(!toggle)}
         />
- */}
+
         <div
           className={`${
             !toggle ? "hidden" : "flex"
