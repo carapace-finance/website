@@ -114,7 +114,7 @@ export const footerLinks = [
     title: "DEVELOPER",
     links: [
       {
-        name: "Github",
+        name: "GitHub",
         link: "https://github.com/carapace-finance",
         target: "_blank"
       },

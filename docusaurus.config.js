@@ -3,8 +3,9 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-
-require('dotenv').config()
+const math = require("remark-math");
+const katex = require("rehype-katex");
+// require('dotenv').config()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,7 +17,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "Carapace",
   projectName: "website",
-  plugins: [require.resolve("docusaurus-plugin-fathom")],
+  // plugins: [require.resolve("docusaurus-plugin-fathom")],
   presets: [
     [
       "classic",
@@ -27,8 +28,13 @@ const config = {
         //   sidebarPath: require.resolve("./sidebars.js"),
         //   editUrl: "https://github.com/carapace-finance/website",
         // },
+        pages: {
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
+        },
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
+          breadcrumbs: false,
         },
         blog: {
           blogSidebarCount: 8,
@@ -40,6 +46,15 @@ const config = {
       }),
     ],
   ],
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      crossorigin: "anonymous",
+    },
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -47,6 +62,7 @@ const config = {
       fathomAnalytics: {
         siteId: process.env.FATHOM_SITE_ID,
       },
+      image: "img/socialmeta.png",
       // navbar: {
       //   logo: {
       //     alt: "Carapace Logo",

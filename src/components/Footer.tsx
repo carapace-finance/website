@@ -4,7 +4,7 @@ import { footerLinks } from '../constants'
 
 const Footer = () => {
   return (
-    <section id='footer'>
+    <section id='footer' className='border-t bg-[#F9F9FF]'>
       <div className="h-[61px] lg:h-[100px]"></div>
       <div className='flex flex-col lg:flex-row justify-center items-center lg:items-start'>
 
@@ -30,7 +30,7 @@ const Footer = () => {
                     index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
                   }`}
                 >
-                  <a href={link.link} target={link.target} className='transition-all hover:text-black hover:no-underline hover:opacity-100 opacity-30'>{link.name}</a>
+                  <a href={link.link} target={link.target} className='transition-all hover:text-buttonPink hover:no-underline hover:opacity-100 opacity-30'>{link.name}</a>
                 </li>
               ))}
             </ul>
