@@ -9,8 +9,8 @@ const ThreeLayerDescription = (props) => {
       <p className='font-manrope font-normal text-[22px] sm:text-3xl leading-[30px] sm:leading-[36px] text-customDarkBlue text-opacity-50 m-0'>{props.secondLayer}</p>
       <a className='hover:text-textPinkHover transition-all cursor-pointer font-manrope text-buttonPink font-bold text-2xl sm:text-[32px] leading-6 sm:leading-[32px] text-right'>
        <div className='flex flex-row items-center justify-end'>
-       <p className='m-0 mr-6' >More about<br />{props.thirdLayer}</p>
-       <p className='text-buttonPink hover:animate-slide'>→</p>
+       {/* <p className='m-0 mr-6' >More about<br />{props.thirdLayer}</p> */}
+       {/* <p className='text-buttonPink hover:animate-slide'>→</p> */}
        </div>
       </a>
     </div>
