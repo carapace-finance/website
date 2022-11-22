@@ -67,7 +67,12 @@ li::marker {
   content: none;
 }
 
+a {
+  text-decoration: underline;
+}
+
 h2 > a {
+  text-decoration: none;
   @apply hover:text-buttonPink;
   @apply hover:no-underline;
 }
