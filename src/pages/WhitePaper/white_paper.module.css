@@ -13,6 +13,10 @@
     @apply text-[16px] sm:text-[32px];
 }
 
+.whitePaperh4 {
+  @apply text-[12px] sm:text-[20px];
+}
+
 .whitePaperli {
   @apply font-manrope;
   @apply text-[#616161];
