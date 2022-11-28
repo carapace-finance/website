@@ -35,7 +35,7 @@ export default function WhitePaperLayout(props) {
               { type: "link", href: "#acknowledgments", label: "Acknowledgments" },
               { type: "link", href: "#disclaimer", label: "Disclaimer" },
             ]}
-            path="#abstract" onCollapse={function (): void {
+            path="#" onCollapse={function (): void {
               throw new Error("Function not implemented.");
             } } isHidden={false}          ></DocSidebar>
         </aside>
