@@ -64,7 +64,7 @@ e is the mathematical constant. We use the e because we assume survival of the p
 <li className={styles.whitePaperli}>1. <i>duration</i> which is selected by protection buyers.</li>
 <li className={styles.whitePaperli}>2. <i>risk_factor</i>, which represents how risky a given pool is. It simulates the hazard rate(survival rate or (1 - default rate)) in the Poisson distribution.</li>
 <li className={styles.whitePaperli}>3. <i>MIN_CARAPACE_RISK_PREMIUM</i> is the minimum amount of carapace_risk_premium paid by a protection buyer.</li>
-</ul>∫
+</ul>
 
 We will explain them in more detail below.
 
@@ -82,8 +82,8 @@ To sum up, we can express the duration with:<br />
 The risk factor represents how the market thinks about the risk of a particular pool. The riskier the pool, the higher the risk factor and the more expensive a premium becomes. A risk factor of 1 means a pool is quite risky, while a risk factor of 0 means a pool is quite safe.
 
 *risk_factor*<br />
-= (((*LEVERAGE_RATIO_CEILING* + *BUFFER*) - *leverage_ratio*)<br />
-     / (*leverage_ratio* - (*LEVERAGE_RATIO_FLOOR* - *BUFFER*)))<br />
+= (((*LEVERAGE_RATIO_CEILING* + *BUFFER*) - *leverage_ratio*) / <br />
+      (*leverage_ratio* - (*LEVERAGE_RATIO_FLOOR* - *BUFFER*)))<br />
     \* *CURVATURE*
 
 The risk factor is calculated based on two main factors:<br />
@@ -97,8 +97,8 @@ We will explain the two main factors below in detail.
 <h3 className={styles.whitePaperh3}>Leverage Ratio</h3>
 
 Here, we will be explaining the first part of the risk factor equation:<br />
- (((*LEVERAGE_RATIO_CEILING* + *BUFFER*) - *leverage_ratio*)<br />
- / (*leverage_ratio* - (*LEVERAGE_RATIO_FLOOR* - *BUFFER*)))
+ (((*LEVERAGE_RATIO_CEILING* + *BUFFER*) - *leverage_ratio*) / <br />
+  (*leverage_ratio* - (*LEVERAGE_RATIO_FLOOR* - *BUFFER*)))
 
 Our protection pool is leveraged; the pool doesn’t store capital for the total protection amount because it is unlikely that all the protected loans are going to default at the same time. The leverage ratio is calculated with the equation below.
 
