@@ -8,19 +8,19 @@ import WhitePaperLayout from './_WhitePaperLayout.tsx'
 
 <WhitePaperLayout content={
   <section>
-<p className="font-medium text-[24px] text-buttonPink text-opacity-50">Carapace Protocol</p>
+<h1 className="font-medium text-[24px] text-buttonPink text-opacity-60">Carapace Protocol</h1>
 
-<h1 className={styles.whitePaperh1}>Decentralized Protection Against Credit Default Risk</h1>
+<h2 className={styles.whitePaperh2}>Decentralized Protection Against Credit Default Risk</h2>
 
-<p className="text-opacity-30">Taisuke Mino</p>
+<p className="text-opacity-60">Taisuke Mino</p>
 
 <h2 id="abstract" className={styles.whitePaperh2}>Abstract</h2>
 
-This paper proposes decentralized protection against default risk in under-collateralized crypto loans. Traditionally, protection against credit default risk is known as credit default swaps.
+This paper proposes decentralized protection against default risk in under-collateralized crypto loans. Traditionally, protection against credit default risk is known as credit default swaps. 
 
-We aim to build the next DeFi primitive currently missing in the market to make DeFi more resilient to credit risks. Credit risk protection is critical for the mass adoption of decentralized finance.
+We aim to build the next DeFi primitive currently missing in the market to make DeFi more resilient to credit risks. Credit risk protection is critical for the mass adoption of decentralized finance. 
 
-We create a market where traders can swap the default risk. Protection buyers pay a premium to get the right to claim protection when an underlying loan defaults. Protection sellers provide capital for protection in exchange for a premium. When a default event occurs, a payout is made to protection buyers.
+We create a market where traders can swap the default risk. Protection buyers pay a premium to get the right to claim protection when an underlying loan defaults. Protection sellers provide capital for protection in exchange for a premium. When a default event occurs, a payout is made to protection buyers. 
 
 ![abstract](../../assets/abstract.png)
 
@@ -40,13 +40,13 @@ If you want to hedge against the default risk of a specific underlying lending p
 
 <h3 className={styles.whitePaperh3}>Protection Sellers</h3>
 
-If you are convinced that the underlying lending pools are safe, you can invest capital in the respective pool contract to earn yields. You will get a representative sToken in exchange for the capital you have invested.
+If you are convinced that the underlying lending pools are safe, you can invest capital in the respective pool contract to earn yields. You will get a representative sToken in exchange for the capital you have invested. 
 
-If one of the lending pools defaults, some liquidity is kept aside for protection. If no loan defaults within the designated period, then protection sellers earn yield via premium payment, without facing any loss.
+If one of the lending pools defaults, some liquidity is kept aside for protection. If no loan defaults within the designated period, then protection sellers earn yield via premium payment, without facing any loss. 
 
-Our pool contract locks the capital provided for some time to prevent protection sellers from running away without providing protection when a lending pool defaults.
+Our pool contract locks the capital provided for some time to prevent protection sellers from running away without providing protection when a lending pool defaults. 
 
-Sellers can always request to withdraw the deposited capital, or they can keep their capital in a pool to keep earning yields.
+Sellers can always request to withdraw the deposited capital, or they can keep their capital in a pool to keep earning yields. 
 
 <h2 id="premium-pricing" className={styles.whitePaperh2}>Premium Pricing</h2>
 
@@ -64,7 +64,7 @@ e is the mathematical constant. We use the e because we assume survival of the p
 <li className={styles.whitePaperli}>1. <i>duration</i> which is selected by protection buyers.</li>
 <li className={styles.whitePaperli}>2. <i>risk_factor</i>, which represents how risky a given pool is. It simulates the hazard rate(survival rate or (1 - default rate)) in the Poisson distribution.</li>
 <li className={styles.whitePaperli}>3. <i>MIN_CARAPACE_RISK_PREMIUM</i> is the minimum amount of carapace_risk_premium paid by a protection buyer.</li>
-</ul>
+</ul>∫
 
 We will explain them in more detail below.
 
@@ -79,7 +79,7 @@ To sum up, we can express the duration with:<br />
 
 <h3 className={styles.whitePaperh3}>Risk Factor</h3>
 
-The risk factor represents how the market thinks about the risk of a particular pool. The riskier the pool, the higher the risk factor and the more expensive a premium becomes. A risk factor of *1* means a pool is quite risky, while a risk factor of *0* means a pool is quite safe.
+The risk factor represents how the market thinks about the risk of a particular pool. The riskier the pool, the higher the risk factor and the more expensive a premium becomes. A risk factor of 1 means a pool is quite risky, while a risk factor of 0 means a pool is quite safe.
 
 *risk_factor*<br />
 = (((*LEVERAGE_RATIO_CEILING* + *BUFFER*) - *leverage_ratio*)<br />
@@ -141,7 +141,7 @@ The underlying_risk_premium represents the level of risk in an underlying lendin
 
 *duration* is the expiration time minus the current time as we explained in the Carapace Risk Premium section.
 
-*protection_buyer_apy* is expected yields for protection buyers in underlying loans in case of survival. The higher the protection_buyer_apy is, the higher the risk of underlying loans and the premium are.
+*protection_buyer_apy* is the expected yield for protection buyers in underlying lending pools. The higher the protection_buyer_apr is, the higher the risk of underlying loans and the premium are.
 
 <h3 className={styles.whitePaperh3}>Protection Amount</h3>
 
@@ -207,7 +207,7 @@ We will explain the premium accrual in more detail below. Accrued premium is pri
 
 K = P / ( $e^{- t * \lambda}$ - $e^{- T * \lambda}$ )
 
-where P is protection_premium $-$ *protocol_fees*.
+where P is premium $-$ *protocol_fees*.
 
 Imagine that a protection buyer has bought 180 days protection for $10,000 and the protocol fee is $100. Then:
 
@@ -252,63 +252,79 @@ The accrued premium has a transitive property. Accrued premium from time A to C 
 
 One of the most important principles of yield distribution is fairness. I will outline how we distribute yield fairly with the above distribution mechanism.
 
-First, at the risk of stating the obvious, a protection seller is entitled to receive a premium from protection buyers only when they protect them. Thus, protection sellers get a premium only when their locking period overlaps with the protection duration of protection buyers. This is why we accrue a premium over the duration of protection following the poisson distribution. Second, when a seller withdraws, they get a proportional amount of premium depending on their share of total capital provided in a given block. Third, the longer they keep their capital in a pool, the more premium they can earn. They can earn more interest with the longer deposit term because the delta between the sToken * the exchange rate when they exit the market and the sToken * the exchange rate when they enter the market will be bigger.
-
-<h2 id="payouts" className={styles.whitePaperh2}>Payouts</h2>
-
-<h3 className={styles.whitePaperh3}>Premium</h3>
-
-When a locking term ends, a protection seller can get a proportional amount of all the premiums in a pool depending on the amount of protection they have provided.
-
-<h3 className={styles.whitePaperh3}>Protection</h3>
-
-Protection buyers get protection depending on how much premium they have paid. They must show their proof of loss in the form of an LP token in underlying lending protocols. More specifically, they get protection in exchange for the LP token and can get only what they have lost.
+First, at the risk of stating the obvious, a protection seller is entitled to receive a premium only when they protect protection buyers. Thus, protection sellers get a premium only when their locking period overlaps with the protection duration of protection buyers. This is why we accrue a premium over the duration of protection following the Poisson distribution. Second, when a seller withdraws, they get a proportional amount of premium depending on their share of total capital provided in a given block. Third, the longer they keep their capital in a pool, the more premium they can earn. They can earn more interest with the longer deposit term because the delta between the sToken * the exchange rate when they exit the market and the sToken * the exchange rate when they enter the market will be bigger.
 
 <h2 id="security" className={styles.whitePaperh2}>Security</h2>
 
-We take security seriously to maintain trust in our system.
+We take security seriously to maintain trust in our system. 
 
-In life insurance, a buyer might assassinate somebody and then attempt to collect money from the insurance carrier. By the same token, it is possible that a buyer of credit default swaps manipulates a default event for a profit.
+<h3 className={styles.whitePaperh3}>Insolvency</h3>
 
-We have a defense mechanism against this classic insurance problem. In short, we require Protection buyers to be a lender of an underlying loan through our proof of loss system.
+<h4 className={styles.whitePaperh4}>Leverage Ratio Floor</h4>
 
-<h3 className={styles.whitePaperh3}>Proof of Loss</h3>
+We will take a conservative approach to our leverage ratio floor initially. In traditional insurance, big insurance companies' leverage ratio can be as low as 2%. We will start conservatively and adjust the ratio as our community accumulates information and knowledge. 
 
-More specifically, our proof of loss system requires Protection buyers to lock the LP tokens representing a loan amount in under-collateralized lending protocols. In this way, only a lender can be a protection buyer, and a protection buyer can get only what they have lost.
+<h4 className={styles.whitePaperh4}>Incentives</h4>
 
-There are two possible attacks against this system where a protection buyer who is also a lender in an underlying loan manipulates a default event.
+In the case of a bank run, the leverage ratio goes down, and the interest rates go up. As a result, there is an incentive 1) to bring more liquidity with new money and 2) for the existing money to stay invested. 
 
-First, self-loan. Let's say Bob lends $10k to himself as an LP and borrows $100k in total. Bob pays a premium to Carapace to get $10k worth of protection. He maliciously defaults and runs away with $100k + $10k - premium. Second, collusion between a lender and a borrower. Bob(LP) lends $10k to Alice(borrower). Alice borrows $100k in total. Bob pays a premium to Carapace to get $10k worth of protection. Alice maliciously defaults. Bob and Alice run away with $100k - premium. Legit under-collateralized lending protocols have a security model against these attacks. Most importantly, borrowers are required to go through the KYC process. It goes without saying that Bob and Alice face significant reputation risk that damages their reputation widely and serious legal risk of getting arrested in both cases as long as there is an identity system. Some protocols, such as Goldfinch have another layer of protection where a randomly chosen auditor carefully chooses a borrower who is not involved in collusion.
+We also plan to reward CARA tokens to sellers when the leverage ratio is below the floor. 
 
-Thus, it is critical to rigorously review each under-collateralized lending protocol and ensure that they have the right security model.
+<h4 className={styles.whitePaperh4}>Backstop Treasury Funds</h4>
 
-<h2 id="treasury" className={styles.whitePaperh2}>Treasury</h2>
+Our protocol earns some fees, and some of our revenue stored in our treasury contract will be used as a backstop. Also, Starlings Lab (an R&D company behind Carapace) might provide some backstop capital. 
 
-Treasury is a revenue stored for the growth and security of the protocol. It can be used for development, grants, emergency funds in the event of insolvency, and other purposes.
+<h4 className={styles.whitePaperh4}>CARA Token Backstop</h4>
 
-Initially, there are no protocol fees for the treasury. However, we plan to turn on the protocol fees in the upcoming versions. The protocol fees will likely be charged from the interest generated with rehypothecation and/or premium. Our protocol will also earn trading fees in decentralized exchanges(DEXes) by selling a bond in exchange for LP tokens in DEXes. This scheme is known as <u>protocol owned liquidity</u>.
+We will reserve a portion of CARA token allocation as a backstop to cover even more loss. 
 
-It’s worth noting that we won’t charge any fees when a default event happens. Since our protocol aims to protect DeFi users against default risk, we don’t want to incentivize our protocol to cause default events.
+<h3 className={styles.whitePaperh3}>Frauds</h3>
 
-<h2 id="governance" className={styles.whitePaperh2}>Governance</h2>
+In traditional CDS, concern has been expressed about the manipulation of underlying loans. For example, a CDS buyer may pay a borrower to default. We have a defense mechanism to mitigate this classic insurance risk. In short, we require protection buyers to be a lender of an underlying loan with our proof of loss system. 
 
-<h3 className={styles.whitePaperh3}>Pool Creation</h3>
+<h4 className={styles.whitePaperh4}>Proof of Loss</h4>
 
-A new pool is going to be created by DAO. Initially, our core team and outside experts will conclude with a rough consensus. We plan to decentralize this process progressively, and eventually, a new pool will be deployed by a community.
+More specifically, at the point of default claiming, our proof of loss system requires protection buyers to lock the LP tokens that represent a loan amount in under-collateralized lending protocols. In this way, only a lender can be a protection buyer, and a protection buyer can get only what they have lost. In other words, we support only non-naked-CDS.
 
-Although we keep our pool simple in the 1st version, we will introduce other kinds of pools in the future. For example, we can collect loans/pools across under-collateralized lending protocols, and each pool can be divided into a senior and junior tranche with different risk levels. Our community members are encouraged to build a new customized pool.
+Imagine that our protocol supports naked CDS that allows anybody to be a buyer without lending money in underlying loans. This CDS design strongly incentivizes borrowers to default because they can earn their borrowing amount plus the protection payout without lending any money. 
 
-<h3 className={styles.whitePaperh3}>Claiming Process</h3>
+There are two possible attacks against this system where a protection buyer who is also a lender in an underlying loan manipulates a default event. 
 
-Since our protocol focuses on default events that can be verified almost algorithmically, the protocol would payout with no complex claiming process. This little/no governance overhead is advantageous over other insurance protocols.
+First, self-loan. Let's say Bob lends $10k to himself as an LP and borrows $100k in total. Bob pays a premium to Carapace to get $10k worth of protection. He maliciously defaults and keeps $100k + $10k - premium. Second, collusion between a lender and a borrower. Bob(LP) lends $10k to Alice(borrower). Alice borrows $100k in total. Bob pays a premium to Carapace to get $10k worth of protection. Alice maliciously defaults. Bob and Alice collectively keep $100k + $10k - premium. 
+
+Legit under-collateralized lending protocols have a security model against these attacks. Most importantly, borrowers are required to go through the KYC process. It goes without saying that Bob and Alice face significant reputation risk that damages their reputation widely and serious legal risk of getting arrested in both cases as long as there is an identity system. Some protocols, such as Goldfinch have another layer of protection where a randomly chosen auditor carefully chooses a borrower who is not involved in collusion. Sure, there is no perfect guard against this exploitation in underlying protocols because it can be difficult to prove collusion between a borrower and a lender. However, their security model does make collusion much more difficult. 
+
+It is critical for the community to review each under-collateralized lending protocol rigorously and ensure that they have the right security model. 
+
+<h2 id="default-payouts" className={styles.whitePaperh2}>Default Payouts</h2>
+
+Protection buyers get protection depending on how much premium they have paid, and they get only what they have lost. After a claim is made, our contract verifies protection purchases with underlying LP tokens and the buyer’s address. When verification is successful, the payout is made to the buyer in the same transaction. 
+
+<h3 className={styles.whitePaperh3}>Payouts Funds Source</h3>
+
+Default payouts will be funded by the following sources (in this order):
+
+<ul>
+<li className={styles.whitePaperli}>1. Non-accrued premium of defaulted underlying loans</li>
+<li className={styles.whitePaperli}>2. Underlying amount of sTokens including accrued premium</li>
+<li className={styles.whitePaperli}>3. Backstop treasury funds</li>
+<li className={styles.whitePaperli}>4. Other non-accrued premium</li>
+<li className={styles.whitePaperli}>5. CARA token backstop</li>
+</ul>
+
+The accrued premium is the allocated portion of the premium that has already been distributed to sellers. The non-accrued premium is the premium that has been collected from buyers but is yet to be allocated to sellers. The non-accrued premium of the defaulted underlying loans from the claiming buyer should be used first because this capital is supposed to be distributed to the protection sellers who are facing defaulted underlying loans. The other non-accrued premium should not be used until other capital is depleted. Otherwise, protection sellers have no incentive to keep their capital in a pool.
+
+<h3 className={styles.whitePaperh3}>Dispute Resolution</h3>
+
+The Carapace protocol does its best to clearly define what constitutes a default event, as explained above. We also plan to set up a committee with disinterested parties as a dispute resolution mechanism. In case our contract cannot algorithmically determine if the default happened or not due to unexpected events such as smart contract hacking and other things that we do not even know yet, the committee comes in. The committee is made up of members of the core team of Carapace as well as credit advisors to Carapace. Committee members should not participate in the market to avoid conflict of interest. When there is a dispute, the committee evaluates a claim with a vote. This committee uses a multi-sig contract that accepts or denies a dispute submission. All of the members of the committee have a stake in Carapace and an interest in doing what's best for the long-term success of Carapace. In other words, they have skin in the game because their wrong decision will make them suffer economically.
 
 <h2 id="acknowledgments" className={styles.whitePaperh2}>Acknowledgments</h2>
 
-Special thanks to Rohit Sabnis and Sabir Shaik for ideas, heavy feedback, and brainstorming help when writing this. The paper would not have been possible without them.
+Special thanks to Rohit Sabnis, Sabir Shaik, and Vipul Nadoda for ideas, heavy feedback, and brainstorming help when writing this. The paper would not have been possible without them.
 
 <h2 id="disclaimer" className={styles.whitePaperh2}>Disclaimer</h2>
 
-This paper is for general information purposes only. It does not constitute investment advice or a recommendation or solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. The opinions reflected herein are subject to change without being updated.
+This paper is for general information purposes only. It does not constitute investment advice or a recommendation or a solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. The opinions reflected herein are subject to change without being updated.
 
   </section>
 } />
