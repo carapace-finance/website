@@ -30,10 +30,8 @@ export default function WhitePaperLayout(props) {
               { type: "link", href: "#peer-to-peer", label: "Peer-to-Peer Model"},
               { type: "link", href: "#premium-pricing", label: "Premium Pricing" },
               { type: "link", href: "#yields-distribution", label: "Yields Distribution" },
-              { type: "link", href: "#payouts", label: "Payouts" },
               { type: "link", href: "#security", label: "Security" },
-              { type: "link", href: "#treasury", label: "Treasury" },
-              { type: "link", href: "#governance", label: "Governance" },
+              { type: "link", href: "#default-payouts", label: "Default Payouts" },
               { type: "link", href: "#acknowledgments", label: "Acknowledgments" },
               { type: "link", href: "#disclaimer", label: "Disclaimer" },
             ]}
