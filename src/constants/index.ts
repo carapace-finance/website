@@ -93,16 +93,16 @@ export const footerLinks = [
   {
     title: "PROTOCOL DESIGN",
     links: [
-      {
-        name: "Coming soon",
-        link: "",
-        target: ""
-      },
       // {
-      //   name: "Whitepaper",
-      //   link: "whitepaper",
+      //   name: "Coming soon",
+      //   link: "",
       //   target: ""
       // },
+      {
+        name: "Whitepaper",
+        link: "whitepaper",
+        target: ""
+      },
       // {
       //   name: "User Doc",
       //   link: "",
@@ -147,10 +147,10 @@ export const navLinks = [
     id: "/",
     title: "Home",
   },
-  // {
-  //   id: "/whitepaper",
-  //   title: "Whitepaper",
-  // },
+  {
+    id: "/whitepaper",
+    title: "Whitepaper",
+  },
   // {
   //   id: "/docs/abstract",
   //   title: "Documentation",
