@@ -160,3 +160,38 @@ export const navLinks = [
     title: "Blog",
   },
 ];
+
+export const sidebarLinks =[
+  {
+    id: "#abstract",
+    title: "Abstract"
+  },
+  {
+    id: "#peer-to-peer",
+    title: "Peer-to-Peer Model"
+  },
+  {
+    id: "#premium-pricing",
+    title: "Premium Pricing"
+  },
+  {
+    id: "#yields-distribution",
+    title: "Yields Distribution"
+  },
+  {
+    id: "#security",
+    title: "Security"
+  },
+  {
+    id: "#default-payouts",
+    title: "Default Payouts"
+  },
+  {
+    id: "#acknowledgments",
+    title: "Acknowledgments"
+  },
+  {
+    id: "#disclaimer",
+    title: "Disclaimer"
+  },
+]

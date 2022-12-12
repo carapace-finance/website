@@ -8,6 +8,7 @@ module.exports = {
         buttonPinkHover: "#FF2576",
         textPinkHover: "#FF0C66",
         customDarkBlue: "#161C2E",
+        darkSidebar: "#606770"
       },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
