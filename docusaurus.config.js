@@ -61,7 +61,7 @@ const config = {
     ({
       fathomAnalytics: {
         siteId: process.env.FATHOM_SITE_ID,
-        customDomain: "https://www.carapace.finance",
+        customDomain: "https://amazing-protected.carapace.finance",
       },
       image: "img/socialmeta.png",
       // navbar: {
