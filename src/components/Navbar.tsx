@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import assets from '../assets';
 import { navLinks } from '../constants';
+import Link from "@docusaurus/Link";
 
 const usePathname = () => {
   const location = useLocation();
@@ -17,6 +18,36 @@ const Navbar = () => {
       <a href="/">
         <img src={assets.logo} alt="carapace" className="w-[145px] md:w-[245px] h-[43px] md:h-[62px] object-contain" />
       </a>
+      {/* 元 page not findになる whitepaperの時にアンダーラインでない */}
+      {/* <ul className="list-none lg:flex hidden justify-end items-center flex-1">
+        {navLinks.map((nav, _) => (
+          <li
+            key={nav.id}
+            className={`decoration-buttonPink text-customDarkBlue list-none font-manrope font-normal cursor-pointer leading-[18px] tracking-[0.02em] text-[22px] ${
+              active === nav.id ? "underline underline-offset-4 decoration-2 decoration-buttonPink decoration-solid" : ""
+            } mr-10`}
+            onClick={() => {
+              setActive(nav.id)
+            }
+          }
+          >
+            <a className={`hover:text-customDarkBlue no-underline
+              ${active !== nav.id
+              ?
+              "group transition-all duration-300 ease-in-out  hover:no-underline"
+              :
+              "hover:decoration-buttonPink decoration-buttonPink"}`}
+              href={`${nav.id}`}
+            >
+              <span className={`bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"}`} >
+                {nav.title}
+              </span>
+            </a>
+
+          </li>
+        ))}
+      </ul> */}
+
 
       <ul className="list-none lg:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, _) => (
@@ -30,14 +61,23 @@ const Navbar = () => {
             }
           }
           >
-            <a className={`hover:text-customDarkBlue no-underline ${active !== nav.id ? "group transition-all duration-300 ease-in-out  hover:no-underline" : "hover:decoration-buttonPink decoration-buttonPink"}`}  href={`${nav.id}`}>
-              <span className={`bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"}`} >
-                {nav.title}
-              </span>
-            </a>
+              <Link
+                to={nav.id}
+                className={`
+                ${active!== nav.id ? "group transition-all no-underline hover:no-underline" : "hover: decoration-buttonPink"}
+              `}
+              >
+                <span className={`underline-offset-[4px] decoration-[2.2px] text-customDarkBlue bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 "}`}
+                >
+                  {nav.title}
+                  </span>
+              </Link>
           </li>
         ))}
       </ul>
+
+
+
 
       <div className="lg:hidden flex flex-1 justify-end items-center">
         <a onClick={() => setToggle(!toggle)}></a>
