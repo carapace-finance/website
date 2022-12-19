@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import assets from '../assets';
 import { navLinks } from '../constants';
+import Link from "@docusaurus/Link";
 
 const usePathname = () => {
   const location = useLocation();
@@ -30,11 +31,35 @@ const Navbar = () => {
             }
           }
           >
-            <a className={`hover:text-customDarkBlue no-underline ${active !== nav.id ? "group transition-all duration-300 ease-in-out  hover:no-underline" : "hover:decoration-buttonPink decoration-buttonPink"}`}  href={`${nav.id}`}>
-              <span className={`bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"}`} >
+            {/* <a className={`hover:text-customDarkBlue no-underline
+              ${active !== nav.id
+              ?
+              "group transition-all duration-300 ease-in-out  hover:no-underline"
+              :
+              "hover:decoration-buttonPink decoration-buttonPink"}`}
+              href={`${nav.id}`}
+            >
+              <span className={
+                `bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover
+                :
+                bg-[length:100%_2px] transition-all duration-500 ease-out"}`} >
                 {nav.title}
               </span>
-            </a>
+            </a> */}
+
+            <Link
+              to={nav.id}
+              className={`
+              ${active!== nav.id
+                ?
+                "group transition-all duration-300 ease-in-out  hover:no-underline"
+                :
+                "hover:decoration-buttonPink decoration-buttonPink bg-[length:100%_2px] transition-all duration-500 ease-out"}
+              `}
+            >
+              {nav.title}
+            </Link>
+
           </li>
         ))}
       </ul>
