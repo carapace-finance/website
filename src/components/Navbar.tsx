@@ -67,7 +67,7 @@ const Navbar = () => {
                 ${active!== nav.id ? "group transition-all no-underline hover:no-underline" : "hover: decoration-buttonPink"}
               `}
               >
-                <span className={` text-customDarkBlue bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"}`}
+                <span className={`underline-offset-[4px] decoration-[2.2px] text-customDarkBlue bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 "}`}
                 >
                   {nav.title}
                   </span>
