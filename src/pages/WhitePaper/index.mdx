@@ -16,11 +16,11 @@ import WhitePaperLayout from './_WhitePaperLayout.tsx'
 
 <h2 id="abstract" className={styles.whitePaperh2}>Abstract</h2>
 
-This paper proposes decentralized protection against default risk in under-collateralized crypto loans. Traditionally, protection against credit default risk is known as credit default swaps. 
+This paper proposes decentralized protection against default risk in under-collateralized crypto loans. Traditionally, protection against credit default risk is known as credit default swaps.
 
-We aim to build the next DeFi primitive currently missing in the market to make DeFi more resilient to credit risks. Credit risk protection is critical for the mass adoption of decentralized finance. 
+We aim to build the next DeFi primitive currently missing in the market to make DeFi more resilient to credit risks. Credit risk protection is critical for the mass adoption of decentralized finance.
 
-We create a market where traders can swap the default risk. Protection buyers pay a premium to get the right to claim protection when an underlying loan defaults. Protection sellers provide capital for protection in exchange for a premium. When a default event occurs, a payout is made to protection buyers. 
+We create a market where traders can swap the default risk. Protection buyers pay a premium to get the right to claim protection when an underlying loan defaults. Protection sellers provide capital for protection in exchange for a premium. When a default event occurs, a payout is made to protection buyers.
 
 ![abstract](../../assets/abstract.png)
 
@@ -40,13 +40,13 @@ If you want to hedge against the default risk of a specific underlying lending p
 
 <h3 className={styles.whitePaperh3}>Protection Sellers</h3>
 
-If you are convinced that the underlying lending pools are safe, you can invest capital in the respective pool contract to earn yields. You will get a representative sToken in exchange for the capital you have invested. 
+If you are convinced that the underlying lending pools are safe, you can invest capital in the respective pool contract to earn yields. You will get a representative sToken in exchange for the capital you have invested.
 
-If one of the lending pools defaults, some liquidity is kept aside for protection. If no loan defaults within the designated period, then protection sellers earn yield via premium payment, without facing any loss. 
+If one of the lending pools defaults, some liquidity is kept aside for protection. If no loan defaults within the designated period, then protection sellers earn yield via premium payment, without facing any loss.
 
-Our pool contract locks the capital provided for some time to prevent protection sellers from running away without providing protection when a lending pool defaults. 
+Our pool contract locks the capital provided for some time to prevent protection sellers from running away without providing protection when a lending pool defaults.
 
-Sellers can always request to withdraw the deposited capital, or they can keep their capital in a pool to keep earning yields. 
+Sellers can always request to withdraw the deposited capital, or they can keep their capital in a pool to keep earning yields.
 
 <h2 id="premium-pricing" className={styles.whitePaperh2}>Premium Pricing</h2>
 
@@ -256,49 +256,49 @@ First, at the risk of stating the obvious, a protection seller is entitled to re
 
 <h2 id="security" className={styles.whitePaperh2}>Security</h2>
 
-We take security seriously to maintain trust in our system. 
+We take security seriously to maintain trust in our system.
 
 <h3 className={styles.whitePaperh3}>Insolvency</h3>
 
 <h4 className={styles.whitePaperh4}>Leverage Ratio Floor</h4>
 
-We will take a conservative approach to our leverage ratio floor initially. In traditional insurance, big insurance companies' leverage ratio can be as low as 2%. We will start conservatively and adjust the ratio as our community accumulates information and knowledge. 
+We will take a conservative approach to our leverage ratio floor initially. In traditional insurance, big insurance companies' leverage ratio can be as low as 2%. We will start conservatively and adjust the ratio as our community accumulates information and knowledge.
 
 <h4 className={styles.whitePaperh4}>Incentives</h4>
 
-In the case of a bank run, the leverage ratio goes down, and the interest rates go up. As a result, there is an incentive 1) to bring more liquidity with new money and 2) for the existing money to stay invested. 
+In the case of a bank run, the leverage ratio goes down, and the interest rates go up. As a result, there is an incentive 1) to bring more liquidity with new money and 2) for the existing money to stay invested.
 
-We also plan to reward CARA tokens to sellers when the leverage ratio is below the floor. 
+We also plan to reward CARA tokens to sellers when the leverage ratio is below the floor.
 
 <h4 className={styles.whitePaperh4}>Backstop Treasury Funds</h4>
 
-Our protocol earns some fees, and some of our revenue stored in our treasury contract will be used as a backstop. Also, Starlings Lab (an R&D company behind Carapace) might provide some backstop capital. 
+Our protocol earns some fees, and some of our revenue stored in our treasury contract will be used as a backstop. Also, Starlings Lab (an R&D company behind Carapace) might provide some backstop capital.
 
 <h4 className={styles.whitePaperh4}>CARA Token Backstop</h4>
 
-We will reserve a portion of CARA token allocation as a backstop to cover even more loss. 
+We will reserve a portion of CARA token allocation as a backstop to cover even more loss.
 
 <h3 className={styles.whitePaperh3}>Frauds</h3>
 
-In traditional CDS, concern has been expressed about the manipulation of underlying loans. For example, a CDS buyer may pay a borrower to default. We have a defense mechanism to mitigate this classic insurance risk. In short, we require protection buyers to be a lender of an underlying loan with our proof of loss system. 
+In traditional CDS, concern has been expressed about the manipulation of underlying loans. For example, a CDS buyer may pay a borrower to default. We have a defense mechanism to mitigate this classic insurance risk. In short, we require protection buyers to be a lender of an underlying loan with our proof of loss system.
 
 <h4 className={styles.whitePaperh4}>Proof of Loss</h4>
 
 More specifically, at the point of default claiming, our proof of loss system requires protection buyers to lock the LP tokens that represent a loan amount in under-collateralized lending protocols. In this way, only a lender can be a protection buyer, and a protection buyer can get only what they have lost. In other words, we support only non-naked-CDS.
 
-Imagine that our protocol supports naked CDS that allows anybody to be a buyer without lending money in underlying loans. This CDS design strongly incentivizes borrowers to default because they can earn their borrowing amount plus the protection payout without lending any money. 
+Imagine that our protocol supports naked CDS that allows anybody to be a buyer without lending money in underlying loans. This CDS design strongly incentivizes borrowers to default because they can earn their borrowing amount plus the protection payout without lending any money.
 
-There are two possible attacks against this system where a protection buyer who is also a lender in an underlying loan manipulates a default event. 
+There are two possible attacks against this system where a protection buyer who is also a lender in an underlying loan manipulates a default event.
 
-First, self-loan. Let's say Bob lends $10k to himself as an LP and borrows $100k in total. Bob pays a premium to Carapace to get $10k worth of protection. He maliciously defaults and keeps $100k + $10k - premium. Second, collusion between a lender and a borrower. Bob(LP) lends $10k to Alice(borrower). Alice borrows $100k in total. Bob pays a premium to Carapace to get $10k worth of protection. Alice maliciously defaults. Bob and Alice collectively keep $100k + $10k - premium. 
+First, self-loan. Let's say Bob lends $10k to himself as an LP and borrows $100k in total. Bob pays a premium to Carapace to get $10k worth of protection. He maliciously defaults and keeps $100k + $10k - premium. Second, collusion between a lender and a borrower. Bob(LP) lends $10k to Alice(borrower). Alice borrows $100k in total. Bob pays a premium to Carapace to get $10k worth of protection. Alice maliciously defaults. Bob and Alice collectively keep $100k + $10k - premium.
 
-Legit under-collateralized lending protocols have a security model against these attacks. Most importantly, borrowers are required to go through the KYC process. It goes without saying that Bob and Alice face significant reputation risk that damages their reputation widely and serious legal risk of getting arrested in both cases as long as there is an identity system. Some protocols, such as Goldfinch have another layer of protection where a randomly chosen auditor carefully chooses a borrower who is not involved in collusion. Sure, there is no perfect guard against this exploitation in underlying protocols because it can be difficult to prove collusion between a borrower and a lender. However, their security model does make collusion much more difficult. 
+Legit under-collateralized lending protocols have a security model against these attacks. Most importantly, borrowers are required to go through the KYC process. It goes without saying that Bob and Alice face significant reputation risk that damages their reputation widely and serious legal risk of getting arrested in both cases as long as there is an identity system. Some protocols, such as Goldfinch have another layer of protection where a randomly chosen auditor carefully chooses a borrower who is not involved in collusion. Sure, there is no perfect guard against this exploitation in underlying protocols because it can be difficult to prove collusion between a borrower and a lender. However, their security model does make collusion much more difficult.
 
-It is critical for the community to review each under-collateralized lending protocol rigorously and ensure that they have the right security model. 
+It is critical for the community to review each under-collateralized lending protocol rigorously and ensure that they have the right security model.
 
 <h2 id="default-payouts" className={styles.whitePaperh2}>Default Payouts</h2>
 
-Protection buyers get protection depending on how much premium they have paid, and they get only what they have lost. After a claim is made, our contract verifies protection purchases with underlying LP tokens and the buyer’s address. When verification is successful, the payout is made to the buyer in the same transaction. 
+Protection buyers get protection depending on how much premium they have paid, and they get only what they have lost. After a claim is made, our contract verifies protection purchases with underlying LP tokens and the buyer’s address. When verification is successful, the payout is made to the buyer in the same transaction.
 
 <h3 className={styles.whitePaperh3}>Payouts Funds Source</h3>
 

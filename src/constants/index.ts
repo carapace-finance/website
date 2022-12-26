@@ -159,6 +159,10 @@ export const navLinks = [
     id: "/blog",
     title: "Blog",
   },
+  {
+    id: "/check",
+    title: "Check",
+  },
 ];
 
 export const sidebarLinks =[
