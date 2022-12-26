@@ -15,37 +15,37 @@ export default function Check(props): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   const jobsPage = useDocusaurusContext().siteConfig.baseUrl + "jobs";
   return (
-    <Layout>
-      <div className={DocPageStyles.docPage}>
-        <main className={clsx(MainStyles.docMainContainer)}>
-          <div
-            className={clsx(
-              "container",
-              "padding-top--md",
-              "padding-bottom--lg"
-            )}
-          >
-            <div className="row">
-              <div className={clsx("col", DocItemColStyles.docItemCol)}>
-                <div className={DocItemStyles.docItemContainer}>
-                  <article>
-                    <div
-                      className={clsx(
-                        ThemeClassNames.docs.docMarkdown,
-                        "markdown"
-                      )}
-                    >
+    // <Layout>
+    //   <div className={DocPageStyles.docPage}>
+    //     <main className={clsx(MainStyles.docMainContainer)}>
+    //       <div
+    //         className={clsx(
+    //           "container",
+    //           "padding-top--md",
+    //           "padding-bottom--lg"
+    //         )}
+    //       >
+    //         <div className="row">
+    //           <div className={clsx("col", DocItemColStyles.docItemCol)}>
+    //             <div className={DocItemStyles.docItemContainer}>
+    //               <article>
+    //                 <div
+    //                   className={clsx(
+    //                     ThemeClassNames.docs.docMarkdown,
+    //                     "markdown"
+    //                   )}
+    //                 >
                       <MDXContent>
                         {props.content}
                       </MDXContent>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-    </Layout>
+    //                 </div>
+    //               </article>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </main>
+    //   </div>
+    // </Layout>
   );
 }
