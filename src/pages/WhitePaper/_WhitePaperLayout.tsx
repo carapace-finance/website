@@ -16,7 +16,7 @@ export default function WhitePaperLayout(props) {
 
   return (
     <Layout>
-      {/* <div className={DocPageStyles.docPage}>
+      <div className={DocPageStyles.docPage}>
         <aside
           className={clsx(
             ThemeClassNames.docs.docSidebarContainer,
@@ -74,7 +74,7 @@ export default function WhitePaperLayout(props) {
             </div>
           </div>
         </main>
-      </div> */}
+      </div>
     </Layout>
   );
 }
