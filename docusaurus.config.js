@@ -29,15 +29,6 @@ const config = {
         //   editUrl: "https://github.com/carapace-finance/website",
         // },
         pages: {
-          path: 'src/pages',
-          routeBasePath: '/',
-          include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
-          exclude: [
-            '**/_*.{js,jsx,ts,tsx,md,mdx}',
-            '**/_*/**',
-            '**/*.test.{js,jsx,ts,tsx}',
-            '**/__tests__/**',
-          ],
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
