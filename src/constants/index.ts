@@ -144,11 +144,11 @@ export const footerLinks = [
 
 export const navLinks = [
   {
-    id: "/",
+    id: "/whitepaper",
     title: "Home",
   },
   {
-    id: "/whitepaper",
+    id: "/",
     title: "Whitepaper",
   },
   // {

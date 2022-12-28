@@ -10,7 +10,7 @@ const usePathname = () => {
 };
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState(usePathname);
   const [toggle, setToggle] = useState(false);
 
   return (
