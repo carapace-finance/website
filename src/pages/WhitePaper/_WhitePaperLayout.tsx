@@ -65,7 +65,7 @@ export default function WhitePaperLayout(props) {
                       )}
                     >
                       <MDXContent>
-                        {props.content}
+                        {/* {props.content} */}
                       </MDXContent>
                     </div>
                   </article>
