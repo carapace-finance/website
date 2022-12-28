@@ -40,10 +40,6 @@ const config = {
           blogSidebarCount: 8,
           showReadingTime: true,
         },
-        whitepaper: {
-          blogSidebarCount: 8,
-          showReadingTime: true,
-        },
         theme: {
           customCss: require.resolve("./src/style/custom.css"),
         },
