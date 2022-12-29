@@ -148,7 +148,7 @@ export const navLinks = [
     title: "Home",
   },
   {
-    id: "/whitepaper",
+    id: "/WhitePaper/",
     title: "Whitepaper",
   },
   // {
