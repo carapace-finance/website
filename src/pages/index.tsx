@@ -15,9 +15,6 @@ export default function Home(): JSX.Element {
     //   description="Carapace is building decentralized protection against default risk in crypto loans."
     // >
     <>
-    <Head>
-      <meta property="og:image" content="img/socialmeta.png" />
-    </Head>
       <div className="overflow-x-hidden">
         <Hero />
         <div className="h-[67px] sm:h-[185px]"></div>
