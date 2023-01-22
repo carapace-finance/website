@@ -17,7 +17,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "Carapace",
   projectName: "website",
-  // plugins: [require.resolve("docusaurus-plugin-fathom")],
+  plugins: [require.resolve("docusaurus-plugin-fathom")],
   presets: [
     [
       "classic",
@@ -61,6 +61,7 @@ const config = {
     ({
       fathomAnalytics: {
         siteId: process.env.FATHOM_SITE_ID,
+        customDomain: "https://amazing-protected.carapace.finance",
       },
       image: "img/socialmeta.png",
       // navbar: {
