@@ -103,11 +103,11 @@ export const footerLinks = [
         link: "whitepaper",
         target: ""
       },
-      // {
-      //   name: "User Doc",
-      //   link: "",
-      //   target: ""
-      // },
+      {
+        name: "Documentation",
+        link: "docs/abstract",
+        target: ""
+      },
     ],
   },
   {
@@ -151,10 +151,10 @@ export const navLinks = [
     id: "/WhitePaper/",
     title: "Whitepaper",
   },
-  // {
-  //   id: "/docs/abstract",
-  //   title: "Documentation",
-  // },
+  {
+    id: "/docs/abstract",
+    title: "Documentation",
+  },
   {
     id: "/blog",
     title: "Blog",
