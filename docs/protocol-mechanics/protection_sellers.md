@@ -23,11 +23,11 @@ Carapace operates on the basis of cycles and each cycle is 90 days. Sellers have
 
 ### Diversification
 
-Find more details in [Protocol Mechanics: General](https://www.carapace.finance/docs/protocol-mechanics/general).
+Find more details in [Protocol Mechanics: General](/docs/protocol-mechanics/general).
 
 ### Leveraged Yields From Premium Payments
 
-Find more details in [Protocol Mechanics: General](https://www.carapace.finance/docs/protocol-mechanics/general).
+Find more details in [Protocol Mechanics: General](/docs/protocol-mechanics/general).
 
 ### Access
 
@@ -47,7 +47,7 @@ A seller can make a deposit at any time as long as the follow conditions are met
 
 ## Withdrawal
 
-Sellers can make a withdrawal request at any time by specifying the sToken amount that they wish to withdraw. As explained in our [White Paper](https://www.carapace.finance/WhitePaper/#premium-pricing), sToken amount equals funds deposited plus accrued premiums minus default payouts for a given seller.
+Sellers can make a withdrawal request at any time by specifying the sToken amount that they wish to withdraw. As explained in our [White Paper](/WhitePaper/#premium-pricing), sToken amount equals funds deposited plus accrued premiums minus default payouts for a given seller.
 
 In addition, protection sellers will always have the ability to sell sTokens in the secondary market as long as there is a buyer.
 

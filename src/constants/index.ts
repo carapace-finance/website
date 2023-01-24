@@ -100,12 +100,12 @@ export const footerLinks = [
       // },
       {
         name: "Whitepaper",
-        link: "whitepaper",
+        link: "/WhitePaper",
         target: ""
       },
       {
         name: "Documentation",
-        link: "docs/abstract",
+        link: "/docs/abstract",
         target: ""
       },
     ],
