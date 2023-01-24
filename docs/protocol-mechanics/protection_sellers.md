@@ -17,7 +17,7 @@ Selling protection on Carapace means taking on exposure to cover default risk in
 
 For protection sellers, Carapace offers a well-diversified portfolio, providing exposure to lending pools in some of the best under-collateralized lending protocols. Benefits include - 
 
-### Flexible terms
+### Flexible Terms
 
 Carapace operates on the basis of cycles and each cycle is 90 days. Sellers have the ability to withdraw capital within two cycles i.e. within 180 days for those looking for shorter-term investment horizons. It also brings uniformity to their investment, in terms of capital horizon, as underlying lending pools might have varying maturity dates (e.g. Loan A expires on Jan 1st 2024, Loan B expires on Mar 1st 2024 etc.) but sellers’ funds are only locked up for up to a period of 2 cycles (180 days) after a deposit has been made.
 
@@ -25,7 +25,7 @@ Carapace operates on the basis of cycles and each cycle is 90 days. Sellers have
 
 Find more details in [Protocol Mechanics: General](https://www.carapace.finance/docs/protocol-mechanics/general).
 
-### Leveraged yields from premium payments
+### Leveraged Yields From Premium Payments
 
 Find more details in [Protocol Mechanics: General](https://www.carapace.finance/docs/protocol-mechanics/general).
 
@@ -79,7 +79,7 @@ Primary source of yield for sellers is by collecting premium payments made by bu
 
 We plan to use some capital in a protection pool to invest in yields earning sources in the upcoming versions. We will aim to give investors flexibility and transparency on how these funds are reinvested. The interest generated from the investment will be distributed to our protection sellers.
 
-### CARA token rewards
+### CARA Token Rewards
 
 Early protection sellers are rewarded with our protocol token. They can invest their CARA tokens in decentralized exchanges (DEXes) to earn more yields.
 
@@ -95,15 +95,15 @@ Note that payouts cannot exceed principal loss suffered by a particular protecti
 
 ### Other Risks
 
-#### Smart contract exploit risk 
+#### Smart Contract Exploit Risk 
 
 Note that Initial users are protected from smart contract exploit risk as a result of insurance purchased from Sherlock for up to $5m.
 
-#### Rehypothecation risk
+#### Rehypothecation Risk
 
 Potential loss of capital from Carapace partners’ yield generating strategies. Note that this feature will be launched in future versions of the protocol and sellers will be provided with the option on whether to participate in the program or not. 
 
-#### Fraud on under-collateralized lending protocol 
+#### Fraud
 
 To minimize fraud via under-collateralized lending protocols, we will only work with protocols like Goldfinch which are building secure incentive models (e.g. decentralized audit system) and strong security measures to minimize fraud. 
 
@@ -111,7 +111,7 @@ To minimize fraud via under-collateralized lending protocols, we will only work 
 
 ![plot](../../src/assets/chart-3.png)
 
-## Data availability for Due-Diligence
+## Data Availability for Due-Diligence
 
 Carapace will provide the following info at the Carapace pool level:
 <ul className={styles.bulletpoints}>

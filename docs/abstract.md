@@ -14,6 +14,4 @@ Carapace connects buyers and sellers of protection against default risk for unde
 
 ![plot](../src/assets/abstract-1.png)
 
-## Why we are building Carapace
-
 Under-collateralized lending in DeFi unlocks multiple use-cases in helping fund both crypto as well as real world assets. For DeFi lending to become a huge market, several primitives will need to be built. At Carapace, we are building one such core DeFi primitive to make the industry more mature, more capital efficient, and to increase access amongst a diversified range of investors.

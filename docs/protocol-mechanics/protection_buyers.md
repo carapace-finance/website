@@ -28,7 +28,7 @@ Risk-adjusted yields for protection buyers equals interest earned from underlyin
 
 Investors are also able to choose their target risk-adjusted yields based on required protection, thus supporting bespoke investment strategies, as buyers can choose what percentage of funds invested need to be protected e.g. 50%, 80% or 100% of amount to be protected
 
-### Efficient premium pricing
+### Efficient Premium Pricing
 
 Since Carapace is cross-protocol, protection sellers face a diversified level of risk across lending pools as well as across protocols. As Carapace grows, level of diversification and market liquidity grows which will lead to more efficient/lower premium pricing for the protection buyer.
 

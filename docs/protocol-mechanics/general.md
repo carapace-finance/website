@@ -27,11 +27,11 @@ Please note that higher leverage also increases the risk for protection sellers 
 
 The relationship between protection purchased (demand) and protection sold (supply) is known as the leverage ratio. See more details on leverage ratio in our [White Paper](https://www.carapace.finance/WhitePaper/#premium-pricing).
 
-#### Boundaries
+#### Leverage Ratio Range
 
 Each pool will have a ceiling and floor in a way that leverage ratio is maintained within an acceptable range. We select these variables to ensure that Carapace Pool has sufficient liquidity to cover losses in the event of default. Equally importantly, we want to ensure that protection sellers earn a certain minimum level yield from premiums in the Carapace Pool that reflects the degree of risk being taken.
 
-#### Addition of new lending pools
+#### Addition of New Lending Pools
 
 After the initial setup of a Carapace pool, each subsequent expiration of a lending pool within a Carapace pool will result in Carapace adding an additional lending pool to the Carapace pool. The ideal scenario is that the new underlying lending pool matches the characteristics of the expiring lending pool to the extent possible in terms of duration, level and type of risk, borrower profile etc.
 
@@ -68,7 +68,7 @@ As an illustrative example, see premium yield curve based on Carapace’s initia
 
 As soon as a borrower fails to repay on the expected date as per the repayment schedule, Carapace considers the respective underlying lending pool to be in a ‘potential default state’. If a lending pool in a ‘potential default state’ does NOT receive two repayments in the next two repayment periods, the lending pool is considered to be in default by the Carapace protocol. Therafter, buyers will be eligible to claim a default payout.
 
-### Sufficient Capital for payouts
+### Sufficient Capital for Payouts
 
 Carapace aims to ensure appropriate capital is locked in a Carapace Pool to cover any potential defaults. In case the capital locked in the pool is insufficient to cover default related payouts, then Carapace Pool can access:
 <ul className={styles.bulletpoints}>
@@ -76,7 +76,7 @@ Carapace aims to ensure appropriate capital is locked in a Carapace Pool to cove
   <li>CARA Tokens - As a last resort, a portion of the tokens could be leveraged by the community to cover any losses that are not covered by locked capital and treasury reserve</li>
 </ul>
 
-### Borrower Repayments post-default
+### Borrower Repayments Post-Default
 
 It is possible that borrowers are unable to make repayments on the due date, but are able to return funds to lenders at a later time. To support such cases, protection buyers that are making a payout claim will be required to lock up their underlying protocol’s LP tokens in the Carapace Pool. As a result, protection buyers will end up transferring ownership of LP tokens to Carapace, held on behalf of its protection sellers. 
 
