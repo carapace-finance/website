@@ -1,5 +1,5 @@
 ---
-title: "Buyer Hub"
+title: "Protection Buyers"
 sidebar_position: 3
 pagination_next: null
 pagination_prev: null
@@ -46,7 +46,7 @@ The primary risk for protection buyers is that there might not be sufficient cap
 
 ### Other Risks 
 
-Smart contract failure and Fraud are some of the other risks faced by a buyer. These risks and mitigants are covered in detail in the [Protocol Mechanics: Seller Hub](https://www.carapace.finance/docs/protocol-mechanics/seller-hub). 
+Smart contract failure and Fraud are some of the other risks faced by a buyer. These risks and mitigants are covered in detail in the [Protocol Mechanics: Protection Sellers](https://www.carapace.finance/docs/protocol-mechanics/protection_sellers). 
 
 ## Buyer Qualifications
 
