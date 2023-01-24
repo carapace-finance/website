@@ -60,7 +60,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       fathomAnalytics: {
-        siteId: 'YOEYJFGL',
+        siteId: process.env.FATHOM_SITE_ID,
         customDomain: "https://amazing-protected.carapace.finance",
       },
       image: "img/socialmeta.png",
