@@ -25,7 +25,7 @@ Please note that higher leverage also increases the risk for protection sellers 
 
 #### Leverage Ratio
 
-The relationship between protection purchased (demand) and protection sold (supply) is known as the leverage ratio. See more details on leverage ratio in our [White Paper](/WhitePaper/#premium-pricing).
+The relationship between protection purchased (demand) and protection sold (supply) is known as the leverage ratio. See more details on leverage ratio in our White Paper [here](/WhitePaper/#premium-pricing).
 
 #### Leverage Ratio Range
 

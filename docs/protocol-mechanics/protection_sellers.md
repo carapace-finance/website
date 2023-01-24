@@ -23,11 +23,11 @@ Carapace operates on the basis of cycles and each cycle is 90 days. Sellers have
 
 ### Diversification
 
-Find more details in [Protocol Mechanics: General](/docs/protocol-mechanics/general).
+Find more details in Protocol Mechanics: General section [here](/docs/protocol-mechanics/general#diversification).
 
 ### Leveraged Yields From Premium Payments
 
-Find more details in [Protocol Mechanics: General](/docs/protocol-mechanics/general).
+Find more details in Protocol Mechanics: General section [here](/docs/protocol-mechanics/general#diversification).
 
 ### Access
 
@@ -47,7 +47,7 @@ A seller can make a deposit at any time as long as the follow conditions are met
 
 ## Withdrawal
 
-Sellers can make a withdrawal request at any time by specifying the sToken amount that they wish to withdraw. As explained in our [White Paper](/WhitePaper/#premium-pricing), sToken amount equals funds deposited plus accrued premiums minus default payouts for a given seller.
+Sellers can make a withdrawal request at any time by specifying the sToken amount that they wish to withdraw. As explained in our White Paper [here](/WhitePaper/#premium-pricing), sToken amount equals funds deposited plus accrued premiums minus default payouts for a given seller.
 
 In addition, protection sellers will always have the ability to sell sTokens in the secondary market as long as there is a buyer.
 
@@ -73,7 +73,7 @@ A seller can make withdraw as long as the following conditions are met:
 
 ### Premium Payments
 
-Primary source of yield for sellers is by collecting premium payments made by buyers. This yield can vary based on several factors such as level of risk in underlying pools, duration of capital provided, amount of protection being bought etc. With sufficient premium and a reasonably low leverage ratio ceiling (see detailed explanation of leverage ratio in our White Paper), protection sellers will be able to earn high yields.
+Primary source of yield for sellers is by collecting premium payments made by buyers. This yield can vary based on several factors such as level of risk in underlying pools, duration of capital provided, amount of protection being bought etc. With sufficient premium and a reasonably low leverage ratio ceiling (see detailed explanation of leverage ratio in our White Paper [here](/WhitePaper/#premium-pricing), protection sellers will be able to earn high yields.
 
 ### Rehypothecation
 

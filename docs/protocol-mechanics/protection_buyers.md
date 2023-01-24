@@ -42,11 +42,11 @@ Token rewards of this nature provide enhanced yield to buyers beyond their risk 
 
 ### Insolvency
 
-The primary risk for protection buyers is that there might not be sufficient capital available in a given pool to cover each claim in the event of default. See [Protocol Mechanics: General](/docs/protocol-mechanics/general) section for a detailed explanation on how Carapace mitigates this risk. 
+The primary risk for protection buyers is that there might not be sufficient capital available in a given pool to cover each claim in the event of default. See Protocol Mechanics: General section [here](/docs/protocol-mechanics/general#sufficient-capital-for-payouts) section for a detailed explanation on how Carapace mitigates this risk. 
 
 ### Other Risks 
 
-Smart contract failure and Fraud are some of the other risks faced by a buyer. These risks and mitigants are covered in detail in the [Protocol Mechanics: Protection Sellers](/docs/protocol-mechanics/protection_sellers). 
+Smart contract failure and Fraud are some of the other risks faced by a buyer. These risks and mitigants are covered in detail in the Protocol Mechanics: Protection Sellers section [here](/docs/protocol-mechanics/protection_sellers#other-risks). 
 
 ## Buyer Qualifications
 
