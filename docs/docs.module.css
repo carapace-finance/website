@@ -5,16 +5,31 @@
 }
 
 h1 {
-  @apply text-[40px] sm:text-[64px];
+  @apply text-4xl sm:text-[64px];
   @apply font-medium;
+}
+
+h2 {
+  @apply text-3xl sm:text-[40px];
+  @apply mb-[26px] sm:mb-[43px] !important;
+  @apply mt-[40px] sm:mt-[47px] !important;
 }
 
 h2, h3 {
   @apply text-[#4B4B4B];
   @apply font-medium;
-  @apply text-2xl sm:text-[40px];
-  @apply mb-[26px] sm:mb-[43px] !important;
-  @apply mt-[40px] sm:mt-[47px] !important;
+}
+
+h3 {
+  @apply text-2xl sm:text-[30px];
+  @apply mb-[16px] sm:mb-[20px] !important;
+  @apply mt-[30px] sm:mt-[37px] !important;
+}
+
+h4 {
+  @apply text-xl sm:text-[20px];
+  @apply font-medium;
+  @apply text-[#4B4B4B];
 }
 
 p {
@@ -46,6 +61,7 @@ p {
   margin-left: -1em
 }
 
+
 code {
   @apply bg-[#F0F0F0];
   @apply py-9 !important;
@@ -57,8 +73,8 @@ code {
 }
 
 article {
-  @apply ml-[20px] sm:ml-[77px];
-  @apply mr-[20px] sm:mr-[44px];
+  @apply ml-[0px] sm:ml-[20px];
+  @apply mr-[0px] sm:mr-[0px];
 }
 
 li::marker {
@@ -67,4 +83,8 @@ li::marker {
 
 main {
   @apply mt-0 sm:mt-10;
+}
+
+img {
+  @apply w-full sm:w-3/4 !important; 
 }

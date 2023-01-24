@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: "Tutorial intro"
+title: "Overview"
 pagination_next: null
 pagination_prev: null
 hide_table_of_contents: false
@@ -8,45 +8,12 @@ hide_table_of_contents: false
 
 import styles from "./docs.module.css";
 
-<p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+# Overview
 
-## Heading 2
+Carapace connects buyers and sellers of protection against default risk for under-collateralized loans in DeFi. Protection buyers are lenders of under-collateralized lending protocols like Goldfinch. They can buy protection against borrower default by paying a premium into Carapace’s Protection Pool. Protection sellers sell protection risk to earn premiums. They lock in capital within the protection pool and take on exposure to cover default risk in a basket of underlying lending pools on protocols like Goldfinch.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+![plot](../src/assets/abstract-1.png)
 
-## Heading 3
+## Why we are building Carapace
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-<ul className={styles.bulletpoints}>
-  <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-  <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-</ul>
-
-## Heading 2
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-## Heading 3
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-<ul className={styles.bulletpoints}>
-  <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-  <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-</ul>
-
-`Lorem// ipsum< dolor sit amet> consectetur adipiscing eli`
-
-## Heading 3
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-<ul className={styles.bulletpoints}>
-  <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-  <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-</ul>
-
-## Heading 3
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Under-collateralized lending in DeFi unlocks multiple use-cases in helping fund both crypto as well as real world assets. For DeFi lending to become a huge market, several primitives will need to be built. At Carapace, we are building one such core DeFi primitive to make the industry more mature, more capital efficient, and to increase access amongst a diversified range of investors.

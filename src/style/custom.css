@@ -25,6 +25,7 @@
     --ifm-code-font-size: 95%;
     --ifm-navbar-height: 0;
     --ifm-menu-color-background-active: transparent;
+    --doc-sidebar-width: 250px !important;
   }
 
   nav {
