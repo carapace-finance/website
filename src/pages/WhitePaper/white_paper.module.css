@@ -1,10 +1,14 @@
 .whitePaperh1 {
-  @apply leading-[28px] sm:leading-[70.65px];
   @apply text-[24px] sm:text-[56px];
   @apply text-black;
 }
 
+h1{
+  @apply leading-[28px] sm:leading-none !important;
+}
+
 .whitePaperh2 {
+    @apply leading-none !important;
     @apply text-black;
     @apply text-[20px] sm:text-[48px];
 }

@@ -4,11 +4,13 @@ sidebar_position: 3
 pagination_next: null
 pagination_prev: null
 hide_table_of_contents: false
+toc_max_heading_level: 4
 ---
 
 import styles from "../docs.module.css";
 
-# 
+
+<br/>
 
 Protection purchase on Carapace is oriented towards lenders of under-collateralized lending protocols e.g. Goldfinch, Maple, TrueFi, Clearpool and more. By buying protection, lenders can access risk adjusted yields while protecting their capital. 
 

@@ -4,11 +4,12 @@ sidebar_position: 2
 pagination_next: null
 pagination_prev: null
 hide_table_of_contents: false
+toc_max_heading_level: 4
 ---
 
 import styles from "../docs.module.css";
 
-# 
+<br/>
 
 Selling protection on Carapace means taking on exposure to cover default risk in a basket of under-collateralized DeFi lending pools. In return, investors can earn high yields, primarily via premiums paid by protection buyers.
 
@@ -46,7 +47,7 @@ A seller can make a deposit at any time as long as the follow conditions are met
 
 ## Withdrawal
 
-Sellers can make a withdrawal request at any time by specifying the sToken amount that they wish to withdraw. As explained in our White Paper, sToken amount equals funds deposited plus accrued premiums minus default payouts for a given seller.
+Sellers can make a withdrawal request at any time by specifying the sToken amount that they wish to withdraw. As explained in our [White Paper](https://www.carapace.finance/WhitePaper/#premium-pricing), sToken amount equals funds deposited plus accrued premiums minus default payouts for a given seller.
 
 In addition, protection sellers will always have the ability to sell sTokens in the secondary market as long as there is a buyer.
 
@@ -107,6 +108,8 @@ Potential loss of capital from Carapace partners’ yield generating strategies.
 To minimize fraud via under-collateralized lending protocols, we will only work with protocols like Goldfinch which are building secure incentive models (e.g. decentralized audit system) and strong security measures to minimize fraud. 
 
 ## Competitive Landscape
+
+![plot](../../src/assets/chart-3.png)
 
 ## Data availability for Due-Diligence
 

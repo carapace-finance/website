@@ -31,7 +31,7 @@ export default function WhitePaperLayout(props) {
                   onClick={() => {setActive(nav.id)}}
                   className={` text-darkSidebar list-none font-manrope font-semibold cursor-pointer leading-[18px] tracking-[0.02em] text-[16px] py-1.5 px-3 hover:bg-gray-100
                   ${active === nav.id ? "underline underline-offset-4 decoration-2 decoration-buttonPink decoration-solid" : ""}
-                  mr-10`}
+                  `}
                 >
                   <Link
                     to={nav.id}
@@ -55,7 +55,7 @@ export default function WhitePaperLayout(props) {
             )}
           >
             <div className="row">
-              <div className={clsx("col", DocItemColStyles.docItemCol)}>
+              <div>
                 <div className={DocItemStyles.docItemContainer}>
                   <article>
                     <div
