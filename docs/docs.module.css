@@ -85,6 +85,6 @@ main {
   @apply mt-0 sm:mt-10;
 }
 
-img {
+p img {
   @apply w-full sm:w-3/4 !important; 
 }
