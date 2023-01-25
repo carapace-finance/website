@@ -3,10 +3,6 @@
   @apply text-black;
 }
 
-h1{
-  @apply leading-[28px] sm:leading-none !important;
-}
-
 .whitePaperh2 {
     @apply leading-none !important;
     @apply text-black;
