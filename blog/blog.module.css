@@ -9,6 +9,9 @@ h1 {
   @apply text-buttonPink;
 }
 
+header h1 {
+  @apply leading-none;
+}
 
 h2, h3 {
   @apply text-[#4B4B4B];
