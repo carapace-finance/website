@@ -17,7 +17,18 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "Carapace",
   projectName: "website",
-  plugins: [require.resolve("docusaurus-plugin-fathom")],
+  plugins: [require.resolve("docusaurus-plugin-fathom"), [
+    '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          // /docs/abstract -> /docs/
+          {
+            to: '/docs/',
+            from: '/docs/abstract',
+          },
+        ],
+      }
+  ]],
   presets: [
     [
       "classic",

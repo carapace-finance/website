@@ -105,7 +105,7 @@ export const footerLinks = [
       },
       {
         name: "Documentation",
-        link: "/docs/abstract",
+        link: "/docs/",
         target: ""
       },
     ],
@@ -152,7 +152,7 @@ export const navLinks = [
     title: "Whitepaper",
   },
   {
-    id: "/docs/abstract",
+    id: "/docs/",
     title: "Documentation",
   },
   {

@@ -109,7 +109,7 @@ To minimize fraud via under-collateralized lending protocols, we will only work 
 
 ## Competitive Landscape
 
-![plot](../../src/assets/chart-3.png)
+![Competitive landscape table carapace finance](../../src/assets/chart-3.png)
 
 ## Data Availability for Due-Diligence
 
