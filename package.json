@@ -16,6 +16,8 @@
     "pretty": "prettier --write \"./**/*.{js,ts,tsx,json,md,mdx}\""
   },
   "dependencies": {
+    "@docsearch/js": "^3.3.3",
+    "@docsearch/react": "^3.3.3",
     "@docusaurus/core": "^2.2.0",
     "@docusaurus/plugin-client-redirects": "^2.3.0",
     "@docusaurus/preset-classic": "^2.2.0",
