@@ -11,6 +11,15 @@ h1 {
 
 header h1 {
   @apply leading-none;
+  @apply text-[#161c2e];
+}
+
+header h2 > a {
+  @apply text-[#161c2e];
+}
+
+header h2 > a:hover {
+  @apply text-[#161c2e];
 }
 
 h2, h3 {
