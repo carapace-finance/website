@@ -3,7 +3,7 @@ import React from 'react'
 
 const JoinTheWaitlist = () => {
     return (
-        <div className='min-h-[50vh] flex item-center justify-center'>
+        <div className='min-h-[50vh] flex item-center justify-center pb-[50px] pt-[10px] lg:pt-[50px] lg:pb-[100px]'>
             <Head>
                 <script type="text/javascript" src="https://app.viral-loops.com/widgetsV2/core/loader.js" ></script>
             </Head>
