@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import assets from '../assets';
 import { navLinks } from '../constants';
 import Link from "@docusaurus/Link";
+import { DocSearch } from '@docsearch/react';
 
 const usePathname = () => {
   const location = useLocation();
@@ -22,27 +23,31 @@ const Navbar = () => {
         {navLinks.map((nav, _) => (
           <li
             key={nav.id}
-            className={`decoration-buttonPink text-customDarkBlue list-none font-manrope font-normal cursor-pointer leading-[18px] tracking-[0.02em] text-[22px] ${
-              active === nav.id ? "underline underline-offset-4 decoration-2 decoration-buttonPink decoration-solid" : ""
-            } mr-10`}
+            className={`decoration-buttonPink text-customDarkBlue list-none font-manrope font-normal cursor-pointer leading-[18px] tracking-[0.02em] text-[22px] ${active === nav.id ? "underline underline-offset-4 decoration-2 decoration-buttonPink decoration-solid" : ""
+              } mr-10`}
             onClick={() => {
               setActive(nav.id)
             }
-          }
+            }
           >
-              <Link
-                to={nav.id}
-                className={`
-                ${active!== nav.id ? "group transition-all no-underline hover:no-underline" : "hover: decoration-buttonPink"}
+            <Link
+              to={nav.id}
+              className={`
+                ${active !== nav.id ? "group transition-all no-underline hover:no-underline" : "hover: decoration-buttonPink"}
               `}
+            >
+              <span className={`underline-offset-[4px] decoration-[2.2px] text-customDarkBlue bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 "}`}
               >
-                <span className={`underline-offset-[4px] decoration-[2.2px] text-customDarkBlue bg-left-bottom bg-gradient-to-r from-buttonPink to-buttonPink bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 "}`}
-                >
-                  {nav.title}
-                  </span>
-              </Link>
+                {nav.title}
+              </span>
+            </Link>
           </li>
         ))}
+        {active === '/docs/' && <DocSearch
+          appId="00TFF80SJR"
+          indexName="carapace"
+          apiKey="59f2fe346d5f6c0fae4cd877ac096093"
+        />}
       </ul>
       <div className="lg:hidden flex flex-1 justify-end items-center">
         <a onClick={() => setToggle(!toggle)}></a>
@@ -54,9 +59,8 @@ const Navbar = () => {
         />
 
         <div
-          className={`${
-            !toggle ? "hidden" : "flex"
-          } flex-col p-6 bg-[url('.././assets/mobile_nav_bg.png')] h-full w-full right-0 top-0 fixed overflow-hidden z-10 bg-cover bg-no-repeat`}
+          className={`${!toggle ? "hidden" : "flex"
+            } flex-col p-6 bg-[url('.././assets/mobile_nav_bg.png')] h-full w-full right-0 top-0 fixed overflow-hidden z-10 bg-cover bg-no-repeat`}
         >
           <div className="flex flex-row items-center w-full">
             <img src={assets.footerCarapace} alt="carapace" className="w-[150px]" />
@@ -68,7 +72,7 @@ const Navbar = () => {
             {navLinks.map((nav, _) => (
               <li
                 key={nav.id}
-                className={`${active === nav.id ? "opacity-100" : "opacity-70" } text-white list-none font-manrope font-semibold leading-[18px] cursor-pointer text-[34px] tracking-[0.02em] mb-[55px]`}
+                className={`${active === nav.id ? "opacity-100" : "opacity-70"} text-white list-none font-manrope font-semibold leading-[18px] cursor-pointer text-[34px] tracking-[0.02em] mb-[55px]`}
                 onClick={() => setActive(nav.id)}
               >
                 <a className={`${active === nav.id ? "underline underline-offset-8 decoration-buttonPink" : ""} hover:no-underline hover:text-white`} href={`${nav.id}`}>{nav.title}</a>
@@ -76,7 +80,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="h-[50px]"></div>
-      </div>
+        </div>
       </div>
     </nav>
   );
