@@ -14,6 +14,9 @@ const Navbar = () => {
   const [active, setActive] = useState(usePathname);
   const [toggle, setToggle] = useState(false);
 
+  //this is to check what is coming as active when we click search in docusearch
+  console.log(usePathname, active)
+
   return (
     <nav className="w-full flex h-[65px] md:h-[102px] px-[20px] md:px-[64px] justify-between items-center border-b">
       <a href="/">
