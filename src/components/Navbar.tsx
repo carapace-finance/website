@@ -43,7 +43,7 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
-        {active === '/docs/' && <DocSearch
+        {active.includes("/docs/") && <DocSearch
           appId="00TFF80SJR"
           indexName="carapace"
           apiKey="59f2fe346d5f6c0fae4cd877ac096093"
