@@ -12,7 +12,7 @@ const Hero = () => {
            </h1>
           <p className='font-semibold text-white text-[30px] sm:text-[38px] leading-[34px] sm:leading-[44px] text-center tracking-[-0.02em] max-w-[300px] sm:max-w-[750px] font-manrope mt-16 mb-[79px] sm:mb-[59px] animate-text-focus-in'>Experience the future of credit investing with on-chain protection markets.</p>
         <Link href='/join-the-waitlist'>
-          <button className={`border-4 border-buttonPink rounded-[200px] text-white tracking-[0.02em] text-transform: uppercase font-normal leading-[50px] text-center hover:bg-buttonPink hover:border-buttonPink ease-in-out duration-300 transition-all px-8 sm:px-8 py-4 sm:py-4 sm:text-[25.5px] text-lg`}>{'Sign-up for Beta'}</button>
+          <button className={`border-4 border-buttonPink rounded-[200px] text-white tracking-[0.02em] text-transform: uppercase font-normal leading-[50px] text-center hover:bg-buttonPink hover:border-buttonPink ease-in-out duration-300 transition-all px-8 sm:px-8 py-4 sm:py-4 sm:text-[25.5px] text-lg`}>{'Sign-up for Early Access'}</button>
         </Link>
         </div>
       </div>
