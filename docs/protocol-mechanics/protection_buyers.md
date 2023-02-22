@@ -61,6 +61,7 @@ A seller does not need to deposit the LP token in a Carapace pool at the time of
 ### Duration
 
 Minimum protection duration = 90 days
+
 Maximum protection duration = Up to end of the next cycle
 
 ### New Protection
