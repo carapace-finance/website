@@ -14,9 +14,6 @@ const Navbar = () => {
   const [active, setActive] = useState(usePathname);
   const [toggle, setToggle] = useState(false);
 
-  //this is to check what is coming as active when we click search in docusearch
-  console.log(usePathname, active)
-
   return (
     <nav className="w-full flex h-[65px] md:h-[102px] px-[20px] md:px-[64px] justify-between items-center border-b">
       <a href="/">
@@ -46,11 +43,11 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
-        <DocSearch
+        {active.includes("/docs/") && <DocSearch
           appId="00TFF80SJR"
           indexName="carapace"
           apiKey="59f2fe346d5f6c0fae4cd877ac096093"
-        />
+        />}
       </ul>
       <div className="lg:hidden flex flex-1 justify-end items-center">
         <a onClick={() => setToggle(!toggle)}></a>
