@@ -116,7 +116,7 @@ To minimize fraud via under-collateralized lending protocols, we will only work 
 Each protocol has varying dynamics so the comparison will need to be made on a protocol by protocol basis. For example in the case of Goldfinch (our first partner protocol), if you compare being a junior tranche lender into Goldfinch and a protection seller in Carapace, then there are a few key differences:
 <ul className={styles.bulletpoints}>
   <li>Diversification: Goldfinch junior lender's exposure is limited to one single lending pool whereas Carapace investor's exposure is diversified across multiple Goldfinch pools (and later on across protocols as we add more support) </li>
-  <li>Time horizon: Goldfinch junior tranche lenders investment horizons are 2,3 or 4 years depending on the lending pool. With Carapace, the minimum lock-up period is somewhere between 90 to 180 days. </li>
+  <li>Time horizon: Goldfinch junior tranche lenders; investment horizons are 2,3 or 4 years depending on the lending pool. With Carapace, the minimum lock-up period is between 90 to 180 days. </li>
   <li>Yield: Goldfinch Junior lenders typically earn between 17-20% yield whereas we estimate Carapace yields to be between 10-14% for the initial pool based on Goldfinch loans. Carapace Protocol has a plan to increase the yield range by adjusting the <a href='/docs/protocol-mechanics/general#leverage-ratio'>leverage ratio</a> range.</li>
 </ul>
 
