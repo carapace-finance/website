@@ -111,7 +111,7 @@ To minimize fraud via under-collateralized lending protocols, we will only work 
 
 ![Competitive landscape table carapace finance](../../src/assets/chart-3.png)
 
-## Comparison between selling protection in Carapace vs. lending to a DeFi credit protocol
+## Selling Protection in Carapace vs. Lending to a DeFi Credit Protocol
 
 Each protocol has varying dynamics so the comparison will need to be made on a protocol by protocol basis. For example in the case of Goldfinch (our first partner protocol), if you compare being a junior tranche lender into Goldfinch and a protection seller in Carapace, then there are a few key differences:
 <ul className={styles.bulletpoints}>
