@@ -26,19 +26,19 @@ We create a market where traders can swap the default risk. Protection buyers pa
 
 Carapace protocol is a non-custodial automated market maker implemented on a blockchain. Our automated market maker (AMM) pools liquidity and makes it available to swap traders according to an algorithm such as our premium pricing formula that fluctuates with supply and demand and the exchange rate formula that keeps increasing with the interest accrual.
 
-<h2 id="peer-to-peer" className={styles.whitePaperh2}>Peer-to-Pool Model</h2>
+<h2 id="peer-to-pool" className={styles.whitePaperh2}>Peer-to-Pool Model</h2>
 
 Each swap market is represented by a pool contract.
 
-<h3 className={styles.whitePaperh3}>Pool Design</h3>
+<h3 id="peer-to-pool-design" className={styles.whitePaperh3}>Pool Design</h3>
 
 Each pool contract represents a bundle of lending pools in under-collateralized lending protocols such as Goldfinch, Maple Finance, TrueFi, to name a few. We aggregate lending pools across these lending protocols for diversification and liquidity. 
 
-<h3 className={styles.whitePaperh3}>Protection Buyers</h3>
+<h3 id="peer-to-pool-protection-buyers" className={styles.whitePaperh3}>Protection Buyers</h3>
 
 If you want to hedge against the default risk of a specific underlying lending pool, you can pay some premium to a pool contract and get the right to claim a payout if the lending pool defaults.
 
-<h3 className={styles.whitePaperh3}>Protection Sellers</h3>
+<h3 id="peer-to-pool-protection-sellers" className={styles.whitePaperh3}>Protection Sellers</h3>
 
 If you are convinced that the underlying lending pools are safe, you can invest capital in the respective pool contract to earn yields. You will get a representative sToken in exchange for the capital you have invested. 
 
@@ -52,7 +52,7 @@ Sellers can always request to withdraw the deposited capital, or they can keep t
 
 *premium* = (*carapace_risk_premium* + *underlying_risk_premium*) \* *protection_amount*
 
-<h3 className={styles.whitePaperh3}>Carapace Risk Premium</h3>
+<h3 id="carapace-risk-premium" className={styles.whitePaperh3}>Carapace Risk Premium</h3>
 
 *carapace_risk_premium*<br />
 = *max*((1 - (e \*\* (- *duration* \* *risk_factor*))), *MIN_CARAPACE_RISK_PREMIUM* )
@@ -68,7 +68,7 @@ e is the mathematical constant. We use the e because we assume survival of the p
 
 We will explain them in more detail below.
 
-<h3 className={styles.whitePaperh3}>Duration</h3>
+<h3 id="premium-pricing-duration" className={styles.whitePaperh3}>Duration</h3>
 
 *duration* is the expiration time minus the current time. All other things being equal, the premium is cheaper when the duration is shorter because it is less likely that a default event occurs when there is a shorter window of time for loans to default.
 
@@ -77,7 +77,7 @@ Since traders typically work with days remaining to expiration, we convert these
 To sum up, we can express the duration with:<br />
 *days_to_expiration* / 365.24
 
-<h3 className={styles.whitePaperh3}>Risk Factor</h3>
+<h3 id="premium-pricing-risk-factor" className={styles.whitePaperh3}>Risk Factor</h3>
 
 The risk factor represents how the market thinks about the risk of a particular pool. The riskier the pool, the higher the risk factor and the more expensive a premium becomes. A risk factor of 1 means a pool is quite risky, while a risk factor of 0 means a pool is quite safe.
 
@@ -94,7 +94,7 @@ The risk factor is calculated based on two main factors:<br />
 
 We will explain the two main factors below in detail.
 
-<h3 className={styles.whitePaperh3}>Leverage Ratio</h3>
+<h3 id="leverage-ratio" className={styles.whitePaperh3}>Leverage Ratio</h3>
 
 Here, we will be explaining the first part of the risk factor equation:<br />
  (((*LEVERAGE_RATIO_CEILING* + *BUFFER*) - *leverage_ratio*) / <br />
@@ -118,7 +118,7 @@ As you can see, the premium price is effectively an aggregated view of supply an
 
 Lastly, we use the buffer value(e.g. 0.05) to avoid edge case inconsistency. For example, when the leverage ratio goes to the floor, without subtracting the buffer value, the premium curve steepens at a high pace and goes to 100%. The buffer values also ensure that the numerator or denominator won’t be zero.
 
-<h3 className={styles.whitePaperh3}>Curvature</h3>
+<h3 id="premium-pricing-curvature" className={styles.whitePaperh3}>Curvature</h3>
 
 *CURVATURE* exists literally to adjust the curvature of the curve. If this doesn’t exist or if this is *1*, the shape would be linear. *0.01* is steeper than *0.05*.
 
@@ -126,11 +126,11 @@ Lastly, we use the buffer value(e.g. 0.05) to avoid edge case inconsistency. For
 
 ![graph3](../../assets/graph3.png)
 
-<h3 className={styles.whitePaperh3}>Minimum Carapace Risk Premium</h3>
+<h3 id="minimum-carapace-risk-premium" className={styles.whitePaperh3}>Minimum Carapace Risk Premium</h3>
 
 The MIN_CARAPACE_RISK_PREMIUM is the minimum carapace_risk_premium paid by a protection buyer regardless of the leverage ratio.
 
-<h3 className={styles.whitePaperh3}>Underlying Risk Premium</h3>
+<h3 id="underlyling-risk-premium" className={styles.whitePaperh3}>Underlying Risk Premium</h3>
 
 The underlying_risk_premium represents the level of risk in an underlying lending pool within a given protection pool. The riskier the underlying lending pools are, the more expensive the underlying_risk_premium. We use the yield from underlying lending pools to indicate the level of risk; for lenders of unsecured lending protocols, higher yields indicate a higher risk of default.
 
@@ -143,7 +143,7 @@ The underlying_risk_premium represents the level of risk in an underlying lendin
 
 *protection_buyer_apy* is the expected yield for protection buyers in underlying lending pools. The higher the protection_buyer_apr is, the higher the risk of underlying loans and the premium are.
 
-<h3 className={styles.whitePaperh3}>Protection Amount</h3>
+<h3 id="protection-amount" className={styles.whitePaperh3}>Protection Amount</h3>
 
 The amount of protection a buyer wants to get. *protection_amount* is selected by protection buyers. The more protection you want to get, the more premium you need to pay.
 
@@ -151,7 +151,7 @@ The amount of protection a buyer wants to get. *protection_amount* is selected b
 
 Carapace Protocol distributes yields with a combination of 1) an sToken in each pool, 2) the exchange rate, and 3) the accrued premium.
 
-<h3 className={styles.whitePaperh3}>sToken</h3>
+<h3 id="yields-distribution-stoken" className={styles.whitePaperh3}>sToken</h3>
 
 sToken is an interest-bearing token that protection sellers get in exchange for an underlying token like USDC that they deposit. Each pool represents a different risk and has its sToken.
 
@@ -161,7 +161,7 @@ Protection sellers can return their sToken to redeem their deposited capital and
 
 If sellers wish to redeem their capital and interest before the lockup period, they might be able to find a buyer of their sToken in a secondary market like Uniswap. Traders in the exchanges can long/short sTokens based on their opinion about the risk exposure associated with sTokens. Since an sToken is a fungible ERC20 token, it is fairly easy to bootstrap the secondary markets for protection sellers.
 
-<h3 className={styles.whitePaperh3}>The Exchange Rate</h3>
+<h3 id="exchange-rate" className={styles.whitePaperh3}>The Exchange Rate</h3>
 
 The exchange rate is the total sToken underlying token amount divided by the total supply of sTokens.
 
@@ -180,7 +180,7 @@ Mathematically speaking, the exchange rate changes only when *total_accrued_prem
 
 One key property of the exchange rate is that the exchange rate from time A to B and B to C is the same as the exchange rate from A to C. If we calculate the exchange rate at time C from time A, we get the same exchange rate when we calculate the exchange rate at time B from time A and then calculate the exchange at time C from time B. In both ways, the exchange rate at C will be the same.
 
-<h3 className={styles.whitePaperh3}>Accrued Premium</h3>
+<h3 id="accured-premium" className={styles.whitePaperh3}>Accrued Premium</h3>
 
 As we discussed above,<br />
 *the exchange rate = total_sToken_underlying / total_sTokens*
@@ -203,7 +203,7 @@ We will explain the premium accrual in more detail below. Accrued premium is pri
 <li className={styles.whitePaperli}>3. 𝜆 is the risk factor from the premium pricing formula for this protection divided by 365.</li>
 </ul>
 
-<h3 className={styles.whitePaperh3}>K</h3>
+<h3 id="k" className={styles.whitePaperh3}>K</h3>
 
 K = P / ( $e^{- t * \lambda}$ - $e^{- T * \lambda}$ )
 
@@ -213,14 +213,14 @@ Imagine that a protection buyer has bought 180 days protection for $10,000 and t
 
 K = (10,000 - 100) / (1 - $e^{- 180 * \lambda}$ )
 
-<h3 className={styles.whitePaperh3}>t and T</h3>
+<h3 id="t-ant-t" className={styles.whitePaperh3}>t and T</h3>
 
 t is the beginning time and T is the end time of protection. In other words, duration is T - t.<br />
 where: 0 < t < T
 
 t and T can be seconds as long as they are expressed in years. This is because we use 365 in the risk factor below.
 
-<h3 className={styles.whitePaperh3}>𝜆</h3>
+<h3 id="𝜆" className={styles.whitePaperh3}>𝜆</h3>
 
 𝜆 is the risk factor from the premium pricing formula for this protection divided by 365 (we use 365 regardless of the duration to get units in years). We assume risk follows Poisson distribution in line with premium pricing.
 
@@ -230,7 +230,7 @@ t and T can be seconds as long as they are expressed in years. This is because w
 / (*leverage_ratio* - (*LEVERAGE_RATIO_FLOOR* - *BUFFER*)))<br />
 \* *CURVATURE* / 365
 
-<h3 className={styles.whitePaperh3}>Example</h3>
+<h3 id="accured-premium-example" className={styles.whitePaperh3}>Example</h3>
 
 Imagine that a protection buyer has bought 180 days protection for $10,000 and the protocol fee is $100. The premium for the pool is paid on day 0, and the protection covers till day 180. How do we calculate the accrued premium after 180 days?
 
@@ -243,12 +243,12 @@ Accrued premium(AP) from day 0 to day 180<br/>
 We can also say that the accrued premium for day 0 + day 1 + day 2 + … + day 180<br />
 = $\displaystyle\sum_{t=1}^{180}$ K \* ($e^{- (t-1) * \lambda}$ - $e^{- t * \lambda}$ )
 
-<h3 className={styles.whitePaperh3}>Transitivity</h3>
+<h3 id="transitivity" className={styles.whitePaperh3}>Transitivity</h3>
 
 The accrued premium has a transitive property. Accrued premium from time A to C = Accrued premium from time A to B + accrued premium from time B to C.
 
 
-<h3 className={styles.whitePaperh3}>Fair Distribution</h3>
+<h3 id="fair-distribution" className={styles.whitePaperh3}>Fair Distribution</h3>
 
 One of the most important principles of yield distribution is fairness. I will outline how we distribute yield fairly with the above distribution mechanism.
 
@@ -258,31 +258,31 @@ First, at the risk of stating the obvious, a protection seller is entitled to re
 
 We take security seriously to maintain trust in our system. 
 
-<h3 className={styles.whitePaperh3}>Insolvency</h3>
+<h3 id="insolvency" className={styles.whitePaperh3}>Insolvency</h3>
 
-<h4 className={styles.whitePaperh4}>Leverage Ratio Floor</h4>
+<h4 id="leverage-ratio-floor" className={styles.whitePaperh4}>Leverage Ratio Floor</h4>
 
 We will take a conservative approach to our leverage ratio floor initially. In traditional insurance, big insurance companies' leverage ratio can be as low as 2%. We will start conservatively and adjust the ratio as our community accumulates information and knowledge. 
 
-<h4 className={styles.whitePaperh4}>Incentives</h4>
+<h4 id="incentives" className={styles.whitePaperh4}>Incentives</h4>
 
 In the case of a bank run, the leverage ratio goes down, and the interest rates go up. As a result, there is an incentive 1) to bring more liquidity with new money and 2) for the existing money to stay invested. 
 
 We also plan to reward CARA tokens to sellers when the leverage ratio is below the floor. 
 
-<h4 className={styles.whitePaperh4}>Backstop Treasury Funds</h4>
+<h4 id="backstop-treasury-funds" className={styles.whitePaperh4}>Backstop Treasury Funds</h4>
 
 Our protocol earns some fees, and some of our revenue stored in our treasury contract will be used as a backstop. Also, Starlings Lab (an R&D company behind Carapace) might provide some backstop capital. 
 
-<h4 className={styles.whitePaperh4}>CARA Token Backstop</h4>
+<h4 id="cara-token-backstop" className={styles.whitePaperh4}>CARA Token Backstop</h4>
 
 We will reserve a portion of CARA token allocation as a backstop to cover even more loss. 
 
-<h3 className={styles.whitePaperh3}>Frauds</h3>
+<h3 id="frauds" className={styles.whitePaperh3}>Frauds</h3>
 
 In traditional CDS, concern has been expressed about the manipulation of underlying loans. For example, a CDS buyer may pay a borrower to default. We have a defense mechanism to mitigate this classic insurance risk. In short, we require protection buyers to be a lender of an underlying loan with our proof of loss system. 
 
-<h4 className={styles.whitePaperh4}>Proof of Loss</h4>
+<h4 id="proof-of-loss" className={styles.whitePaperh4}>Proof of Loss</h4>
 
 More specifically, at the point of default claiming, our proof of loss system requires protection buyers to lock the LP tokens that represent a loan amount in under-collateralized lending protocols. In this way, only a lender can be a protection buyer, and a protection buyer can get only what they have lost. In other words, we support only non-naked-CDS.
 
@@ -300,7 +300,7 @@ It is critical for the community to review each under-collateralized lending pro
 
 Protection buyers get protection depending on how much premium they have paid, and they get only what they have lost. After a claim is made, our contract verifies protection purchases with underlying LP tokens and the buyer’s address. When verification is successful, the payout is made to the buyer in the same transaction. 
 
-<h3 className={styles.whitePaperh3}>Payouts Funds Source</h3>
+<h3 id="payouts-funds-source" className={styles.whitePaperh3}>Payouts Funds Source</h3>
 
 Default payouts will be funded by the following sources (in this order):
 
@@ -314,7 +314,7 @@ Default payouts will be funded by the following sources (in this order):
 
 The accrued premium is the allocated portion of the premium that has already been distributed to sellers. The non-accrued premium is the premium that has been collected from buyers but is yet to be allocated to sellers. The non-accrued premium of the defaulted underlying loans from the claiming buyer should be used first because this capital is supposed to be distributed to the protection sellers who are facing defaulted underlying loans. The other non-accrued premium should not be used until other capital is depleted. Otherwise, protection sellers have no incentive to keep their capital in a pool.
 
-<h3 className={styles.whitePaperh3}>Dispute Resolution</h3>
+<h3 id="dispute-resolution" className={styles.whitePaperh3}>Dispute Resolution</h3>
 
 The Carapace protocol does its best to clearly define what constitutes a default event, as explained above. We also plan to set up a committee with disinterested parties as a dispute resolution mechanism. In case our contract cannot algorithmically determine if the default happened or not due to unexpected events such as smart contract hacking and other things that we do not even know yet, the committee comes in. The committee is made up of members of the core team of Carapace as well as credit advisors to Carapace. Committee members should not participate in the market to avoid conflict of interest. When there is a dispute, the committee evaluates a claim with a vote. This committee uses a multi-sig contract that accepts or denies a dispute submission. All of the members of the committee have a stake in Carapace and an interest in doing what's best for the long-term success of Carapace. In other words, they have skin in the game because their wrong decision will make them suffer economically.
 
