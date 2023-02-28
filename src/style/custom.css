@@ -94,3 +94,23 @@
 .DocSearch-Form{
  box-shadow: inset 0 0 0 2px #293C9A !important
 }
+
+.table-of-contents > li {
+  list-style-type: none !important;
+}
+
+.table-of-contents > li > ul > li {
+  list-style-type: none !important;
+}
+
+.table-of-contents > li > ul > li > ul > li {
+  list-style-type: none !important;
+}
+
+.menu__list li {
+  list-style-type: none !important;
+}
+
+.whitePaperli_src-pages-WhitePaper-white_paper-module{
+  list-style-type: none !important;
+}
