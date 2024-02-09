@@ -80,7 +80,7 @@ export const footerLinks = [
       },
       {
         name: "Twitter",
-        link: "https://twitter.com/carapacefinance",
+        link: "https://twitter.com/starlings_lab",
         target: "_blank"
       },
       {

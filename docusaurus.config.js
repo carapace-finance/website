@@ -119,7 +119,7 @@ const config = {
       //         },
       //         {
       //           label: "Twitter",
-      //           href: "https://twitter.com/carapacefinance",
+      //           href: "https://twitter.com/starlings_lab",
       //         },
       //       ],
       //     },
